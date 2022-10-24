@@ -9,16 +9,8 @@
   text-align: center;
 }
 
-.banner {
-  background: linear-gradient(
-      131.39deg,
-      #927397 -9.09%,
-      #e7cbae 129.67%
-    );
-}
-
 .main {
-  padding: 2rem 0 0 0;
+  padding: 2rem 0 2.5rem 0;
   flex: 1;
   display: flex;
   flex-direction: column;
@@ -50,10 +42,34 @@
 }
 
 .description {
-  margin: 2rem 0;
+  margin: 1.5rem 0;
   line-height: 2.22;
   font-size: 1rem;
   color: rgb(241, 241, 241);
+}
+
+.buttonContainer {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 2rem;
+}
+
+.button {
+  display: inline-flex;
+  -webkit-box-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  align-items: center;
+  border-radius: 30px;
+  font-weight: bold;
+  font-size: 16px;
+  text-align: center;
+  line-height: 1;
+  color: rgb(255, 255, 255);
+  padding: 21px 29px;
+  background-color: rgb(35, 55, 77);
+  transition: all 500ms ease 0s;
+  margin-right: 0.5rem;
 }
 
 .image {
@@ -72,6 +88,11 @@
   .title,
   .description {
     text-align: left;
+  }
+  .buttonContainer {
+    display: flex;
+    justify-content: flex-start;
+    margin-bottom: 1rem;
   }
   .image {
     display: block;
