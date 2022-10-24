@@ -2,8 +2,8 @@ import type { NextPage } from "next";
 import Head from "next/head";
 
 import Banner from "../components/Banner";
-import Footer from "../components/Footer";
-import styles from "../styles/Home.module.css";
+// import Footer from "../components/Footer";
+// import styles from "../styles/Home.module.css";
 
 const Home: NextPage = () => {
   return (
@@ -16,19 +16,9 @@ const Home: NextPage = () => {
 
       <Banner />
 
-      <div className={styles.container}>
-        <main className={styles.main}>
-          <h1 className={styles.title}>
-            Welcome to <a href="https://nextjs.org">Next.js!</a>
-          </h1>
-
-          <p className={styles.description}>
-            Get started by editing{" "}
-            <code className={styles.code}>pages/index.tsx</code>
-          </p>
-        </main>
+      {/* <div className={styles.container}>
         <Footer />
-      </div>
+      </div> */}
     </>
   );
 };
