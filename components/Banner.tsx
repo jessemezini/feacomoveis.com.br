@@ -19,10 +19,10 @@ function Banner() {
               impressionantes e envolventes.
             </h1>
 
-            <p className={styles.description}>
+            {/* <p className={styles.description}>
               Entre em contato conosco para saber mais sobre nosso aplicativo de
               meditação para IOS e Android.
-            </p>
+            </p> */}
 
             <div className={styles.buttonContainer}>
               <a href="https://wa.me/5519983373120" className={styles.button}>
