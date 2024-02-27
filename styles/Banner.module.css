@@ -68,8 +68,12 @@
   color: rgb(255, 255, 255);
   padding: 21px 29px;
   background-color: rgb(35, 55, 77);
-  transition: all 500ms ease 0s;
+  transition: all 200ms ease 0s;
   margin-right: 0.5rem;
+}
+
+.button:hover {
+  background-color: rgba(35, 55, 77, 0.636);
 }
 
 .image {
