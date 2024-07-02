@@ -1,9 +1,9 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { Manrope } from "next/font/google";
 import "./globals.css";
 import NavBar from "@/components/navbar";
 
-const inter = Inter({ subsets: ["latin"] });
+const font = Manrope({ weight: ["600", "500"], subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "MZN App Lab",
@@ -17,7 +17,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="pt-BR" data-theme="synthwave">
-      <body className={inter.className}>
+      <body className={font.className}>
         <div>
           <NavBar />
           {children}
