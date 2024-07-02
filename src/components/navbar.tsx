@@ -25,7 +25,7 @@ export default function NavBar() {
           </div>
           <ul
             tabIndex={0}
-            className="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow"
+            className="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow text-base"
           >
             <li>
               <a>Início</a>
@@ -49,7 +49,7 @@ export default function NavBar() {
         </Link>
       </div>
       <div className="navbar-center hidden lg:flex">
-        <ul className="menu menu-horizontal px-1">
+        <ul className="menu menu-horizontal px-1 text-base">
           <li>
             <a>Início</a>
           </li>
@@ -62,8 +62,8 @@ export default function NavBar() {
         </ul>
       </div>
       <div className="navbar-end uppercase">
-        <a href="https://wa.me/5519983373120" className="btn">
-          Contato <FaWhatsapp size="1.25rem" />
+        <a href="https://wa.me/5519983373120" className="btn text-base">
+          WhatsApp <FaWhatsapp size="1.25rem" />
         </a>
       </div>
     </div>
