@@ -4,7 +4,7 @@ import { FaWhatsapp } from "react-icons/fa";
 
 export default function NavBar() {
   return (
-    <div className="navbar bg-base-100">
+    <div className="navbar bg-base-100 container mx-auto mt-4">
       <div className="navbar-start">
         <div className="dropdown">
           <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -25,7 +25,7 @@ export default function NavBar() {
           </div>
           <ul
             tabIndex={0}
-            className="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow text-base"
+            className="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow text-base font-normal"
           >
             <li>
               <a>Início</a>
@@ -49,7 +49,7 @@ export default function NavBar() {
         </Link>
       </div>
       <div className="navbar-center hidden lg:flex">
-        <ul className="menu menu-horizontal px-1 text-base">
+        <ul className="menu menu-horizontal px-1 text-base font-normal">
           <li>
             <a>Início</a>
           </li>
