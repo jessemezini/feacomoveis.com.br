@@ -19,7 +19,7 @@ export default function Hero() {
         </p>
       </Fade>
 
-      <Fade delay={750} duration={2000}>
+      <Fade delay={750} duration={2000} triggerOnce>
         <Image
           src="/website.webp"
           alt="MZN App Lab"
