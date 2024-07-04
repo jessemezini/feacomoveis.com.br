@@ -61,8 +61,11 @@ export default function NavBar() {
           </li>
         </ul>
       </div>
-      <div className="navbar-end uppercase">
-        <a href="https://wa.me/5519983373120" className="btn text-base">
+      <div className="navbar-end">
+        <a
+          href="https://wa.me/5519983373120"
+          className="btn btn-secondary text-base"
+        >
           WhatsApp <FaWhatsapp size="1.25rem" />
         </a>
       </div>
