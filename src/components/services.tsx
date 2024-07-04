@@ -3,7 +3,11 @@ import { FaLaptopCode } from "react-icons/fa";
 
 export default function Services() {
   return (
-    <section className="bg-[#f7f7f7] -mt-32 pb-32" data-theme="light">
+    <section
+      id="services"
+      className="bg-[#f7f7f7] -mt-32 pb-32"
+      data-theme="light"
+    >
       <div className="container mx-auto pt-64 text-center px-5">
         <h2 className="max-w-3xl mx-auto text-3xl sm:text-4xl font-extrabold leading-normal sm:leading-normal tracking-tight mb-6">
           Design & desenvolvimento de Sites e Aplicativos

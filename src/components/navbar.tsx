@@ -28,13 +28,13 @@ export default function NavBar() {
             className="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow text-base font-normal"
           >
             <li>
-              <a>Início</a>
+              <a href="/">Início</a>
             </li>
             <li>
-              <a>Serviços</a>
+              <a href="#services">Serviços</a>
             </li>
             <li>
-              <a>Contato</a>
+              <a href="#contact">Contato</a>
             </li>
           </ul>
         </div>
@@ -51,13 +51,13 @@ export default function NavBar() {
       <div className="navbar-center hidden lg:flex">
         <ul className="menu menu-horizontal px-1 text-base font-normal">
           <li>
-            <a>Início</a>
+            <a href="/">Início</a>
           </li>
           <li>
-            <a>Serviços</a>
+            <a href="#services">Serviços</a>
           </li>
           <li>
-            <a>Contato</a>
+            <a href="#contact">Contato</a>
           </li>
         </ul>
       </div>

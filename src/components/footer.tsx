@@ -7,7 +7,7 @@ import {
 
 export default function Footer() {
   return (
-    <footer className="">
+    <footer id="contact">
       <div className="container mx-auto py-10">
         <h2 className="my-6 text-center text-xl sm:text-2xl leading-normal sm:leading-normal tracking-tight">
           Entre em contato conosco!
