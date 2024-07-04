@@ -13,31 +13,29 @@ export default function Footer() {
           Entre em contato conosco!
         </h2>
 
+        <p className="flex gap-x-2 justify-center items-center mb-6">
+          <FaCopyright /> MZN App Lab - {new Date().getFullYear()}
+        </p>
+
         <div className="flex justify-center gap-3">
-          <a href="https://wa.me/5519983373120" className="btn btn-circle">
-            <FaWhatsapp size={20} />
+          <a
+            href="https://wa.me/5519983373120"
+            className="btn btn-lg btn-outline btn-neutral btn-circle"
+          >
+            <FaWhatsapp size={26} />
           </a>
           <a
             href="https://www.instagram.com/mznapplab/"
-            className="btn btn-circle"
+            className="btn btn-lg btn-outline btn-neutral btn-circle"
           >
-            <FaInstagram size={20} />
+            <FaInstagram size={26} />
           </a>
           <a
             href="https://www.facebook.com/mznapplab"
-            className="btn btn-circle"
+            className="btn btn-lg btn-outline btn-neutral btn-circle"
           >
-            <FaFacebook size={20} />
+            <FaFacebook size={26} />
           </a>
-        </div>
-      </div>
-
-      <div className="py-3">
-        <div className="container mx-auto text-sm flex flex-col gap-3 items-center justify-between sm:flex-row sm:justify-between">
-          <p>MZN App Lab</p>
-          <p className="flex gap-x-1 items-center">
-            <FaCopyright /> {new Date().getFullYear()}
-          </p>
         </div>
       </div>
     </footer>
