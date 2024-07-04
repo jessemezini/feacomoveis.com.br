@@ -9,8 +9,11 @@ export default function Services() {
           Design & desenvolvimento de Sites e Aplicativos
         </h2>
 
-        <div className="max-w-3xl mx-auto flex flex-col sm:flex-row gap-3 text-left [&>div]:prose [&>div]:py-10 [&>div]:px-6 [&>div]:flex-1 [&>div]:bg-secondary [&>div]:rounded-md [&>div]:shadow-sm">
-          <div data-theme="synthwave" className="hover:bg-secondary/50">
+        <div className="max-w-3xl mx-auto flex flex-col sm:flex-row gap-3 text-left [&>div]:prose [&>div]:py-10 [&>div]:px-6 [&>div]:flex-1 [&>div]:rounded-md [&>div]:shadow-sm">
+          <div
+            data-theme="synthwave"
+            className="bg-secondary hover:bg-secondary/50"
+          >
             <MdOutlineDesignServices
               size={44}
               className="text-secondary-content"
@@ -22,7 +25,10 @@ export default function Services() {
             </p>
           </div>
 
-          <div data-theme="synthwave" className="hover:bg-secondary/50">
+          <div
+            data-theme="synthwave"
+            className="bg-secondary/40 hover:bg-secondary/20"
+          >
             <FaLaptopCode size={44} className="text-secondary-content" />
 
             <h3 className="!text-secondary-content">Desenvolvimento</h3>
@@ -32,7 +38,10 @@ export default function Services() {
             </p>
           </div>
 
-          <div data-theme="synthwave" className="hover:bg-secondary/50">
+          <div
+            data-theme="synthwave"
+            className="bg-secondary hover:bg-secondary/50"
+          >
             <MdTipsAndUpdates size={44} className="text-secondary-content" />
             <h3 className="!text-secondary-content">Manutenção</h3>
             <p className="font-light text-secondary-content">
