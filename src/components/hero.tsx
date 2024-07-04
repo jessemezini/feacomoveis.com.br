@@ -19,13 +19,14 @@ export default function Hero() {
         </p>
       </Fade>
 
-      <Fade delay={750} duration={2000} triggerOnce>
+      <Fade delay={750} duration={1000} triggerOnce>
         <Image
-          src="/website.webp"
+          src="/undraw2.svg"
           alt="MZN App Lab"
           width={768}
           height={768}
-          className="mx-auto mt-8"
+          className="mx-auto mt-8 rounded-2xl"
+          quality={100}
         />
       </Fade>
     </section>
