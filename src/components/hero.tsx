@@ -13,7 +13,7 @@ export default function Hero() {
       </Slide>
 
       <Fade direction="up" delay={500}>
-        <p className="max-w-xl mx-auto text-base sm:text-lg font-medium leading-loose text-gray-300">
+        <p className="max-w-xl mx-auto text-base sm:text-lg font-medium leading-loose text-base-content/80">
           Nós nos concentramos nas melhores práticas para soluções e serviços de
           design e desenvolvimento de sites e aplicativos.
         </p>
