@@ -1,21 +1,19 @@
-import styles from "../../styles/contact.module.css";
-
 export default function MznMindfulnessPage() {
   return (
     <div className="container mx-auto max-w-screen-sm my-20">
-      <div data-theme="light" className={styles.card}>
-        <h2 className={styles.title}>Mais informações para contato</h2>
+      <div data-theme="light" className="prose p-5 rounded-md">
+        <h2>Mais informações para contato</h2>
 
-        <hr color="#dcdcdc" className="mb-6" />
+        <hr className="mb-6" />
 
-        <h3 className={styles.title}>Circular Iracemápolis</h3>
-        <p className={styles.p}>Transporte Municipal 3456.3537</p>
+        <h3>Circular Iracemápolis</h3>
+        <p>Transporte Municipal 3456.3537</p>
 
-        <h3 className={styles.title}>Limeira / Piracicaba</h3>
-        <p className={styles.p}>VB Transportes 3456.3934</p>
+        <h3>Limeira / Piracicaba</h3>
+        <p>VB Transportes 3456.3934</p>
 
-        <h3 className={styles.title}>Contato sobre o aplicativo</h3>
-        <p className={styles.p}>jessemezini@gmail.com</p>
+        <h3>Contato sobre o aplicativo</h3>
+        <p>jessemezini@gmail.com</p>
       </div>
     </div>
   );
