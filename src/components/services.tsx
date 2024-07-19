@@ -15,7 +15,7 @@ export default function Services() {
 
         <div className="max-w-3xl mx-auto flex flex-col sm:flex-row gap-3 text-left [&>div]:prose [&>div]:py-10 [&>div]:px-6 [&>div]:flex-1 [&>div]:rounded-md [&>div]:shadow-sm">
           <div
-            data-theme="synthwave"
+            data-theme="forest"
             className="bg-secondary hover:bg-secondary/50"
           >
             <MdOutlineDesignServices
@@ -30,7 +30,7 @@ export default function Services() {
           </div>
 
           <div
-            data-theme="synthwave"
+            data-theme="forest"
             className="bg-secondary/40 hover:bg-secondary/20"
           >
             <FaLaptopCode size={44} className="text-secondary-content" />
@@ -43,7 +43,7 @@ export default function Services() {
           </div>
 
           <div
-            data-theme="synthwave"
+            data-theme="forest"
             className="bg-secondary hover:bg-secondary/50"
           >
             <MdTipsAndUpdates size={44} className="text-secondary-content" />

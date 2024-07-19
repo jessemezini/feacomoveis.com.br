@@ -20,7 +20,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="pt-BR" data-theme="synthwave">
+    <html lang="pt-BR" data-theme="forest">
       <body className={font.className}>
         <NavBar />
         {children}
