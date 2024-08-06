@@ -7,7 +7,7 @@ import {
 
 export default function Footer() {
   return (
-    <footer id="contact">
+    <footer id="contact" data-theme="dim">
       <div className="container mx-auto py-10">
         <h2 className="my-6 text-center text-xl sm:text-2xl leading-normal sm:leading-normal tracking-tight">
           Entre em contato conosco!
@@ -20,19 +20,19 @@ export default function Footer() {
         <div className="flex justify-center gap-3">
           <a
             href="https://wa.me/5519983373120"
-            className="btn btn-lg btn-outline btn-neutral btn-circle"
+            className="btn btn-lg btn-outline  btn-circle"
           >
             <FaWhatsapp size={26} />
           </a>
           <a
             href="https://www.instagram.com/mznapplab/"
-            className="btn btn-lg btn-outline btn-neutral btn-circle"
+            className="btn btn-lg btn-outline  btn-circle"
           >
             <FaInstagram size={26} />
           </a>
           <a
             href="https://www.facebook.com/mznapplab"
-            className="btn btn-lg btn-outline btn-neutral btn-circle"
+            className="btn btn-lg btn-outline  btn-circle"
           >
             <FaFacebook size={26} />
           </a>

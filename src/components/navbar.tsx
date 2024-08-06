@@ -65,7 +65,7 @@ export default function NavBar() {
         <div className="navbar-end">
           <a
             href="https://wa.me/5519983373120"
-            className="btn btn-secondary text-base"
+            className="btn btn-primary text-primary-content"
           >
             <span className="max-[340px]:hidden">WhatsApp</span>{" "}
             <FaWhatsapp size="1.25rem" />

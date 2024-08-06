@@ -19,7 +19,18 @@ const config: Config = {
   },
   plugins: [require("@tailwindcss/typography"), require("daisyui")],
   daisyui: {
-    themes: ["light", "forest"],
+    themes: [
+      "dim",
+      {
+        light: {
+          ...require("daisyui/src/theming/themes")["light"],
+          primary: "#6C63FF",
+          "primary-content": "#ffffff",
+          secondary: "#36344F",
+          "secondary-content": "#ffffff",
+        },
+      },
+    ],
   },
 };
 export default config;

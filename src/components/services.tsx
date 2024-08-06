@@ -6,7 +6,7 @@ export default function Services() {
   return (
     <section
       id="services"
-      className="bg-[#f7f7f7] -mt-32 pb-32"
+      className="bg-base-200/30 -mt-32 pb-32"
       data-theme={THEME}
     >
       <div className="container mx-auto pt-64 text-center px-5">
@@ -32,7 +32,7 @@ export default function Services() {
 
           <div
             data-theme={THEME}
-            className="bg-secondary/40 hover:bg-secondary/20"
+            className="bg-secondary/70 hover:bg-secondary/50"
           >
             <FaLaptopCode size={44} className="text-secondary-content" />
 
