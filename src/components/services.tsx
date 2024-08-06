@@ -1,12 +1,13 @@
 import { MdOutlineDesignServices, MdTipsAndUpdates } from "react-icons/md";
 import { FaLaptopCode } from "react-icons/fa";
+import { THEME } from "@/consts";
 
 export default function Services() {
   return (
     <section
       id="services"
       className="bg-[#f7f7f7] -mt-32 pb-32"
-      data-theme="light"
+      data-theme={THEME}
     >
       <div className="container mx-auto pt-64 text-center px-5">
         <h2 className="max-w-3xl mx-auto text-3xl sm:text-4xl font-extrabold leading-normal sm:leading-normal tracking-tight mb-6">
@@ -15,7 +16,7 @@ export default function Services() {
 
         <div className="max-w-3xl mx-auto flex flex-col sm:flex-row gap-3 text-left [&>div]:prose [&>div]:py-10 [&>div]:px-6 [&>div]:flex-1 [&>div]:rounded-md [&>div]:shadow-sm">
           <div
-            data-theme="forest"
+            data-theme={THEME}
             className="bg-secondary hover:bg-secondary/50"
           >
             <MdOutlineDesignServices
@@ -30,7 +31,7 @@ export default function Services() {
           </div>
 
           <div
-            data-theme="forest"
+            data-theme={THEME}
             className="bg-secondary/40 hover:bg-secondary/20"
           >
             <FaLaptopCode size={44} className="text-secondary-content" />
@@ -43,7 +44,7 @@ export default function Services() {
           </div>
 
           <div
-            data-theme="forest"
+            data-theme={THEME}
             className="bg-secondary hover:bg-secondary/50"
           >
             <MdTipsAndUpdates size={44} className="text-secondary-content" />

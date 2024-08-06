@@ -17,14 +17,14 @@ export default function Hero() {
           className="max-md:hidden absolute -top-20 -right-3/4 text-secondary/15 rotate-12"
         />
 
-        <Slide direction="up">
+        <Slide direction="up" triggerOnce>
           <h1 className="text-4xl sm:text-5xl leading-normal sm:leading-normal tracking-tight mb-4">
             Somos uma agência digital, que cria experiências online
             impressionantes e envolventes
           </h1>
         </Slide>
 
-        <Fade direction="up" delay={500}>
+        <Fade direction="up" delay={500} triggerOnce>
           <p className="max-w-xl mx-auto text-base sm:text-lg font-medium leading-loose text-base-content/80">
             Nós nos concentramos nas melhores práticas para soluções e serviços
             de design e desenvolvimento de sites e aplicativos.

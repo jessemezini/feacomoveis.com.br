@@ -3,6 +3,7 @@ import { Manrope } from "next/font/google";
 import "./globals.css";
 import NavBar from "@/components/navbar";
 import Footer from "@/components/footer";
+import { THEME } from "@/consts";
 
 const font = Manrope({
   weight: ["800", "600", "500", "400", "300"],
@@ -20,7 +21,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="pt-BR" data-theme="forest">
+    <html lang="pt-BR" data-theme={THEME}>
       <body className={font.className}>
         <NavBar />
         {children}
