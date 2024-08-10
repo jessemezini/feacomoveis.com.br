@@ -1,31 +1,20 @@
 "use client";
 import Image from "next/image";
 import { Fade, Slide } from "react-awesome-reveal";
-import { IoCodeOutline, IoCodeSlashOutline } from "react-icons/io5";
 
 export default function Hero() {
   return (
     <div className="overflow-x-hidden">
-      <section className="container mx-auto max-w-3xl mt-16 text-center px-5 relative">
-        <IoCodeOutline
-          size={600}
-          className="max-md:hidden absolute -top-20 -left-3/4 text-secondary/15 -rotate-12"
-        />
-
-        <IoCodeSlashOutline
-          size={600}
-          className="max-md:hidden absolute -top-20 -right-3/4 text-secondary/15 rotate-12"
-        />
-
+      <section className="container mx-auto max-w-3xl lg:max-w-4xl mt-8 sm:mt-16 text-center px-5 relative">
         <Slide direction="up" triggerOnce>
-          <h1 className="text-4xl sm:text-5xl leading-normal sm:leading-normal tracking-tight mb-4">
+          <h1 className="text-2xl leading-normal sm:text-4xl sm:leading-normal md:text-5xl md:leading-normal tracking-tight mb-4">
             Somos uma agência digital, que cria experiências online
             impressionantes e envolventes
           </h1>
         </Slide>
 
         <Fade direction="up" delay={500} triggerOnce>
-          <p className="max-w-xl mx-auto text-base sm:text-lg font-medium leading-loose text-base-content/80">
+          <p className="max-w-2xl mx-auto text-base sm:text-lg font-medium leading-loose text-base-content/70">
             Nós nos concentramos nas melhores práticas para soluções e serviços
             de design e desenvolvimento de sites e aplicativos.
           </p>

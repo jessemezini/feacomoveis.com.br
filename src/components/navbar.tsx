@@ -6,12 +6,12 @@ export default function NavBar() {
   return (
     <div className="md:max-w-screen-md mx-auto md:shadow-sm mt-5 md:rounded-lg">
       <div className="navbar">
-        <div className="navbar-start">
+        <div className="navbar-start max-lg:w-3/4">
           <div className="dropdown">
             <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
-                className="h-5 w-5"
+                className="h-6 w-6"
                 fill="none"
                 viewBox="0 0 24 24"
                 stroke="currentColor"
@@ -52,7 +52,10 @@ export default function NavBar() {
         <div className="navbar-center hidden lg:flex">
           <ul className="menu menu-horizontal px-1 text-base font-normal">
             <li>
-              <Link href="/" className="hover:bg-base-100 hover:text-primary">
+              <Link
+                href="/"
+                className="active:bg-base-100 hover:bg-base-100 hover:text-primary"
+              >
                 Início
               </Link>
             </li>
@@ -79,7 +82,7 @@ export default function NavBar() {
             href="https://wa.me/5519983373120"
             className="btn btn-primary text-primary-content"
           >
-            <span className="max-[340px]:hidden">WhatsApp</span>{" "}
+            <span className="max-[375px]:hidden">Contato</span>{" "}
             <FaWhatsapp size="1.25rem" />
           </a>
         </div>
