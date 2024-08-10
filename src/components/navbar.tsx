@@ -4,7 +4,7 @@ import { FaWhatsapp } from "react-icons/fa";
 
 export default function NavBar() {
   return (
-    <div className="md:max-w-screen-md mx-auto md:shadow-md mt-5 md:rounded-lg">
+    <div className="md:max-w-screen-md mx-auto md:shadow-sm mt-5 md:rounded-lg">
       <div className="navbar">
         <div className="navbar-start">
           <div className="dropdown">
@@ -29,13 +29,13 @@ export default function NavBar() {
               className="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow text-base font-normal"
             >
               <li>
-                <a href="/">Início</a>
+                <Link href="/">Início</Link>
               </li>
               <li>
-                <a href="#services">Serviços</a>
+                <Link href="#services">Serviços</Link>
               </li>
               <li>
-                <a href="#contact">Contato</a>
+                <Link href="#contact">Contato</Link>
               </li>
             </ul>
           </div>
@@ -52,13 +52,25 @@ export default function NavBar() {
         <div className="navbar-center hidden lg:flex">
           <ul className="menu menu-horizontal px-1 text-base font-normal">
             <li>
-              <Link href="/">Início</Link>
+              <Link href="/" className="hover:bg-base-100 hover:text-primary">
+                Início
+              </Link>
             </li>
             <li>
-              <a href="#services">Serviços</a>
+              <Link
+                href="#services"
+                className="hover:bg-base-100 hover:text-primary"
+              >
+                Serviços
+              </Link>
             </li>
             <li>
-              <a href="#contact">Contato</a>
+              <Link
+                href="#contact"
+                className="hover:bg-base-100 hover:text-primary"
+              >
+                Contato
+              </Link>
             </li>
           </ul>
         </div>
