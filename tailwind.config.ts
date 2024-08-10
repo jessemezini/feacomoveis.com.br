@@ -20,14 +20,16 @@ const config: Config = {
   plugins: [require("@tailwindcss/typography"), require("daisyui")],
   daisyui: {
     themes: [
-      "dim",
       {
         light: {
           ...require("daisyui/src/theming/themes")["light"],
-          primary: "#6C63FF",
+          primary: "#2c6fee",
           "primary-content": "#ffffff",
-          secondary: "#36344F",
-          "secondary-content": "#ffffff",
+          secondary: "#ff996c",
+          "secondary-content": "#0f2137",
+          accent: "#f7d177",
+          "accent-content": "#0f2137",
+          "base-content": "#0f2137",
         },
       },
     ],
