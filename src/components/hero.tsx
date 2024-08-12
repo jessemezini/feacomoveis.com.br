@@ -22,11 +22,11 @@ export default function Hero() {
 
         <Fade delay={750} duration={1000} triggerOnce>
           <Image
-            src="/undraw2.svg"
+            src="/hero-mockup.png"
             alt="MZN App Lab"
-            width={768}
-            height={768}
-            className="mx-auto mt-8 rounded-2xl"
+            width={446}
+            height={521}
+            className="mx-auto mt-8"
             quality={100}
           />
         </Fade>

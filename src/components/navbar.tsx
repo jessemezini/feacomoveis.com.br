@@ -4,8 +4,8 @@ import { FaWhatsapp } from "react-icons/fa";
 
 export default function NavBar() {
   return (
-    <div className="md:max-w-screen-md mx-auto md:shadow-sm mt-5 md:rounded-lg">
-      <div className="navbar">
+    <div className="container max-w-screen-xl mx-auto  mt-5 md:rounded-lg">
+      <div className="navbar md:shadow-sm">
         <div className="navbar-start max-lg:w-3/4">
           <div className="dropdown">
             <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
