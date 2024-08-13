@@ -12,7 +12,6 @@ export default function Testimonials() {
       </h2>
       <div className="container mx-auto">
         <Swiper
-          className="[&>.swiper-pagination-bullet-active]:bg-slate-300"
           slidesPerView={1}
           spaceBetween={40}
           pagination={{
