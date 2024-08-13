@@ -7,7 +7,7 @@ export default function Clients() {
         Alguns de nossos clientes
       </h2>
       <section className="container max-w-screen-lg mx-auto flex flex-wrap justify-center gap-7">
-        <div className="bg-gray-100 shadow-sm rounded-3xl w-28 h-28 p-3 flex justify-center items-center">
+        <div className="bg-base-200/50 shadow-sm rounded-3xl w-28 h-28 p-3 flex justify-center items-center">
           <Image
             src="/clients/prefeitura-iracemapolis.webp"
             alt="Prefeitura de Iracemapolis"
@@ -16,10 +16,10 @@ export default function Clients() {
             quality={100}
           />
         </div>
-        <div className="bg-gray-100 shadow-sm rounded-3xl w-28 h-28 p-3 flex justify-center items-center">
+        <div className="bg-base-200/50 shadow-sm rounded-3xl w-28 h-28 p-3 flex justify-center items-center">
           <Image
             src="/clients/gazeta-de-iracemapolis.webp"
-            alt="Prefeitura de Iracemapolis"
+            alt="Gazeta de Iracemapolis"
             width={72}
             height={72}
             quality={100}
@@ -28,25 +28,25 @@ export default function Clients() {
         <div className="bg-gray-700 shadow-sm rounded-3xl w-28 h-28 p-3 flex justify-center items-center">
           <Image
             src="/clients/medite-em-casa.webp"
-            alt="Prefeitura de Iracemapolis"
+            alt="App Medite em Casa"
             width={60}
             height={60}
             quality={100}
           />
         </div>
-        <div className="bg-gray-100 shadow-sm rounded-3xl w-28 h-28 p-3 flex justify-center items-center">
+        <div className="bg-base-200/50 shadow-sm rounded-3xl w-28 h-28 p-3 flex justify-center items-center">
           <Image
             src="/clients/praticar-italiano.webp"
-            alt="Prefeitura de Iracemapolis"
+            alt="Blog Praticar Italiano"
             width={72}
             height={72}
             quality={100}
           />
         </div>
-        <div className="bg-gray-100 shadow-sm rounded-3xl w-28 h-28 p-3 flex justify-center items-center">
+        <div className="bg-base-200/50 shadow-sm rounded-3xl w-28 h-28 p-3 flex justify-center items-center">
           <Image
             src="/clients/emporio-da-terra.webp"
-            alt="Prefeitura de Iracemapolis"
+            alt="Empório da Terra"
             width={72}
             height={72}
             quality={100}
@@ -55,16 +55,16 @@ export default function Clients() {
         <div className="bg-gray-700  rounded-3xl w-28 h-28 p-3 flex justify-center items-center">
           <Image
             src="/clients/j3a-metais.webp"
-            alt="Prefeitura de Iracemapolis"
+            alt="J3A Metais"
             width={72}
             height={72}
             quality={100}
           />
         </div>
-        <div className="bg-gray-100 shadow-sm rounded-3xl w-28 h-28 p-3 flex justify-center items-center">
+        <div className="bg-base-200/50 shadow-sm rounded-3xl w-28 h-28 p-3 flex justify-center items-center">
           <Image
             src="/clients/dueamici.webp"
-            alt="Prefeitura de Iracemapolis"
+            alt="Pizzaria Due Amici"
             width={72}
             height={72}
             quality={100}
@@ -73,16 +73,16 @@ export default function Clients() {
         <div className="bg-gray-700 shadow-sm rounded-3xl w-28 h-28 p-3 flex justify-center items-center">
           <Image
             src="/clients/dangelo-corretor.webp"
-            alt="Prefeitura de Iracemapolis"
+            alt="Dangelo Corretor"
             width={72}
             height={72}
             quality={100}
           />
         </div>
-        <div className="bg-gray-100 shadow-sm rounded-3xl w-28 h-28 p-3 flex justify-center items-center">
+        <div className="bg-base-200/50 shadow-sm rounded-3xl w-28 h-28 p-3 flex justify-center items-center">
           <Image
             src="/clients/conveniencia-uniao.webp"
-            alt="Prefeitura de Iracemapolis"
+            alt="Conveniência União"
             width={52}
             height={52}
             quality={100}
@@ -91,25 +91,25 @@ export default function Clients() {
         <div className="bg-gray-700 shadow-sm rounded-3xl w-28 h-28 p-3 flex justify-center items-center">
           <Image
             src="/clients/conectimme.webp"
-            alt="Prefeitura de Iracemapolis"
+            alt="Conectimme"
             width={72}
             height={72}
             quality={100}
           />
         </div>
-        <div className="bg-gray-100 shadow-sm rounded-3xl w-28 h-28 p-3 flex justify-center items-center">
+        <div className="bg-base-200/50 shadow-sm rounded-3xl w-28 h-28 p-3 flex justify-center items-center">
           <Image
             src="/clients/castelli.webp"
-            alt="Prefeitura de Iracemapolis"
+            alt="Pizzaria Castelli"
             width={72}
             height={72}
             quality={100}
           />
         </div>
-        <div className="bg-gray-100 shadow-sm rounded-3xl w-28 h-28 p-3 flex justify-center items-center">
+        <div className="bg-base-200/50 shadow-sm rounded-3xl w-28 h-28 p-3 flex justify-center items-center">
           <Image
             src="/clients/onibus-iracemapolis.webp"
-            alt="Prefeitura de Iracemapolis"
+            alt="App Ônibus Iracemápolis"
             width={72}
             height={72}
             quality={100}
