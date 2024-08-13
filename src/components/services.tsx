@@ -4,11 +4,7 @@ import { THEME } from "@/consts";
 
 export default function Services() {
   return (
-    <section
-      id="services"
-      className="bg-base-200/30 -mt-32 pb-32"
-      data-theme={THEME}
-    >
+    <section id="services" data-theme={THEME}>
       <div className="container mx-auto pt-64 text-center px-5">
         <h2 className="max-w-3xl mx-auto text-3xl sm:text-4xl font-extrabold leading-normal sm:leading-normal tracking-tight mb-6">
           Design & desenvolvimento de Sites e Aplicativos
