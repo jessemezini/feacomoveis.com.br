@@ -23,14 +23,12 @@ const data = [
     h: 12,
     img2: "/clients/dangelo-corretor.webp",
     alt2: "Dangelo Corretor",
-    dark2: true,
     w2: 72,
     h2: 41,
   },
   {
     img: "/clients/medite-em-casa.webp",
     alt: "App Medite em Casa",
-    dark: true,
     w: 68,
     h: 72,
     img2: "/clients/conveniencia-uniao.webp",
@@ -45,14 +43,12 @@ const data = [
     h: 37,
     img2: "/clients/conectimme.webp",
     alt2: "Conectimme",
-    dark2: true,
     w2: 72,
     h2: 16,
   },
   {
     img: "/clients/j3a-metais.webp",
     alt: "J3A Metais",
-    dark: true,
     w: 72,
     h: 22,
     img2: "/clients/castelli.webp",
@@ -99,11 +95,7 @@ export default function Clients() {
         {data.map((item, index) => (
           <SwiperSlide key={index}>
             <div className="flex flex-col justify-center items-center gap-y-7">
-              <div
-                className={`${
-                  item.dark ? "bg-slate-700" : "bg-base-200/50"
-                } shadow-sm w-28 h-28 p-3 flex justify-center items-center`}
-              >
+              <div className="bg-base-200/50 shadow-sm w-28 h-28 p-3 flex justify-center items-center grayscale-[50%]">
                 <Image
                   src={item.img}
                   alt={item.alt}
@@ -112,11 +104,7 @@ export default function Clients() {
                   quality={100}
                 />
               </div>
-              <div
-                className={`${
-                  item.dark2 ? "bg-slate-700" : "bg-base-200/50"
-                } shadow-sm w-28 h-28 p-3 flex justify-center items-center`}
-              >
+              <div className="bg-base-200/50 shadow-sm w-28 h-28 p-3 flex justify-center items-center grayscale-[50%]">
                 <Image
                   src={item.img2}
                   alt={item.alt2}
