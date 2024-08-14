@@ -5,6 +5,73 @@ import "swiper/css";
 import "swiper/css/pagination";
 import { Pagination } from "swiper/modules";
 
+const data = [
+  {
+    img: "/clients/prefeitura-iracemapolis.webp",
+    alt: "Prefeitura de Iracemapolis",
+    w: 72,
+    h: 63,
+    img2: "/clients/dueamici.webp",
+    alt2: "Pizzaria Due Amici",
+    w2: 72,
+    h2: 72,
+  },
+  {
+    img: "/clients/gazeta-de-iracemapolis.webp",
+    alt: "Gazeta de Iracemapolis",
+    w: 72,
+    h: 12,
+    img2: "/clients/dangelo-corretor.webp",
+    alt2: "Dangelo Corretor",
+    dark2: true,
+    w2: 72,
+    h2: 41,
+  },
+  {
+    img: "/clients/medite-em-casa.webp",
+    alt: "App Medite em Casa",
+    dark: true,
+    w: 68,
+    h: 72,
+    img2: "/clients/conveniencia-uniao.webp",
+    alt2: "Conveniência União",
+    w2: 43,
+    h2: 72,
+  },
+  {
+    img: "/clients/praticar-italiano.webp",
+    alt: "Blog Praticar Italiano",
+    w: 72,
+    h: 37,
+    img2: "/clients/conectimme.webp",
+    alt2: "Conectimme",
+    dark2: true,
+    w2: 72,
+    h2: 16,
+  },
+  {
+    img: "/clients/j3a-metais.webp",
+    alt: "J3A Metais",
+    dark: true,
+    w: 72,
+    h: 22,
+    img2: "/clients/castelli.webp",
+    alt2: "Pizzaria Castelli",
+    w2: 72,
+    h2: 67,
+  },
+  {
+    img: "/clients/emporio-da-terra.webp",
+    alt: "Empório da Terra",
+    w: 72,
+    h: 47,
+    img2: "/clients/onibus-iracemapolis.webp",
+    alt2: "App Ônibus Iracemápolis",
+    w2: 72,
+    h2: 72,
+  },
+];
+
 export default function Clients() {
   return (
     <section className="container max-w-screen-lg mx-auto my-24">
@@ -29,144 +96,38 @@ export default function Clients() {
           },
         }}
       >
-        <SwiperSlide>
-          <div className="flex flex-col justify-center items-center gap-y-7">
-            <div className="bg-base-200/50 shadow-sm rounded-3xl w-28 h-28 p-3 flex justify-center items-center">
-              <Image
-                src="/clients/prefeitura-iracemapolis.webp"
-                alt="Prefeitura de Iracemapolis"
-                width={72}
-                height={72}
-                quality={100}
-              />
+        {data.map((item, index) => (
+          <SwiperSlide key={index}>
+            <div className="flex flex-col justify-center items-center gap-y-7">
+              <div
+                className={`${
+                  item.dark ? "bg-slate-700" : "bg-base-200/50"
+                } shadow-sm w-28 h-28 p-3 flex justify-center items-center`}
+              >
+                <Image
+                  src={item.img}
+                  alt={item.alt}
+                  width={item.w}
+                  height={item.h}
+                  quality={100}
+                />
+              </div>
+              <div
+                className={`${
+                  item.dark2 ? "bg-slate-700" : "bg-base-200/50"
+                } shadow-sm w-28 h-28 p-3 flex justify-center items-center`}
+              >
+                <Image
+                  src={item.img2}
+                  alt={item.alt2}
+                  width={item.w2}
+                  height={item.h2}
+                  quality={100}
+                />
+              </div>
             </div>
-            <div className="bg-base-200/50 shadow-sm rounded-3xl w-28 h-28 p-3 flex justify-center items-center">
-              <Image
-                src="/clients/dueamici.webp"
-                alt="Pizzaria Due Amici"
-                width={72}
-                height={72}
-                quality={100}
-              />
-            </div>
-          </div>
-        </SwiperSlide>
-
-        <SwiperSlide>
-          <div className="flex flex-col justify-center items-center gap-y-7">
-            <div className="bg-base-200/50 shadow-sm rounded-3xl w-28 h-28 p-3 flex justify-center items-center">
-              <Image
-                src="/clients/gazeta-de-iracemapolis.webp"
-                alt="Gazeta de Iracemapolis"
-                width={72}
-                height={72}
-                quality={100}
-              />
-            </div>
-            <div className="bg-gray-700 shadow-sm rounded-3xl w-28 h-28 p-3 flex justify-center items-center">
-              <Image
-                src="/clients/dangelo-corretor.webp"
-                alt="Dangelo Corretor"
-                width={72}
-                height={72}
-                quality={100}
-              />
-            </div>
-          </div>
-        </SwiperSlide>
-
-        <SwiperSlide>
-          <div className="flex flex-col justify-center items-center gap-y-7">
-            <div className="bg-gray-700 shadow-sm rounded-3xl w-28 h-28 p-3 flex justify-center items-center">
-              <Image
-                src="/clients/medite-em-casa.webp"
-                alt="App Medite em Casa"
-                width={60}
-                height={60}
-                quality={100}
-              />
-            </div>
-            <div className="bg-base-200/50 shadow-sm rounded-3xl w-28 h-28 p-3 flex justify-center items-center">
-              <Image
-                src="/clients/conveniencia-uniao.webp"
-                alt="Conveniência União"
-                width={52}
-                height={52}
-                quality={100}
-              />
-            </div>
-          </div>
-        </SwiperSlide>
-
-        <SwiperSlide>
-          <div className="flex flex-col justify-center items-center gap-y-7">
-            <div className="bg-base-200/50 shadow-sm rounded-3xl w-28 h-28 p-3 flex justify-center items-center">
-              <Image
-                src="/clients/praticar-italiano.webp"
-                alt="Blog Praticar Italiano"
-                width={72}
-                height={72}
-                quality={100}
-              />
-            </div>
-            <div className="bg-gray-700 shadow-sm rounded-3xl w-28 h-28 p-3 flex justify-center items-center">
-              <Image
-                src="/clients/conectimme.webp"
-                alt="Conectimme"
-                width={72}
-                height={72}
-                quality={100}
-              />
-            </div>
-          </div>
-        </SwiperSlide>
-
-        <SwiperSlide>
-          <div className="flex flex-col justify-center items-center gap-y-7">
-            <div className="bg-base-200/50 shadow-sm rounded-3xl w-28 h-28 p-3 flex justify-center items-center">
-              <Image
-                src="/clients/emporio-da-terra.webp"
-                alt="Empório da Terra"
-                width={72}
-                height={72}
-                quality={100}
-              />
-            </div>
-            <div className="bg-base-200/50 shadow-sm rounded-3xl w-28 h-28 p-3 flex justify-center items-center">
-              <Image
-                src="/clients/castelli.webp"
-                alt="Pizzaria Castelli"
-                width={72}
-                height={72}
-                quality={100}
-              />
-            </div>
-          </div>
-        </SwiperSlide>
-
-        <SwiperSlide>
-          <div className="flex flex-col justify-center items-center gap-y-7">
-            <div className="bg-gray-700  rounded-3xl w-28 h-28 p-3 flex justify-center items-center">
-              <Image
-                src="/clients/j3a-metais.webp"
-                alt="J3A Metais"
-                width={72}
-                height={72}
-                quality={100}
-              />
-            </div>
-
-            <div className="bg-base-200/50 shadow-sm rounded-3xl w-28 h-28 p-3 flex justify-center items-center">
-              <Image
-                src="/clients/onibus-iracemapolis.webp"
-                alt="App Ônibus Iracemápolis"
-                width={72}
-                height={72}
-                quality={100}
-              />
-            </div>
-          </div>
-        </SwiperSlide>
+          </SwiperSlide>
+        ))}
       </Swiper>
     </section>
   );
