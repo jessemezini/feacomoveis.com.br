@@ -11,18 +11,18 @@ export default function Services() {
     >
       <div className="container mx-auto my-10 text-center px-5">
         <h2 className="text-center text-2xl leading-normal tracking-tight mb-10">
-          Design & desenvolvimento de Sites e Aplicativos
+          Design & Desenvolvimento de Sites e Aplicativos
         </h2>
 
-        <div className="max-w-3xl mx-auto flex flex-col sm:flex-row gap-3 text-left [&>div]:prose [&>div]:py-10 [&>div]:px-6 [&>div]:flex-1 [&>div]:rounded-md [&>div]:shadow-sm">
-          <div
-            data-theme={THEME}
-            className="bg-secondary hover:bg-secondary/50"
-          >
-            <MdOutlineDesignServices
-              size={44}
-              className="text-secondary-content"
-            />
+        <div className="max-w-3xl mx-auto flex flex-col sm:flex-row gap-3 text-left [&>div]:prose [&>div]:py-10 [&>div]:px-6 [&>div]:flex-1">
+          <div className="text-center">
+            <div className="bg-secondary/70 rounded-full mx-auto relative w-14 h-14">
+              <MdOutlineDesignServices
+                size={60}
+                className="text-secondary-content absolute -right-4 -bottom-4"
+              />
+            </div>
+
             <h3 className="!text-secondary-content">Design</h3>
             <p className="font-light text-secondary-content">
               Transformamos suas ideias em designs visualmente atraentes e
@@ -30,11 +30,13 @@ export default function Services() {
             </p>
           </div>
 
-          <div
-            data-theme={THEME}
-            className="bg-secondary/70 hover:bg-secondary/50"
-          >
-            <FaLaptopCode size={44} className="text-secondary-content" />
+          <div className="text-center">
+            <div className="bg-secondary/70 rounded-full mx-auto relative w-14 h-14">
+              <FaLaptopCode
+                size={60}
+                className="text-secondary-content absolute -right-4 -bottom-4"
+              />
+            </div>
 
             <h3 className="!text-secondary-content">Desenvolvimento</h3>
             <p className="font-light text-secondary-content">
@@ -43,11 +45,14 @@ export default function Services() {
             </p>
           </div>
 
-          <div
-            data-theme={THEME}
-            className="bg-secondary hover:bg-secondary/50"
-          >
-            <MdTipsAndUpdates size={44} className="text-secondary-content" />
+          <div className="text-center">
+            <div className="bg-secondary/70 rounded-full mx-auto relative w-14 h-14">
+              <MdTipsAndUpdates
+                size={60}
+                className="text-secondary-content absolute -right-4 -bottom-4"
+              />
+            </div>
+
             <h3 className="!text-secondary-content">Manutenção</h3>
             <p className="font-light text-secondary-content">
               Garantimos que seu site ou aplicativo esteja sempre atualizado e
