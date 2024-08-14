@@ -1,6 +1,7 @@
 import { MdOutlineDesignServices, MdTipsAndUpdates } from "react-icons/md";
 import { FaLaptopCode } from "react-icons/fa";
 import { THEME } from "@/consts";
+import CountUpStats from "./countup-stats";
 
 export default function Services() {
   return (
@@ -60,6 +61,8 @@ export default function Services() {
             </p>
           </div>
         </div>
+
+        <CountUpStats />
       </div>
     </section>
   );
