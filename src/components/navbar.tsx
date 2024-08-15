@@ -52,17 +52,14 @@ export default function NavBar() {
         <div className="navbar-center hidden lg:flex">
           <ul className="menu menu-horizontal px-1 text-base font-normal">
             <li>
-              <Link
-                href="/"
-                className="active:bg-base-100 hover:bg-base-100 hover:text-primary"
-              >
+              <Link href="/" className="hover:bg-base-100 hover:text-secondary">
                 Início
               </Link>
             </li>
             <li>
               <Link
                 href="#services"
-                className="hover:bg-base-100 hover:text-primary"
+                className="hover:bg-base-100 hover:text-secondary"
               >
                 Serviços
               </Link>
@@ -70,7 +67,7 @@ export default function NavBar() {
             <li>
               <Link
                 href="#contact"
-                className="hover:bg-base-100 hover:text-primary"
+                className="hover:bg-base-100 hover:text-secondary"
               >
                 Contato
               </Link>

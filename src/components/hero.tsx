@@ -8,8 +8,8 @@ export default function Hero() {
       <section className="container mx-auto max-w-3xl lg:max-w-4xl mt-8 sm:mt-16 text-center px-5 relative">
         <Slide direction="up" triggerOnce>
           <h1 className="text-2xl leading-normal sm:text-4xl sm:leading-normal md:text-5xl md:leading-normal tracking-tight mb-4">
-            Somos uma agência digital, que cria experiências online
-            impressionantes e envolventes
+            Somos uma agência digital <br />
+            que cria experiências online impressionantes e envolventes
           </h1>
         </Slide>
 
