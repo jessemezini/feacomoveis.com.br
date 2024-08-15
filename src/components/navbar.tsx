@@ -42,7 +42,7 @@ export default function NavBar() {
           <Link href="/">
             <Image
               src="/logo-horizontal.png"
-              alt="MZN App Lab"
+              alt="MZN Digital"
               width={150}
               height={50.69}
               priority

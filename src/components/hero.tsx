@@ -23,7 +23,7 @@ export default function Hero() {
         <Fade delay={750} duration={1000} triggerOnce>
           <Image
             src="/hero-mockup.png"
-            alt="MZN App Lab"
+            alt="MZN Digital"
             width={446}
             height={521}
             className="mx-auto mt-8"

@@ -6,12 +6,12 @@ import Footer from "@/components/footer";
 import { THEME } from "@/consts";
 
 const font = Manrope({
-  weight: ["800", "600", "500", "400", "300"],
+  weight: ["600", "500", "400", "300"],
   subsets: ["latin"],
 });
 
 export const metadata: Metadata = {
-  title: "MZN App Lab",
+  title: "MZN Digital",
   description: "Agência de design e desenvolvimento de Sites e Aplicativos",
 };
 
