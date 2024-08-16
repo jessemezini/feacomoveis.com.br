@@ -64,7 +64,7 @@ export default function Testimonials() {
         >
           {data.map((item, index) => (
             <SwiperSlide key={index}>
-              <div className="bg-base-200/50 p-9 prose">
+              <div className="bg-gradient-to-br from-base-200 to-base-200/10 shadow-sm p-9 prose rounded-lg">
                 <blockquote>{item.text}</blockquote>
                 <div className="mt-5">
                   <h4>{item.name}</h4>

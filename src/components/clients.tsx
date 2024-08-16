@@ -95,7 +95,7 @@ export default function Clients() {
         {data.map((item, index) => (
           <SwiperSlide key={index}>
             <div className="flex flex-col justify-center items-center gap-y-7">
-              <div className="bg-base-200/50 shadow-sm w-28 h-28 p-3 flex justify-center items-center grayscale-[50%]">
+              <div className="bg-gradient-to-br from-base-200 to-base-200/10 shadow-sm w-28 h-28 p-3 rounded-lg flex justify-center items-center grayscale-[60%]">
                 <Image
                   src={item.img}
                   alt={item.alt}
@@ -104,7 +104,7 @@ export default function Clients() {
                   quality={100}
                 />
               </div>
-              <div className="bg-base-200/50 shadow-sm w-28 h-28 p-3 flex justify-center items-center grayscale-[50%]">
+              <div className="bg-gradient-to-br from-base-200 to-base-200/10 shadow-sm w-28 h-28 p-3 rounded-lg flex justify-center items-center grayscale-[60%]">
                 <Image
                   src={item.img2}
                   alt={item.alt2}

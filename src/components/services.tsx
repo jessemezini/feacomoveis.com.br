@@ -8,7 +8,7 @@ export default function Services() {
     <section
       id="services"
       data-theme={THEME}
-      className="bg-base-200/50 -mt-32 pt-44 pb-20"
+      className="bg-gradient-to-br from-secondary to-secondary/10 -mt-32 pt-44 pb-20"
     >
       <div className="container mx-auto my-10 text-center px-5">
         <h2 className="text-center text-2xl leading-normal tracking-tight mb-10">
@@ -17,7 +17,7 @@ export default function Services() {
 
         <div className="max-w-3xl mx-auto flex flex-col sm:flex-row gap-3 text-left [&>div]:prose [&>div]:py-10 [&>div]:px-6 [&>div]:flex-1">
           <div className="text-center">
-            <div className="bg-secondary/70 rounded-full mx-auto relative w-14 h-14">
+            <div className="bg-accent/70 rounded-full mx-auto relative w-14 h-14">
               <MdOutlineDesignServices
                 size={60}
                 className="text-secondary-content absolute -right-4 -bottom-4"
@@ -32,7 +32,7 @@ export default function Services() {
           </div>
 
           <div className="text-center">
-            <div className="bg-secondary/70 rounded-full mx-auto relative w-14 h-14">
+            <div className="bg-accent/70 rounded-full mx-auto relative w-14 h-14">
               <FaLaptopCode
                 size={60}
                 className="text-secondary-content absolute -right-4 -bottom-4"
@@ -47,7 +47,7 @@ export default function Services() {
           </div>
 
           <div className="text-center">
-            <div className="bg-secondary/70 rounded-full mx-auto relative w-14 h-14">
+            <div className="bg-accent/70 rounded-full mx-auto relative w-14 h-14">
               <MdTipsAndUpdates
                 size={60}
                 className="text-secondary-content absolute -right-4 -bottom-4"
