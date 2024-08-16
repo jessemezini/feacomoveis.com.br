@@ -29,7 +29,7 @@ const config: Config = {
           "primary-content": "#fafbf5",
           secondary: "#258EA6",
           "secondary-content": "#0f2137",
-          accent: "#A0ECD0",
+          accent: "#f4f2ec",
           "accent-content": "#0f2137",
           // "--rounded-btn": "0",
         },

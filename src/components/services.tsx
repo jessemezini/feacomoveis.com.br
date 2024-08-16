@@ -17,7 +17,7 @@ export default function Services() {
 
         <div className="max-w-3xl mx-auto flex flex-col sm:flex-row gap-3 text-left [&>div]:prose [&>div]:py-10 [&>div]:px-6 [&>div]:flex-1">
           <div className="text-center">
-            <div className="bg-accent/70 rounded-full mx-auto relative w-14 h-14">
+            <div className="bg-accent rounded-full mx-auto relative w-14 h-14">
               <MdOutlineDesignServices
                 size={60}
                 className="text-secondary-content absolute -right-4 -bottom-4"
@@ -32,7 +32,7 @@ export default function Services() {
           </div>
 
           <div className="text-center">
-            <div className="bg-accent/70 rounded-full mx-auto relative w-14 h-14">
+            <div className="bg-accent rounded-full mx-auto relative w-14 h-14">
               <FaLaptopCode
                 size={60}
                 className="text-secondary-content absolute -right-4 -bottom-4"
@@ -47,7 +47,7 @@ export default function Services() {
           </div>
 
           <div className="text-center">
-            <div className="bg-accent/70 rounded-full mx-auto relative w-14 h-14">
+            <div className="bg-accent rounded-full mx-auto relative w-14 h-14">
               <MdTipsAndUpdates
                 size={60}
                 className="text-secondary-content absolute -right-4 -bottom-4"
