@@ -6,5 +6,6 @@ import partytown from "@astrojs/partytown";
 
 // https://astro.build/config
 export default defineConfig({
-  integrations: [tailwind(), icon(), partytown()]
+  site: "https://mzndigital.com",
+  integrations: [tailwind(), icon(), partytown()],
 });
