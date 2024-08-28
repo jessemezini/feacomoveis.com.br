@@ -6,11 +6,11 @@ const { title, description } = Astro.props;
 ---
 
 <!doctype html>
-<html lang="pt-BR">
+<html lang="pt-BR" class="bg-primary">
 	<head>
 		<BaseHead title={title} description={description} />
 	</head>
-	<body>
+	<body class="container mx-auto">
 		<Header />
 		<slot />
 	</body>
