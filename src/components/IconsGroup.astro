@@ -1,0 +1,15 @@
+---
+import { Icon } from "astro-icon/components";
+
+const { isNavbar } = Astro.props;
+---
+
+<a class:list={["btn btn-circle", { "max-[360px]:btn-sm": isNavbar }]}
+  ><Icon name="bxl:youtube" size={26} /></a
+>
+<a class:list={["btn btn-circle", { "max-[360px]:btn-sm": isNavbar }]}
+  ><Icon name="bxl:tiktok" size={26} /></a
+>
+<a class:list={["btn btn-circle", { "max-[360px]:btn-sm": isNavbar }]}
+  ><Icon name="bxl:instagram" size={26} /></a
+>
