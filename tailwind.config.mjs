@@ -1,7 +1,5 @@
 import defaultTheme from "tailwindcss/defaultTheme";
 
-const colors = require("tailwindcss/colors");
-
 /** @type {import('tailwindcss').Config} */
 export default {
   content: ["./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}"],
@@ -18,10 +16,10 @@ export default {
       {
         dark: {
           ...require("daisyui/src/theming/themes")["dark"],
-          "base-100": colors.gray[100],
-          "base-200": colors.gray[200],
-          "base-300": colors.gray[300],
-          "base-content": colors.gray[800],
+          "base-100": "#110D0E",
+          "base-200": "#292526",
+          "base-300": "#413d3e",
+          "base-content": "#F0F7FE",
           primary: "#110D0E",
           "primary-content": "#F0F7FE",
           secondary: "#258EA6",
