@@ -20,8 +20,8 @@ import IconsGroup from "./IconsGroup.astro";
   activeClass="bg-base-100 border-base-300 py-4 backdrop-blur-sm"
 >
   <header class="lg:flex container mx-auto items-center">
-    <Astronav>
-      <div class="flex justify-between w-full">
+    <Astronav closeOnClick>
+      <div class="flex justify-between items-center w-full">
         <a href="/"
           ><img
             src="/logo.png"
@@ -31,12 +31,12 @@ import IconsGroup from "./IconsGroup.astro";
           /></a
         >
         <div class="block lg:hidden">
-          <MenuIcon class="w-4 h-4 text-gray-800" />
+          <MenuIcon class="w-7 h-7 text-base-content" />
         </div>
       </div>
       <MenuItems class="hidden lg:flex w-full">
         <ul class="flex flex-col lg:flex-row lg:gap-2">
-          <li><HeaderLink dropdownHref="/">Ínicio</HeaderLink></li>
+          <li><HeaderLink href="/">Ínicio</HeaderLink></li>
           <li>
             <Dropdown class="group">
               <button class="flex items-center">
@@ -61,16 +61,25 @@ import IconsGroup from "./IconsGroup.astro";
                 <div class="absolute top-0 p-2 bg-base-200 rounded-md">
                   <ul class="w-52">
                     <li>
-                      <HeaderLink href="/" class="btn-sm w-full justify-start"
-                        >Design Gráfico</HeaderLink>
+                      <HeaderLink
+                        href="#hero"
+                        class="btn-sm w-full justify-start"
+                        >Design Gráfico</HeaderLink
+                      >
                     </li>
                     <li>
-                      <HeaderLink href="/" class="btn-sm w-full justify-start"
-                        >Portfolio</HeaderLink>
+                      <HeaderLink
+                        href="#servicos"
+                        class="btn-sm w-full justify-start"
+                        >Portfolio</HeaderLink
+                      >
                     </li>
                     <li>
-                      <HeaderLink href="/" class="btn-sm w-full justify-start"
-                        >Casos de Sucesso</HeaderLink>
+                      <HeaderLink
+                        href="#contato"
+                        class="btn-sm w-full justify-start"
+                        >Casos de Sucesso</HeaderLink
+                      >
                     </li>
                   </ul>
                 </div>
@@ -79,8 +88,11 @@ import IconsGroup from "./IconsGroup.astro";
           </li>
           <li><HeaderLink href="#contato">Contato</HeaderLink></li>
         </ul>
+        <div class="block lg:hidden gap-0.5">
+          <IconsGroup isNavbar={true} />
+        </div>
       </MenuItems>
-      <div class="flex gap-0.5">
+      <div class="hidden lg:flex gap-0.5">
         <IconsGroup isNavbar={true} />
       </div>
     </Astronav>
