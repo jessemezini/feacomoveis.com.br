@@ -1,12 +1,16 @@
 ---
-import { Astronav, MenuItems, MenuIcon, Dropdown, DropdownItems, DropdownSubmenu } from "astro-navbar";
+import { Astronav, MenuItems, MenuIcon, Dropdown, DropdownItems, StickyHeader } from "astro-navbar";
 
 import HeaderLink from "./HeaderLink.astro";
 import { SITE_TITLE } from "../consts";
 import IconsGroup from "./IconsGroup.astro";
 ---
-
-<header class="lg:flex container mx-auto py-5 items-center">
+<StickyHeader
+  class="sticky top-0 border-b z-20 transition-all"
+  scrollY={50}
+  defaultClass="bg-base-100 border-base-300 py-5"
+  activeClass="bg-base-100 border-base-300 py-4 backdrop-blur-sm">
+<header class="lg:flex container mx-auto  items-center">
   <Astronav>
     <div class="flex justify-between w-full">
       <a href="/"
@@ -57,3 +61,4 @@ import IconsGroup from "./IconsGroup.astro";
     </div>
   </Astronav>
 </header>
+</StickyHeader>
