@@ -14,11 +14,19 @@ const isDropDownActive =
   dropdownHref === pathname || dropdownHref === "/" + subpath?.[0];
 ---
 
-<a
-  href={href}
-  class:list={[className]}
-  class={`${isActive || isDropDownActive ? "bg-base-200" : ""} btn btn-ghost`}
-  {...props}
->
-  <slot />
-</a>
+{
+  isDropDownActive ? (
+    <p class="bg-base-200 btn btn-ghost">
+      <slot />
+    </p>
+  ) : (
+    <a
+      href={href}
+      class:list={[className]}
+      class={`${isActive ? "bg-base-200" : ""} btn btn-ghost`}
+      {...props}
+    >
+      <slot />
+    </a>
+  )
+}
