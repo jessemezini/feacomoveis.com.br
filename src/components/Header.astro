@@ -19,7 +19,7 @@ import IconsGroup from "./IconsGroup.astro";
   defaultClass="bg-base-100 border-base-300 py-5"
   activeClass="bg-base-100 border-base-300 py-4 backdrop-blur-sm"
 >
-  <header class="lg:flex container mx-auto items-center">
+  <header id="header" class="lg:flex container mx-auto items-center">
     <Astronav closeOnClick>
       <div class="flex justify-between items-center w-full">
         <a href="/"
@@ -36,11 +36,11 @@ import IconsGroup from "./IconsGroup.astro";
       </div>
       <MenuItems class="hidden lg:flex w-full">
         <ul class="flex flex-col lg:flex-row lg:gap-2">
-          <li><HeaderLink href="/">Ínicio</HeaderLink></li>
+          <li><HeaderLink href="#hero">Ínicio</HeaderLink></li>
           <li>
             <Dropdown class="group">
               <button class="flex items-center">
-                <HeaderLink dropdownHref="/">
+                <HeaderLink dropdownHref="#servicos">
                   <span class="mr-1">Serviços</span>
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -62,21 +62,21 @@ import IconsGroup from "./IconsGroup.astro";
                   <ul class="w-52">
                     <li>
                       <HeaderLink
-                        href="#hero"
+                        href="#servicos1"
                         class="btn-sm w-full justify-start"
                         >Design Gráfico</HeaderLink
                       >
                     </li>
                     <li>
                       <HeaderLink
-                        href="#servicos"
+                        href="#servicos2"
                         class="btn-sm w-full justify-start"
                         >Portfolio</HeaderLink
                       >
                     </li>
                     <li>
                       <HeaderLink
-                        href="#contato"
+                        href="#servicos3"
                         class="btn-sm w-full justify-start"
                         >Casos de Sucesso</HeaderLink
                       >
@@ -87,6 +87,7 @@ import IconsGroup from "./IconsGroup.astro";
             </Dropdown>
           </li>
           <li><HeaderLink href="#contato">Contato</HeaderLink></li>
+          <li><HeaderLink href="#teste">Teste</HeaderLink></li>
         </ul>
         <div class="block lg:hidden gap-0.5">
           <IconsGroup isNavbar={true} />
@@ -98,3 +99,39 @@ import IconsGroup from "./IconsGroup.astro";
     </Astronav>
   </header>
 </StickyHeader>
+
+<style>
+  .scroll-active {
+    @apply btn-active;
+  }
+</style>
+
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const sections = document.querySelectorAll("section");
+    const navLinks = document.querySelectorAll(".nav-link");
+
+    const observerOptions = {
+      threshold: 0.5,
+    };
+
+    const observerCallback: IntersectionObserverCallback = (entries) => {
+      entries.forEach((entry) => {
+        const id = entry.target.getAttribute("id");
+        const navLink = document.querySelector(`#header a[href="#${id}"]`);
+
+        if (!navLink) return;
+        if (entry.isIntersecting) {
+          navLinks.forEach((link) => link.classList.remove("scroll-active"));
+          navLink.classList.add("scroll-active");
+        }
+      });
+    };
+
+    const observer = new IntersectionObserver(
+      observerCallback,
+      observerOptions
+    );
+    sections.forEach((section) => observer.observe(section));
+  });
+</script>
