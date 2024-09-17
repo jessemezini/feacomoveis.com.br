@@ -1,5 +1,4 @@
 {
-  "name": "",
   "type": "module",
   "version": "0.0.1",
   "scripts": {
@@ -25,5 +24,6 @@
     "daisyui": "^4.12.10",
     "prettier": "^3.3.3",
     "prettier-plugin-astro": "^0.14.1"
-  }
+  },
+  "packageManager": "yarn@4.5.0"
 }
