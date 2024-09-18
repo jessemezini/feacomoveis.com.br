@@ -2,12 +2,19 @@
 
 ---
 
-<section id="hero" class="flex container mx-auto items-center justify-between">
+<section
+  id="hero"
+  class="flex flex-col md:flex-row container mx-auto items-center justify-between relative z-10"
+>
   <div>
     <h1>JL</h1>
   </div>
 
-  <div class="w-[50vw] h-[50vw] borders rounded-[50%]"></div>
+  <div
+    class="w-[60vw] h-[60vw] max-[425px]:w-[80vw] max-[425px]:h-[80vw] md:w-[400px] md:h-[400px] lg:w-[460px] lg:h-[460px]"
+  >
+    <div class="w-full h-full borders rounded-[50%]"></div>
+  </div>
 
   <style>
     .borders {
