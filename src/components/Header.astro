@@ -16,8 +16,8 @@ import IconsGroup from "./IconsGroup.astro";
 <StickyHeader
   class="sticky top-0 border-b z-20 transition-all"
   scrollY={50}
-  defaultClass="bg-base-100 border-base-300 py-5"
-  activeClass="bg-base-100 border-base-300 py-2 backdrop-blur-sm"
+  defaultClass="bg-base-100 border-transparent py-5"
+  activeClass="bg-base-100 border-base-200 py-2 backdrop-blur-sm"
 >
   <header id="header" class="lg:flex container mx-auto items-center">
     <Astronav closeOnClick>
@@ -34,7 +34,7 @@ import IconsGroup from "./IconsGroup.astro";
           <MenuIcon class="w-7 h-7 text-base-content" />
         </div>
       </div>
-      <MenuItems class="hidden lg:flex w-full">
+      <MenuItems class="hidden lg:flex w-full justify-end">
         <ul class="flex flex-col lg:flex-row lg:gap-2">
           <li><HeaderLink href="#hero">Início</HeaderLink></li>
           <li>
@@ -91,13 +91,7 @@ import IconsGroup from "./IconsGroup.astro";
           <li><HeaderLink href="#contato">Contato</HeaderLink></li>
           <li><HeaderLink href="#teste">Teste</HeaderLink></li>
         </ul>
-        <div class="block lg:hidden gap-0.5">
-          <IconsGroup isNavbar={true} />
-        </div>
       </MenuItems>
-      <div class="hidden lg:flex gap-0.5">
-        <IconsGroup isNavbar={true} />
-      </div>
     </Astronav>
   </header>
 </StickyHeader>
