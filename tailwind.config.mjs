@@ -15,7 +15,7 @@ export default {
     },
     extend: {
       fontFamily: {
-        sans: ['"Manrope Variable"', ...defaultTheme.fontFamily.sans],
+        sans: ['"Nunito Variable"', ...defaultTheme.fontFamily.sans],
       },
     },
   },
