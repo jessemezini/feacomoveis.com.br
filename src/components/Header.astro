@@ -17,7 +17,7 @@ import IconsGroup from "./IconsGroup.astro";
   class="sticky top-0 border-b z-20 transition-all"
   scrollY={50}
   defaultClass="bg-base-100 border-base-300 py-5"
-  activeClass="bg-base-100 border-base-300 py-4 backdrop-blur-sm"
+  activeClass="bg-base-100 border-base-300 py-2 backdrop-blur-sm"
 >
   <header id="header" class="lg:flex container mx-auto items-center">
     <Astronav closeOnClick>
@@ -26,8 +26,8 @@ import IconsGroup from "./IconsGroup.astro";
           ><img
             src="/logo.png"
             alt={SITE_TITLE}
-            width="142.06px"
-            height="48px"
+            width="187.16px"
+            height="64px"
           /></a
         >
         <div class="block lg:hidden">
@@ -36,10 +36,12 @@ import IconsGroup from "./IconsGroup.astro";
       </div>
       <MenuItems class="hidden lg:flex w-full">
         <ul class="flex flex-col lg:flex-row lg:gap-2">
-          <li><HeaderLink href="#hero">Ínicio</HeaderLink></li>
+          <li><HeaderLink href="#hero">Início</HeaderLink></li>
           <li>
             <Dropdown class="group">
-              <button class="flex items-center btn btn-ghost nav-link">
+              <button
+                class="flex items-center btn btn-ghost text-base hover:bg-transparent hover:text-secondary rounded-none nav-link border-0"
+              >
                 <!-- <HeaderLink dropdownHref="#servicos"> TODO: highlight only when is page products -->
                 <span class="mr-1">Serviços</span>
                 <svg
@@ -59,7 +61,7 @@ import IconsGroup from "./IconsGroup.astro";
               </button>
               <DropdownItems class="relative">
                 <div class="absolute top-0 p-2 bg-base-200 rounded-md">
-                  <ul class="w-52">
+                  <ul class="w-52 [&>li]:mb-1">
                     <li>
                       <HeaderLink
                         href="#servicos1"
@@ -102,7 +104,7 @@ import IconsGroup from "./IconsGroup.astro";
 
 <style>
   .scroll-active {
-    @apply btn-active;
+    @apply text-secondary border-secondary border-b-2;
   }
 </style>
 
