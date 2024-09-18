@@ -1,0 +1,30 @@
+---
+
+---
+
+<section id="hero" class="flex container mx-auto items-center justify-between">
+  <div>
+    <h1>JL</h1>
+  </div>
+
+  <div class="w-[50vw] h-[50vw] borders rounded-[50%]"></div>
+
+  <style>
+    .borders {
+      position: relative;
+      border: 12px solid #dce0e6;
+    }
+
+    .borders:before {
+      content: " ";
+      position: absolute;
+      z-index: -1;
+      top: 12px;
+      left: 12px;
+      right: 12px;
+      bottom: 12px;
+      border-radius: 50%;
+      background-color: #dce0e6;
+    }
+  </style>
+</section>

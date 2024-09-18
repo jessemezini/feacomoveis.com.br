@@ -2,16 +2,12 @@
 import Layout from "../layouts/Layout.astro";
 
 import { SITE_TITLE, SITE_DESCRIPTION } from "../consts";
+import Hero from "../components/Hero.astro";
 ---
 
 <Layout title={SITE_TITLE} description={SITE_DESCRIPTION}>
   <main>
-    <section
-      id="hero"
-      class="bg-secondary h-[1600px] flex items-center justify-center"
-    >
-      <p>Hero</p>
-    </section>
+    <Hero />
 
     <section
       id="servicos"
