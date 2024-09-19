@@ -21,7 +21,11 @@ import hero3 from "../images/hero3.png";
       resistência. Soluções versáteis e robustas para empresas e residências,
       com foco em organização e segurança.
     </h2>
-    <a href="#" class="btn btn-accent rounded-full mx-auto lg:ml-0"
+    <a
+      href="https://wa.me/5519971314457"
+      target="_blank"
+      rel="noopener noreferrer"
+      class="btn btn-accent rounded-full mx-auto lg:ml-0"
       >ORÇAMENTO <span class="max-[336px]:hidden">SEM COMPROMISSO</span>
       <Icon name="bxl--whatsapp" size={26} /></a
     >
@@ -33,9 +37,16 @@ import hero3 from "../images/hero3.png";
     >
       <div class="w-full h-full borders rounded-[50%]">
         <Image src={hero} class="mt-5" alt="Armário de Ferramenta baixo L90" />
+        <div
+          class="flex items-center gap-x-1 absolute bottom-10 left-0 sm:bottom-12 sm:left-1 bg-base-100 shadow-sm rounded-full px-3 py-2 text-sm text-gray-500"
+        >
+          Diversas cores
+          <span class="h-4 w-4 rounded-full bg-gray-200"></span>
+          <span class="h-4 w-4 rounded-full bg-red-500"></span>
+          <span class="h-4 w-4 rounded-full bg-black"></span>
+        </div>
       </div>
     </div>
-
     <div class="sm:flex lg:max-xl:hidden flex-col gap-y-8 hidden">
       <div class="w-24">
         <Image src={hero2} alt="Armário de Ferramenta baixo L90" />
@@ -45,23 +56,23 @@ import hero3 from "../images/hero3.png";
       </div>
     </div>
   </div>
+
+  <style>
+    .borders {
+      position: relative;
+      border: 12px solid #dce0e6;
+    }
+
+    .borders:before {
+      content: " ";
+      position: absolute;
+      z-index: -1;
+      top: 12px;
+      left: 12px;
+      right: 12px;
+      bottom: 12px;
+      border-radius: 50%;
+      background-color: #dce0e6;
+    }
+  </style>
 </section>
-
-<style>
-  .borders {
-    position: relative;
-    border: 12px solid #dce0e6;
-  }
-
-  .borders:before {
-    content: " ";
-    position: absolute;
-    z-index: -1;
-    top: 12px;
-    left: 12px;
-    right: 12px;
-    bottom: 12px;
-    border-radius: 50%;
-    background-color: #dce0e6;
-  }
-</style>
