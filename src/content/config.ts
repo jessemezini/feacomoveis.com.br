@@ -16,4 +16,4 @@ const productsCollection = defineCollection({
     }),
 });
 
-export const collections = { produtos: productsCollection };
+export const collections = { products: productsCollection };
