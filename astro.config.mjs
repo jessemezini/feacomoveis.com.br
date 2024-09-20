@@ -6,8 +6,10 @@ import partytown from "@astrojs/partytown";
 
 import react from "@astrojs/react";
 
+import mdx from "@astrojs/mdx";
+
 // https://astro.build/config
 export default defineConfig({
   site: "https://mzndigital.com",
-  integrations: [tailwind(), icon(), partytown(), react()],
+  integrations: [tailwind(), icon(), partytown(), react(), mdx()],
 });
