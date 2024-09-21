@@ -10,6 +10,6 @@ import mdx from "@astrojs/mdx";
 
 // https://astro.build/config
 export default defineConfig({
-  site: "https://mzndigital.com",
+  site: "https://jlmoveisdeaco.com.br",
   integrations: [tailwind(), icon(), partytown(), react(), mdx()],
 });
