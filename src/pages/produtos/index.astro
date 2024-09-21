@@ -11,7 +11,13 @@ const allProducts = await getCollection("products");
   <main class="container max-w-5xl mx-auto my-20">
     <section>
       <ul class="flex flex-wrap gap-8 justify-center">
-        {allProducts.map((product) => <li>{product.data.title}</li>)}
+        {
+          allProducts.map((product) => (
+            <li>
+              <a href={`/produtos/${product.slug}/`}>{product.data.title}</a>
+            </li>
+          ))
+        }
       </ul>
     </section>
   </main>
