@@ -1,5 +1,6 @@
 ---
 import { type CollectionEntry, getCollection } from "astro:content";
+import ProductLayout from "../../layouts/ProductLayout.astro";
 
 export const prerender = true;
 
@@ -16,4 +17,6 @@ const product = Astro.props;
 const { Content } = await product.render();
 ---
 
-<Content />
+<ProductLayout {...product.data}>
+  <Content />
+</ProductLayout>

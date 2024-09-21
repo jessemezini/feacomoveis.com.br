@@ -1,0 +1,63 @@
+---
+import type { CollectionEntry } from "astro:content";
+import { Icon } from "astro-icon/components";
+
+import Layout from "./Layout.astro";
+
+type Props = CollectionEntry<"products">["data"];
+
+const { title, description, items, height, width, depth, sheetWidth } =
+  Astro.props;
+---
+
+<Layout title={title} description={description}>
+  <header class="bg-primary py-6">
+    <div class="container mx-auto flex justify-between items-center">
+      <div class="breadcrumbs text-sm text-primary-content">
+        <ul>
+          <li><a>Início</a></li>
+          <li><a>Produtos</a></li>
+          <li>{title}</li>
+        </ul>
+      </div>
+
+      <div class="dropdown dropdown-bottom dropdown-end">
+        <div tabindex="0" role="button" class="btn m-1">
+          Categorias <Icon name="bxl--whatsapp" size={26} />
+        </div>
+        <ul
+          tabindex="0"
+          class="dropdown-content menu bg-base-100 rounded-box z-[1] w-52 p-2 shadow"
+        >
+          <li><a>Item 1</a></li>
+          <li><a>Item 2</a></li>
+        </ul>
+      </div>
+    </div>
+  </header>
+  <main class="container mx-auto my-10">
+    <article class="flex gap-8 justify-between">
+      <div class="flex-1">
+        <slot />
+      </div>
+      <div class="prose flex-1">
+        <h2>{title}</h2>
+
+        <div
+          class="flex gap-4 flex-wrap [&>p]:w-[45%] [&>p]:flex [&>p]:gap-x-2 not-prose"
+        >
+          <p><Icon name="bxl--whatsapp" size={26} /> Altura: {height}</p>
+          <p><Icon name="bxl--whatsapp" size={26} /> Largura: {width}</p>
+          <p><Icon name="bxl--whatsapp" size={26} /> Profundidade: {depth}</p>
+          <p><Icon name="bxl--whatsapp" size={26} /> Chapa: {sheetWidth}</p>
+        </div>
+
+        <ul>
+          {items.map((item) => <li>{item}</li>)}
+        </ul>
+        <h4>Descrição</h4>
+        <p>{description}</p>
+      </div>
+    </article>
+  </main>
+</Layout>
