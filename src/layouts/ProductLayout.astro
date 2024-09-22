@@ -27,11 +27,11 @@ const { title, description, items, height, width, depth, sheetWidth } =
 
   <main class="container mx-auto my-10">
     <article class="flex flex-col lg:flex-row gap-8 justify-between">
-      <div class="flex-1">
+      <div class="lg:w-1/2">
         <slot />
       </div>
 
-      <div class="prose flex-1">
+      <div class="prose lg:w-1/2">
         <h2>{title}</h2>
 
         <ul
