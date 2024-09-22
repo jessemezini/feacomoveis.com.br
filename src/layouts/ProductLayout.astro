@@ -17,8 +17,8 @@ const { title, description, items, height, width, depth, sheetWidth } =
     >
       <div class="breadcrumbs text-sm text-primary-content">
         <ul>
-          <li><a>Início</a></li>
-          <li><a>Produtos</a></li>
+          <li><a href="/">Início</a></li>
+          <li><a href="/produtos">Produtos</a></li>
           <li>{title}</li>
         </ul>
       </div>
@@ -56,6 +56,14 @@ const { title, description, items, height, width, depth, sheetWidth } =
             <p>{description}</p>
           )
         }
+
+          <a
+            href="https://wa.me/5519971314457"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="btn btn-accent rounded-full mb-10">Entre em contato conosco!</span>
+            <Icon name="bxl--whatsapp" size={26} />
+          </a>
       </div>
     </article>
   </main>
