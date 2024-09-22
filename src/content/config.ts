@@ -11,7 +11,7 @@ const productsCollection = defineCollection({
       depth: z.string(),
       sheetWidth: z.string(),
       items: z.string().array(),
-      description: z.string(),
+      description: z.string().optional(),
       heroImage: z.string().optional(),
     }),
 });
