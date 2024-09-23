@@ -2,7 +2,7 @@ import { defineCollection, z } from "astro:content";
 
 const productsCollection = defineCollection({
   type: "content",
-  schema: () =>
+  schema: ({ image }) =>
     z.object({
       title: z.string(),
       category: z.string(),
@@ -12,7 +12,7 @@ const productsCollection = defineCollection({
       sheetWidth: z.string(),
       items: z.string().array(),
       description: z.string().optional(),
-      heroImage: z.string().optional(),
+      heroImage: image(),
     }),
 });
 
