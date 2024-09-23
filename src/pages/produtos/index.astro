@@ -8,12 +8,20 @@ import Layout from "../../layouts/Layout.astro";
 import PageHeader from "../../components/PageHeader.astro";
 import CategoriesMenu from "../../components/CategoriesMenu";
 
-const allProducts = await getCollection("products");
+export const prerender = false;
+
+const { searchParams } = Astro.url;
+const category = searchParams.get("category") || undefined;
+console.log(searchParams.get("category"));
+
+const allProducts = await getCollection("products", ({ data }) => {
+  return category ? data.category === category : data;
+});
 ---
 
 <Layout title={`Produtos | ${SITE_TITLE}`} description={SITE_DESCRIPTION}>
   <PageHeader>
-    <h3 class="py-2">Produtos em Destaques</h3>
+    <h3 class="py-2 text-lg font-semibold">Produtos</h3>
     <CategoriesMenu client:load />
   </PageHeader>
 

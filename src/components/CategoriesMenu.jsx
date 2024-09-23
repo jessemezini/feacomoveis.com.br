@@ -22,8 +22,12 @@ export default function CategoriesMenu() {
       }
       transition
     >
-      <MenuItem href="/produtos">Armários de Ferramentas</MenuItem>
-      <MenuItem href="/">Armários de Ferramentas Balcão</MenuItem>
+      <MenuItem href="/produtos?category=armarios-de-ferramentas">
+        Armários de Ferramentas
+      </MenuItem>
+      <MenuItem href="/produtos?category=armarios-de-ferramentas-balcao">
+        Armários de Ferramentas Balcão
+      </MenuItem>
       <MenuItem>Armários</MenuItem>
       <MenuItem>Arquivos</MenuItem>
       <MenuItem>Estantes</MenuItem>
