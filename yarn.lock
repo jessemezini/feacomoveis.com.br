@@ -1293,6 +1293,19 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@szhsin/react-menu@npm:^4.2.2":
+  version: 4.2.2
+  resolution: "@szhsin/react-menu@npm:4.2.2"
+  dependencies:
+    prop-types: "npm:^15.7.2"
+    react-transition-state: "npm:^2.1.0"
+  peerDependencies:
+    react: ">=16.14.0"
+    react-dom: ">=16.14.0"
+  checksum: 10c0/e51dd970818a541cad4b5fd04436ec759de0e7542acc29cb693aae1d65843acc5c3132c8e8d5a3c0c1ecbb0ec285871c3e5112be40a515664a6a0118bf6c3bd8
+  languageName: node
+  linkType: hard
+
 "@tailwindcss/typography@npm:^0.5.14":
   version: 0.5.14
   resolution: "@tailwindcss/typography@npm:0.5.14"
@@ -3927,7 +3940,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"loose-envify@npm:^1.1.0":
+"loose-envify@npm:^1.1.0, loose-envify@npm:^1.4.0":
   version: 1.4.0
   resolution: "loose-envify@npm:1.4.0"
   dependencies:
@@ -4987,7 +5000,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"object-assign@npm:^4.0.1":
+"object-assign@npm:^4.0.1, object-assign@npm:^4.1.1":
   version: 4.1.1
   resolution: "object-assign@npm:4.1.1"
   checksum: 10c0/1f4df9945120325d041ccf7b86f31e8bcc14e73d29171e37a7903050e96b81323784ec59f93f102ec635bcf6fa8034ba3ea0a8c7e69fa202b87ae3b6cec5a414
@@ -5485,6 +5498,17 @@ __metadata:
   languageName: node
   linkType: hard
 
+"prop-types@npm:^15.7.2":
+  version: 15.8.1
+  resolution: "prop-types@npm:15.8.1"
+  dependencies:
+    loose-envify: "npm:^1.4.0"
+    object-assign: "npm:^4.1.1"
+    react-is: "npm:^16.13.1"
+  checksum: 10c0/59ece7ca2fb9838031d73a48d4becb9a7cc1ed10e610517c7d8f19a1e02fa47f7c27d557d8a5702bec3cfeccddc853579832b43f449e54635803f277b1c78077
+  languageName: node
+  linkType: hard
+
 "property-information@npm:^6.0.0":
   version: 6.5.0
   resolution: "property-information@npm:6.5.0"
@@ -5528,10 +5552,27 @@ __metadata:
   languageName: node
   linkType: hard
 
+"react-is@npm:^16.13.1":
+  version: 16.13.1
+  resolution: "react-is@npm:16.13.1"
+  checksum: 10c0/33977da7a5f1a287936a0c85639fec6ca74f4f15ef1e59a6bc20338fc73dc69555381e211f7a3529b8150a1f71e4225525b41b60b52965bda53ce7d47377ada1
+  languageName: node
+  linkType: hard
+
 "react-refresh@npm:^0.14.2":
   version: 0.14.2
   resolution: "react-refresh@npm:0.14.2"
   checksum: 10c0/875b72ef56b147a131e33f2abd6ec059d1989854b3ff438898e4f9310bfcc73acff709445b7ba843318a953cb9424bcc2c05af2b3d80011cee28f25aef3e2ebb
+  languageName: node
+  linkType: hard
+
+"react-transition-state@npm:^2.1.0":
+  version: 2.1.2
+  resolution: "react-transition-state@npm:2.1.2"
+  peerDependencies:
+    react: ">=16.8.0"
+    react-dom: ">=16.8.0"
+  checksum: 10c0/69fc4462ac7ffd930887c01928986e2a11a84ba20660c58749d58e3a050f2bfa55543a3a85699af74feafece9e32183ef4ff0e27cd653774503a1d7ffab8cb70
   languageName: node
   linkType: hard
 
@@ -5895,6 +5936,7 @@ __metadata:
     "@astrojs/react": "npm:^3.6.2"
     "@astrojs/tailwind": "npm:5.1.1"
     "@fontsource-variable/nunito": "npm:^5.1.0"
+    "@szhsin/react-menu": "npm:^4.2.2"
     "@tailwindcss/typography": "npm:^0.5.14"
     "@types/react": "npm:^18.3.8"
     "@types/react-dom": "npm:^18.3.0"

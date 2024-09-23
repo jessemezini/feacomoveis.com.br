@@ -3,15 +3,18 @@ import { Image } from "astro:assets";
 import { getCollection } from "astro:content";
 
 import { SITE_TITLE, SITE_DESCRIPTION } from "../../consts";
+
 import Layout from "../../layouts/Layout.astro";
 import PageHeader from "../../components/PageHeader.astro";
+import CategoriesMenu from "../../components/CategoriesMenu";
 
 const allProducts = await getCollection("products");
 ---
 
 <Layout title={`Produtos | ${SITE_TITLE}`} description={SITE_DESCRIPTION}>
   <PageHeader>
-    <h3>Produtos em Destaque</h3>
+    <h3 class="py-2">Produtos em Destaques</h3>
+    <CategoriesMenu client:load />
   </PageHeader>
 
   <section class="container mx-auto my-20">
