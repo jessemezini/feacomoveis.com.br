@@ -4,11 +4,16 @@ import { getCollection } from "astro:content";
 
 import { SITE_TITLE, SITE_DESCRIPTION } from "../../consts";
 import Layout from "../../layouts/Layout.astro";
+import PageHeader from "../../components/PageHeader.astro";
 
 const allProducts = await getCollection("products");
 ---
 
 <Layout title={`Produtos | ${SITE_TITLE}`} description={SITE_DESCRIPTION}>
+  <PageHeader>
+    <h3>Produtos em Destaque</h3>
+  </PageHeader>
+
   <section class="container mx-auto my-20">
     <ul
       class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-5 justify-between"

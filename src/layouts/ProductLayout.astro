@@ -3,6 +3,7 @@ import type { CollectionEntry } from "astro:content";
 import { Icon } from "astro-icon/components";
 
 import Layout from "./Layout.astro";
+import PageHeader from "../components/PageHeader.astro";
 
 type Props = CollectionEntry<"products">["data"];
 
@@ -11,19 +12,15 @@ const { title, description, items, height, width, depth, sheetWidth } =
 ---
 
 <Layout title={title} description={description}>
-  <header class="bg-primary py-6">
-    <div
-      class="container mx-auto"
-    >
-      <div class="breadcrumbs text-sm text-primary-content">
+  <PageHeader>
+      <div class="breadcrumbs text-sm">
         <ul>
           <li><a href="/">Início</a></li>
           <li><a href="/produtos">Produtos</a></li>
           <li>{title}</li>
         </ul>
       </div>
-    </div>
-  </header>
+  </PageHeader>
 
   <main class="container mx-auto my-5 sm:my-10">
     <article class="flex flex-col lg:flex-row gap-8 justify-between">
