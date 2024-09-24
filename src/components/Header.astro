@@ -10,14 +10,14 @@ import {
 
 import HeaderLink from "./HeaderLink.astro";
 import { SITE_TITLE } from "../consts";
-import IconsGroup from "./IconsGroup.astro";
+import { categories } from "../data/categories";
 ---
 
 <StickyHeader
   class="sticky top-0 border-b z-20 transition-all"
   scrollY={50}
-  defaultClass="bg-base-100 border-base-300 py-5"
-  activeClass="bg-base-100 border-base-300 py-4 backdrop-blur-sm"
+  defaultClass="bg-base-100 border-transparent py-5"
+  activeClass="bg-base-100 border-base-200 py-2 backdrop-blur-sm"
 >
   <header id="header" class="lg:flex container mx-auto items-center">
     <Astronav closeOnClick>
@@ -26,22 +26,24 @@ import IconsGroup from "./IconsGroup.astro";
           ><img
             src="/logo.png"
             alt={SITE_TITLE}
-            width="142.06px"
-            height="48px"
+            width="187.16px"
+            height="64px"
           /></a
         >
         <div class="block lg:hidden">
           <MenuIcon class="w-7 h-7 text-base-content" />
         </div>
       </div>
-      <MenuItems class="hidden lg:flex w-full">
+      <MenuItems class="hidden lg:flex w-full justify-end">
         <ul class="flex flex-col lg:flex-row lg:gap-2">
-          <li><HeaderLink href="#hero">Ínicio</HeaderLink></li>
+          <li><HeaderLink href="/">Início</HeaderLink></li>
           <li>
             <Dropdown class="group">
-              <button class="flex items-center btn btn-ghost nav-link">
+              <button
+                class="flex items-center btn btn-ghost text-base hover:bg-transparent hover:text-secondary rounded-none nav-link border-0"
+              >
                 <!-- <HeaderLink dropdownHref="#servicos"> TODO: highlight only when is page products -->
-                <span class="mr-1">Serviços</span>
+                <span class="mr-1">Produtos</span>
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   fill="none"
@@ -58,51 +60,44 @@ import IconsGroup from "./IconsGroup.astro";
                 <!-- </HeaderLink> -->
               </button>
               <DropdownItems class="relative">
-                <div class="absolute top-0 p-2 bg-base-200 rounded-md">
-                  <ul class="w-52">
+                <div class="absolute top-0 right-0 p-2 bg-base-200 rounded-md">
+                  <ul class="w-72 [&>li]:mb-1">
                     <li>
                       <HeaderLink
-                        href="#servicos1"
+                        href="/produtos"
                         class="btn-sm w-full justify-start"
-                        >Design Gráfico</HeaderLink
+                        >Todos Produtos</HeaderLink
                       >
                     </li>
-                    <li>
-                      <HeaderLink
-                        href="#servicos2"
-                        class="btn-sm w-full justify-start"
-                        >Portfolio</HeaderLink
-                      >
-                    </li>
-                    <li>
-                      <HeaderLink
-                        href="#servicos3"
-                        class="btn-sm w-full justify-start"
-                        >Casos de Sucesso</HeaderLink
-                      >
-                    </li>
+                    <div class="divider my-2"></div>
+                    {
+                      categories.map((category, index) => (
+                        <li>
+                          <HeaderLink
+                            href={`/produtos?category=${category.name}`}
+                            class="btn-sm w-full justify-start"
+                          >
+                            {category.name}
+                          </HeaderLink>
+                        </li>
+                      ))
+                    }
                   </ul>
                 </div>
               </DropdownItems>
             </Dropdown>
           </li>
+          <li><HeaderLink>Sobre Nós</HeaderLink></li>
           <li><HeaderLink href="#contato">Contato</HeaderLink></li>
-          <li><HeaderLink href="#teste">Teste</HeaderLink></li>
         </ul>
-        <div class="block lg:hidden gap-0.5">
-          <IconsGroup isNavbar={true} />
-        </div>
       </MenuItems>
-      <div class="hidden lg:flex gap-0.5">
-        <IconsGroup isNavbar={true} />
-      </div>
     </Astronav>
   </header>
 </StickyHeader>
 
 <style>
   .scroll-active {
-    @apply btn-active;
+    @apply text-secondary border-secondary border-b-2;
   }
 </style>
 

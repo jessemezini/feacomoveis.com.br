@@ -23,7 +23,7 @@ const isDropDownActive =
     <a
       href={href}
       class:list={[className]}
-      class={`${isActive ? "bg-base-200" : ""} btn btn-ghost nav-link`}
+      class={`${isActive} btn btn-ghost text-base hover:bg-transparent hover:text-secondary rounded-none nav-link border-0`}
       {...props}
     >
       <slot />

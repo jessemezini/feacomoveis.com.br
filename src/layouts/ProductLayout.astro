@@ -1,0 +1,67 @@
+---
+import type { CollectionEntry } from "astro:content";
+import { Icon } from "astro-icon/components";
+
+import Layout from "./Layout.astro";
+import PageHeader from "../components/PageHeader.astro";
+
+type Props = CollectionEntry<"products">["data"];
+
+const { title, description, items, height, width, depth, sheetWidth } =
+  Astro.props;
+---
+
+<Layout title={title} description={description}>
+  <PageHeader>
+      <div class="breadcrumbs text-sm">
+        <ul>
+          <li><a href="/">Início</a></li>
+          <li><a href="/produtos">Produtos</a></li>
+          <li>{title}</li>
+        </ul>
+      </div>
+  </PageHeader>
+
+  <main class="container mx-auto my-5 sm:my-10">
+    <article class="flex flex-col lg:flex-row gap-8 justify-between">
+      <div class="lg:w-1/2">
+        <slot />
+      </div>
+
+      <div class="prose lg:w-1/2 mt-10">
+        <h2>{title}</h2>
+
+        <ul
+          class="flex gap-4 flex-wrap max-[470px]:flex-col max-[470px]:border-none max-[470px]:p-0 border p-3 [&>p]:w-[45%] max-[470px]:[&>p]:w-[100%] [&>p]:flex [&>p]:gap-x-2 [&>p]:items-center not-prose"
+        >
+          <p><Icon name="material-symbols--height-rounded" size={20} /> Altura: {height}</p>
+          <p><Icon name="material-symbols--width-rounded" size={20} /> Largura: {width}</p>
+          <p><Icon name="iconoir--depth" size={20} /> Profundidade: {depth}</p>
+          <p><Icon name="gg--size" size={20} /> Chapa: {sheetWidth}</p>
+        </ul>
+
+        <ul>
+          {items.map((item) => <li>{item}</li>)}
+          <li>
+            Cores disponíveis: branco, cinza, preto, vermelho, azul, bege,
+            laranja, amarelo, verde e platina.
+          </li>
+        </ul>
+        {
+          description && (
+            <h4>Mais informações:</h4>
+            <p>{description}</p>
+          )
+        }
+
+          <a
+            href="https://wa.me/5519971314457"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="btn btn-accent rounded-full mb-10">Entre em contato conosco!</span>
+            <Icon name="bxl--whatsapp" size={26} />
+          </a>
+      </div>
+    </article>
+  </main>
+</Layout>

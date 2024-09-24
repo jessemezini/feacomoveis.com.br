@@ -1,0 +1,64 @@
+---
+import { Image } from "astro:assets";
+import { getCollection } from "astro:content";
+
+import { SITE_TITLE, SITE_DESCRIPTION } from "../../consts";
+
+import Layout from "../../layouts/Layout.astro";
+import PageHeader from "../../components/PageHeader.astro";
+import CategoriesMenu from "../../components/CategoriesMenu";
+
+export const prerender = false;
+
+const { searchParams } = Astro.url;
+const category = searchParams.get("category") || undefined;
+
+const allProducts = await getCollection("products", ({ data }) => {
+  return category ? data.category === category : data;
+});
+---
+
+<Layout title={`Produtos | ${SITE_TITLE}`} description={SITE_DESCRIPTION}>
+  <PageHeader>
+    <div class="breadcrumbs text-sm">
+      <ul>
+        <li><a href="/">Início</a></li>
+        <li><a href="/produtos">Produtos</a></li>
+        {category && <li>{category}</li>}
+      </ul>
+    </div>
+    <CategoriesMenu client:load />
+  </PageHeader>
+
+  <section class="container mx-auto my-20">
+    <ul
+      class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-5 justify-between"
+    >
+      {
+        allProducts.map((product) => (
+          <li>
+            <a
+              href={`/produtos/${product.slug}/`}
+              class="border rounded-md flex flex-col hover:shadow-md"
+            >
+              <div class="bg-gray-100 p-4 h-72">
+                <Image
+                  class="object-contain w-full h-full"
+                  src={product.data.heroImage}
+                  alt={product.data.title}
+                  width="350"
+                  height="350"
+                />
+              </div>
+              <div class="h-28">
+                <h4 class="font-semibold py-5 px-3 line-clamp-3">
+                  {product.data.title}
+                </h4>
+              </div>
+            </a>
+          </li>
+        ))
+      }
+    </ul>
+  </section>
+</Layout>

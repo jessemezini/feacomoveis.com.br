@@ -1,0 +1,68 @@
+---
+import { Image } from "astro:assets";
+import IconsGroup from "./IconsGroup.astro";
+
+const today = new Date();
+---
+
+<section id="contato" class="bg-primary py-10 mt-20">
+  <footer
+    class="container mx-auto grid grid-cols-1 sm:grid-cols-3 gap-12 prose-p:font-thin prose-headings:text-primary-content prose-p:text-primary-content"
+  >
+    <div class="prose">
+      <h3>Sobre Nós</h3>
+      <p>JL Móveis de Aço: Qualidade e Durabilidade para seu Espaço</p>
+      <p>
+        Armários, estantes, arquivos, vitrines e roupeiros em aço de alta
+        resistência. Soluções versáteis e robustas para empresas e residências,
+        com foco em organização e segurança.
+      </p>
+      <Image
+        src="/logo-white.png"
+        alt="logo JL Móveis de Aço"
+        width="240"
+        height="82.07"
+      />
+    </div>
+
+    <div class="prose">
+      <h3>Atendimento</h3>
+      <h4>Horários:</h4>
+      <p>De Segunda a Sexta das 9 às 18h. Sábados das 10 às 14h.</p>
+
+      <h4>Telefone / WhatsApp:</h4>
+      <p>
+        <span class="text-sm">19</span> 97131-4457
+      </p>
+
+      <h4>E-mail:</h4>
+      <p>jlmoveisdeaco@gmail.com</p>
+    </div>
+
+    <div class="prose">
+      <h3>Endereço</h3>
+      <h4>Horários:</h4>
+      <p>Avenida Waldemar Longato, 669 - Park Empresarial de Iracemápolis-SP</p>
+
+      <h4>Redes Sociais</h4>
+      <IconsGroup />
+    </div>
+  </footer>
+</section>
+<div class="bg-secondary">
+  <div
+    class="container mx-auto py-2 flex justify-between items-center prose max-w-none text-secondary-content"
+  >
+    <small>
+      &copy; {today.getFullYear()} JL Móveis de Aço - CNPJ: 12.345.678/0001-00
+    </small>
+    <a
+      href="https://wa.me/5519971314457"
+      target="_blank"
+      rel="noopener noreferrer"
+      class="btn btn-link text-secondary-content"
+    >
+      MZN Digital</a
+    >
+  </div>
+</div>

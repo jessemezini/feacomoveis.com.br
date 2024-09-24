@@ -1,4 +1,5 @@
 import defaultTheme from "tailwindcss/defaultTheme";
+const colors = require("tailwindcss/colors");
 
 /** @type {import('tailwindcss').Config} */
 export default {
@@ -15,7 +16,7 @@ export default {
     },
     extend: {
       fontFamily: {
-        sans: ['"Manrope Variable"', ...defaultTheme.fontFamily.sans],
+        sans: ['"Nunito Variable"', ...defaultTheme.fontFamily.sans],
       },
     },
   },
@@ -23,18 +24,18 @@ export default {
   daisyui: {
     themes: [
       {
-        dark: {
-          ...require("daisyui/src/theming/themes")["dark"],
-          "base-100": "#110D0E",
-          "base-200": "#292526",
-          "base-300": "#413d3e",
-          "base-content": "#F0F7FE",
-          primary: "#110D0E",
-          "primary-content": "#F0F7FE",
-          secondary: "#258EA6",
-          "secondary-content": "#110D0E",
-          accent: "#F4F4EC",
-          "accent-content": "#110D0E",
+        light: {
+          ...require("daisyui/src/theming/themes")["light"],
+          "base-100": colors.white,
+          "base-200": colors.gray[200],
+          "base-300": colors.gray[300],
+          "base-content": "#070606",
+          primary: "#40516D",
+          "primary-content": colors.white,
+          secondary: "#4B6387",
+          "secondary-content": colors.white,
+          accent: "#F39C5B",
+          "accent-content": "#070606",
         },
       },
     ],

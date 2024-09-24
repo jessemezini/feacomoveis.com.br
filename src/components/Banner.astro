@@ -1,0 +1,24 @@
+---
+import { Image } from "astro:assets";
+import myImage from "../assets/images/pintura-cores.jpg";
+---
+
+<div class="container mx-auto">
+  <div class="relative h-64">
+    <Image
+      class="object-cover w-full h-full rounded-2xl"
+      src={myImage}
+      alt="Pintura Eletrostática"
+    />
+    <div
+      class="text-base-100 prose text-right absolute left-5 right-5 bottom-5 sm:left-auto sm:right-10 sm:bottom-10"
+    >
+      <h2 class="text-base-100">Pintura Eletrostática</h2>
+      <p class="line-clamp-6">
+        Oferecemos Pintura Eletrostática de alta qualidade, garantindo
+        durabilidade e acabamento impecável. Ideal para proteger e renovar
+        móveis de aço, com resistência superior à corrosão e desgaste.
+      </p>
+    </div>
+  </div>
+</div>
