@@ -9,7 +9,7 @@ export default function CategoriesMenu() {
       arrow
       menuButton={
         <MenuButton className="flex items-center gap-2 btn btn-secondary">
-          Categorias
+          Filtrar por Categoria
           <svg
             viewBox="0 0 24 24"
             fill="currentColor"

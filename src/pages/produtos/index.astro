@@ -21,7 +21,13 @@ const allProducts = await getCollection("products", ({ data }) => {
 
 <Layout title={`Produtos | ${SITE_TITLE}`} description={SITE_DESCRIPTION}>
   <PageHeader>
-    <h3 class="py-2 text-lg font-semibold">Produtos</h3>
+    <div class="breadcrumbs text-sm">
+      <ul>
+        <li><a href="/">Início</a></li>
+        <li><a href="/produtos">Produtos</a></li>
+        {category && <li>{category}</li>}
+      </ul>
+    </div>
     <CategoriesMenu client:load />
   </PageHeader>
 
