@@ -3,12 +3,14 @@ import { SITE_TITLE, SITE_DESCRIPTION } from "../consts";
 import Layout from "../layouts/Layout.astro";
 import Hero from "../components/Hero.astro";
 import CategoriesSlider from "../components/CategoriesSlider.jsx";
+import HomeProducts from "../components/HomeProducts.astro";
 ---
 
 <Layout title={SITE_TITLE} description={SITE_DESCRIPTION}>
   <main>
     <Hero />
     <CategoriesSlider client:load />
+    <HomeProducts />
 
     <section
       id="servicos"

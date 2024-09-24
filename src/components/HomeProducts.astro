@@ -1,0 +1,45 @@
+---
+import { getCollection } from "astro:content";
+import { Icon } from "astro-icon/components";
+import { Image } from "astro:assets";
+
+const allProducts = await getCollection("products");
+---
+
+<section class="container mx-auto mt-10 mb-20">
+  <div class="flex justify-between items-center mb-5">
+    <h3 class="text-xl font-semibold">Produtos em Destaque</h3>
+    <a href="/produtos" class="btn btn-ghost">
+      Todos Produtos <Icon name="majesticons--chevron-right" />
+    </a>
+  </div>
+  <ul
+    class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-5 justify-between"
+  >
+    {
+      allProducts.map((product) => (
+        <li>
+          <a
+            href={`/produtos/${product.slug}/`}
+            class="border rounded-md flex flex-col hover:shadow-md"
+          >
+            <div class="bg-gray-100 p-4 h-72">
+              <Image
+                class="object-contain w-full h-full"
+                src={product.data.heroImage}
+                alt={product.data.title}
+                width="350"
+                height="350"
+              />
+            </div>
+            <div class="h-28">
+              <h4 class="font-semibold py-5 px-3 line-clamp-3">
+                {product.data.title}
+              </h4>
+            </div>
+          </a>
+        </li>
+      ))
+    }
+  </ul>
+</section>
