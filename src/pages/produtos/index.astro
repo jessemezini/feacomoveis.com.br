@@ -12,7 +12,6 @@ export const prerender = false;
 
 const { searchParams } = Astro.url;
 const category = searchParams.get("category") || undefined;
-console.log(searchParams.get("category"));
 
 const allProducts = await getCollection("products", ({ data }) => {
   return category ? data.category === category : data;
