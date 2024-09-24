@@ -4,11 +4,10 @@ import { Image } from "astro:assets";
 
 interface Props {
   imagePath: string;
-  altText: string;
   name: string;
 }
 
-const { imagePath, altText, name } = Astro.props;
+const { imagePath, name } = Astro.props;
 const images = import.meta.glob<{ default: ImageMetadata }>(
   "/src/assets/images/categories/*.{jpeg,jpg,png,gif}"
 );
@@ -25,7 +24,7 @@ if (!images[imagePath])
     >
       <Image
         src={images[imagePath]()}
-        alt={altText}
+        alt={name}
         class="object-contain h-40 mx-auto"
       />
     </div>

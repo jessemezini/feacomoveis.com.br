@@ -1,5 +1,6 @@
 ---
 import CategoriesSwiperSlider from "./CategoriesSwiperSlider.astro";
+import { categories } from "../data/categories";
 ---
 
 <div class="bg-primary h-96 -mt-8 flex flex-col justify-center gap-y-4">
@@ -10,11 +11,14 @@ import CategoriesSwiperSlider from "./CategoriesSwiperSlider.astro";
     <div class="swiper">
       <div class="swiper-wrapper">
         <!-- Slides -->
-        <CategoriesSwiperSlider
-          imagePath="/src/assets/images/categories/estantes.png"
-          altText="Armários"
-          name="Armários"
-        />
+        {
+          categories.map((category, index) => (
+            <CategoriesSwiperSlider
+              imagePath={category.imageUrl}
+              name={category.name}
+            />
+          ))
+        }
       </div>
       <!-- If we need pagination -->
       <div class="swiper-pagination"></div>
