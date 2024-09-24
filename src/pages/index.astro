@@ -2,13 +2,13 @@
 import { SITE_TITLE, SITE_DESCRIPTION } from "../consts";
 import Layout from "../layouts/Layout.astro";
 import Hero from "../components/Hero.astro";
-import CategoriesCarousel from "../components/CategoriesCarousel.astro";
+import CategoriesSlider from "../components/CategoriesSlider.jsx";
 ---
 
 <Layout title={SITE_TITLE} description={SITE_DESCRIPTION}>
   <main>
     <Hero />
-    <CategoriesCarousel />
+    <CategoriesSlider client:load />
 
     <section
       id="servicos"
