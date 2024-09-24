@@ -10,6 +10,7 @@ import {
 
 import HeaderLink from "./HeaderLink.astro";
 import { SITE_TITLE } from "../consts";
+import { categories } from "../data/categories";
 ---
 
 <StickyHeader
@@ -59,8 +60,8 @@ import { SITE_TITLE } from "../consts";
                 <!-- </HeaderLink> -->
               </button>
               <DropdownItems class="relative">
-                <div class="absolute top-0 p-2 bg-base-200 rounded-md">
-                  <ul class="w-52 [&>li]:mb-1">
+                <div class="absolute top-0 right-0 p-2 bg-base-200 rounded-md">
+                  <ul class="w-72 [&>li]:mb-1">
                     <li>
                       <HeaderLink
                         href="/produtos"
@@ -69,27 +70,25 @@ import { SITE_TITLE } from "../consts";
                       >
                     </li>
                     <div class="divider my-2"></div>
-                    <li>
-                      <HeaderLink
-                        href="#servicos2"
-                        class="btn-sm w-full justify-start"
-                        >Portfolio</HeaderLink
-                      >
-                    </li>
-                    <li>
-                      <HeaderLink
-                        href="#servicos3"
-                        class="btn-sm w-full justify-start"
-                        >Casos de Sucesso</HeaderLink
-                      >
-                    </li>
+                    {
+                      categories.map((category, index) => (
+                        <li>
+                          <HeaderLink
+                            href={`/produtos?category=${category.name}`}
+                            class="btn-sm w-full justify-start"
+                          >
+                            {category.name}
+                          </HeaderLink>
+                        </li>
+                      ))
+                    }
                   </ul>
                 </div>
               </DropdownItems>
             </Dropdown>
           </li>
+          <li><HeaderLink>Sobre Nós</HeaderLink></li>
           <li><HeaderLink href="#contato">Contato</HeaderLink></li>
-          <li><HeaderLink href="#teste">Teste</HeaderLink></li>
         </ul>
       </MenuItems>
     </Astronav>

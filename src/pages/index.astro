@@ -5,7 +5,6 @@ import Hero from "../components/Hero.astro";
 import CategoriesSlider from "../components/CategoriesSlider.jsx";
 import HomeProducts from "../components/HomeProducts.astro";
 import Banner from "../components/Banner.astro";
-import Footer from "../components/Footer.astro";
 ---
 
 <Layout title={SITE_TITLE} description={SITE_DESCRIPTION}>
@@ -14,6 +13,5 @@ import Footer from "../components/Footer.astro";
     <CategoriesSlider client:load />
     <HomeProducts />
     <Banner />
-    <Footer />
   </main>
 </Layout>
