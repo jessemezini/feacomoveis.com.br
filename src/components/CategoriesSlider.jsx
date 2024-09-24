@@ -52,7 +52,7 @@ export default function CategoriesSlider() {
   return (
     <div class="bg-primary h-96 -mt-8 flex flex-col justify-center gap-y-4">
       <div class="prose text-center mx-auto mt-5">
-        <h3 class="text-primary-content">Encontre por categoria</h3>
+        <h3 class="text-primary-content">Encontre por Categoria</h3>
       </div>
       <div class="container mx-auto">
         <Swiper
