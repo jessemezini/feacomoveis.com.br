@@ -9,52 +9,15 @@ import "swiper/css/pagination";
 // import required modules
 import { Navigation, Pagination } from "swiper/modules";
 
-const categories = [
-  {
-    name: "Armário de Ferramentas",
-    categoryName: "armarios-de-ferramentas",
-    imageUrl: "../../src/assets/images/categories/armarios-de-ferramentas.png",
-  },
-  {
-    name: "Armários de Ferramentas Balcão",
-    categoryName: "armarios-de-ferramentas-balcao",
-    imageUrl:
-      "../../src/assets/images/categories/armarios-de-ferramentas-balcao.png",
-  },
-  {
-    name: "Armários",
-    categoryName: "armarios",
-    imageUrl: "../../src/assets/images/categories/armarios.png",
-  },
-  {
-    name: "Estantes",
-    categoryName: "estantes",
-    imageUrl: "../../src/assets/images/categories/estantes.png",
-  },
-  {
-    name: "Roupeiros GRP",
-    categoryName: "roupeiros-grp",
-    imageUrl: "../../src/assets/images/categories/roupeiros-grp.png",
-  },
-  {
-    name: "Carrinhos Auxiliares",
-    categoryName: "carrinhos-auxiliares",
-    imageUrl: "../../src/assets/images/categories/carrinhos-auxiliares.png",
-  },
-  {
-    name: "Suportes",
-    categoryName: "suportes",
-    imageUrl: "../../src/assets/images/categories/suportes.png",
-  },
-];
+import { categories } from "../data/categories";
 
 export default function CategoriesSlider() {
   return (
-    <div class="bg-primary h-96 -mt-8 flex flex-col justify-center gap-y-4">
-      <div class="prose text-center mx-auto mt-5">
-        <h3 class="text-primary-content">Encontre por Categoria</h3>
+    <div className="bg-primary h-96 -mt-8 flex flex-col justify-center gap-y-4">
+      <div className="prose text-center mx-auto mt-5">
+        <h3 className="text-primary-content">Encontre por Categoria</h3>
       </div>
-      <div class="container mx-auto">
+      <div className="container mx-auto">
         <Swiper
           navigation={true}
           modules={[Navigation, Pagination]}
@@ -83,7 +46,7 @@ export default function CategoriesSlider() {
         >
           {categories.map((category, index) => (
             <SwiperSlide key={index} className="text-primary-content p-5">
-              <a href={`/produtos?category=${category.categoryName}`}>
+              <a href={`/produtos?category=${category.name}`}>
                 <div className="flex justify-center items-center bg-base-100 shadow-md rounded-full w-32 h-32 mx-auto">
                   <img
                     src={category.imageUrl}

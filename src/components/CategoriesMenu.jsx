@@ -2,6 +2,8 @@ import { Menu, MenuItem, MenuButton, MenuDivider } from "@szhsin/react-menu";
 import "@szhsin/react-menu/dist/index.css";
 import "@szhsin/react-menu/dist/transitions/zoom.css";
 
+import { categories } from "../data/categories";
+
 export default function CategoriesMenu() {
   return (
     <Menu
@@ -22,19 +24,11 @@ export default function CategoriesMenu() {
       }
       transition
     >
-      <MenuItem href="/produtos?category=armarios-de-ferramentas">
-        Armários de Ferramentas
-      </MenuItem>
-      <MenuItem href="/produtos?category=armarios-de-ferramentas-balcao">
-        Armários de Ferramentas Balcão
-      </MenuItem>
-      <MenuItem>Armários</MenuItem>
-      <MenuItem>Arquivos</MenuItem>
-      <MenuItem>Estantes</MenuItem>
-      <MenuItem>Estantes Gaveteiros</MenuItem>
-      <MenuItem>Roupeiros GRP</MenuItem>
-      <MenuItem>Carrinhos Auxiliares</MenuItem>
-      <MenuItem>Suportes</MenuItem>
+      {categories.map((category, index) => (
+        <MenuItem key={index} href={`/produtos?category=${category.name}`}>
+          {category.name}
+        </MenuItem>
+      ))}
     </Menu>
   );
 }
