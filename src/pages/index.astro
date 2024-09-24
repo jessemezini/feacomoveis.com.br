@@ -2,7 +2,7 @@
 import { SITE_TITLE, SITE_DESCRIPTION } from "../consts";
 import Layout from "../layouts/Layout.astro";
 import Hero from "../components/Hero.astro";
-import CategoriesSlider from "../components/CategoriesSlider.jsx";
+import CategoriesCarousel from "../components/CategoriesCarousel.astro";
 import HomeProducts from "../components/HomeProducts.astro";
 import Banner from "../components/Banner.astro";
 ---
@@ -10,7 +10,7 @@ import Banner from "../components/Banner.astro";
 <Layout title={SITE_TITLE} description={SITE_DESCRIPTION}>
   <main>
     <Hero />
-    <CategoriesSlider client:load />
+    <CategoriesCarousel />
     <HomeProducts />
     <Banner />
   </main>
