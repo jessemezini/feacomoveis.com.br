@@ -20,24 +20,22 @@
   import { Navigation, Pagination } from "swiper/modules";
   import "swiper/css/bundle";
 
-  document.addEventListener("astro:page-load", () => {
-    const swiperConfig = {
-      modules: [Navigation, Pagination],
-      // Optional parameters
+  const swiperConfig = {
+    modules: [Navigation, Pagination],
+    // Optional parameters
 
-      // If we need pagination
-      pagination: {
-        el: ".swiper-pagination",
-        clickable: true,
-      },
+    // If we need pagination
+    pagination: {
+      el: ".swiper-pagination",
+      clickable: true,
+    },
 
-      // Navigation arrows
-      navigation: {
-        nextEl: ".swiper-button-next",
-        prevEl: ".swiper-button-prev",
-      },
-    };
+    // Navigation arrows
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
+    },
+  };
 
-    const swiper = new Swiper(".swiper", swiperConfig);
-  });
+  const swiper = new Swiper(".swiper", swiperConfig);
 </script>
