@@ -1,9 +1,8 @@
 ---
 // import Swiper and modules styles
-// import "swiper/css";
-// import "swiper/css/navigation";
-// import "swiper/css/pagination";
-import "swiper/swiper-bundle.css";
+import "swiper/css";
+import "swiper/css/navigation";
+import "swiper/css/pagination";
 
 import CategoriesSwiperSlider from "./CategoriesSwiperSlider.astro";
 import { categories } from "../data/categories";
@@ -44,8 +43,8 @@ import { categories } from "../data/categories";
     const swiperConfig = {
       modules: [Navigation, Pagination],
       // Optional parameters
-      // slidesPerView: 1,
-      // spaceBetween: 10,
+      slidesPerView: 1,
+      spaceBetween: 10,
       breakpoints: {
         425: {
           slidesPerView: 2,
