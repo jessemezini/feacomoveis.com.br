@@ -16,12 +16,17 @@ description: "Desmontadas. Temos disponível no colorido e outras profundidades"
 heroImage: "./1.png"
 ---
 
-import ProductSlider from "../../../components/ProductSlider";
+import { Image } from "astro:assets";
+import ProductCarousel from "../../../components/ProductCarousel.astro";
 
-<ProductSlider
-  client:load
-  images={[
-    "../../src/content/products/estante-de-aco-cinza-padrao-50-cm-6-bandejas/1.png",
-  ]}
-  alt="Estante de aço cinza padrão 50 cm 6 bandejas"
-/>
+import product1 from "./1.png";
+
+<ProductCarousel>
+  <div class="swiper-slide">
+    <Image
+      src={product1}
+      alt="Produto"
+      class="object-contain h-[500px] mx-auto p-5 mb-1 sm:mb-5"
+    />
+  </div>
+</ProductCarousel>

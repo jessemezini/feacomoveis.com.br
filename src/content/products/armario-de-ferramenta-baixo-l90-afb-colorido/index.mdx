@@ -16,15 +16,41 @@ items:
 heroImage: "./1.png"
 ---
 
-import ProductSlider from "../../../components/ProductSlider";
+import { Image } from "astro:assets";
+import ProductCarousel from "../../../components/ProductCarousel.astro";
 
-<ProductSlider
-  client:load
-  images={[
-    "../../src/content/products/armario-de-ferramenta-baixo-l90-afb-colorido/1.png",
-    "../../src/content/products/armario-de-ferramenta-baixo-l90-afb-colorido/2.png",
-    "../../src/content/products/armario-de-ferramenta-baixo-l90-afb-colorido/3.png",
-    "../../src/content/products/armario-de-ferramenta-baixo-l90-afb-colorido/4.png",
-  ]}
-  alt="Armário de Ferramenta Baixo, L90 - AFB Colorido"
-/>
+import product1 from "./1.png";
+import product2 from "./2.png";
+import product3 from "./2.png";
+import product4 from "./2.png";
+
+<ProductCarousel>
+  <div class="swiper-slide">
+    <Image
+      src={product1}
+      alt="Produto"
+      class="object-contain h-[500px] mx-auto p-5 mb-1 sm:mb-5"
+    />
+  </div>
+  <div class="swiper-slide">
+    <Image
+      src={product2}
+      alt="Produto"
+      class="object-contain h-[500px] mx-auto p-5 mb-1 sm:mb-5"
+    />
+  </div>
+  <div class="swiper-slide">
+    <Image
+      src={product3}
+      alt="Produto"
+      class="object-contain h-[500px] mx-auto p-5 mb-1 sm:mb-5"
+    />
+  </div>
+  <div class="swiper-slide">
+    <Image
+      src={product4}
+      alt="Produto"
+      class="object-contain h-[500px] mx-auto p-5 mb-1 sm:mb-5"
+    />
+  </div>
+</ProductCarousel>

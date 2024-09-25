@@ -18,6 +18,6 @@ export default defineConfig({
     react(),
     mdx(),
   ],
-  output: "hybrid",
+  output: "server",
   adapter: netlify(),
 });
