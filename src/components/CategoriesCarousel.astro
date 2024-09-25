@@ -1,9 +1,4 @@
 ---
-// import Swiper and modules styles
-import "swiper/css";
-import "swiper/css/navigation";
-import "swiper/css/pagination";
-
 import CategoriesSwiperSlider from "./CategoriesSwiperSlider.astro";
 import { categories } from "../data/categories";
 ---
@@ -38,6 +33,11 @@ import { categories } from "../data/categories";
 <script>
   import Swiper from "swiper";
   import { Navigation, Pagination } from "swiper/modules";
+
+  // import Swiper and modules styles
+  import "swiper/css";
+  import "swiper/css/navigation";
+  import "swiper/css/pagination";
 
   document.addEventListener("astro:page-load", () => {
     const swiperConfig = {
