@@ -13,7 +13,7 @@ import { categories } from "../data/categories";
     <h3 class="text-primary-content">Encontre por Categoria</h3>
   </div>
   <div class="container mx-auto">
-    <div class="glide">
+    <div class="glide glideCarousel">
       <div class="glide__track" data-glide-el="track">
         <ul class="glide__slides">
           <!-- Slides -->
@@ -60,7 +60,7 @@ import { categories } from "../data/categories";
   } from "@glidejs/glide/dist/glide.modular.esm";
 
   document.addEventListener("astro:page-load", () => {
-    new Glide(".glide", {
+    new Glide(".glideCarousel", {
       type: "carousel",
       startAt: 0,
       perView: 5,
