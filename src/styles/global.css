@@ -4,11 +4,3 @@
 }
 
 html { scroll-behavior: smooth; }
-
-.swiper-pagination-bullet-active {
-  background-color: #4B6387 !important;
-}
-
-.swiper-button-next, .swiper-button-prev {
-  color: #4B6387 !important;
-} 
