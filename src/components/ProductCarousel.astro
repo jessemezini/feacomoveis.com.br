@@ -1,42 +1,36 @@
 ---
-// import Swiper and modules styles
-import "swiper/css";
-import "swiper/css/navigation";
-import "swiper/css/pagination";
+import { Icon } from "astro-icon/components";
+
+import "@glidejs/glide/dist/css/glide.core.css";
+import "@glidejs/glide/dist/css/glide.theme.css";
 ---
 
-<div class="swiper">
-  <div class="swiper-wrapper">
-    <!-- Slides -->
-    <slot />
+<div class="glide glideProduct">
+  <div class="glide__track" data-glide-el="track">
+    <ul class="glide__slides">
+      <slot />
+    </ul>
+    <div class="glide__arrows" data-glide-el="controls">
+      <button
+        class="glide__arrow glide__arrow--left !bg-base-200 !text-primary !shadow-none !rounded-full !border-none !left-0 !py-3"
+        data-glide-dir="<"
+        ><Icon name="ic--round-navigate-before" size={26} /></button
+      >
+      <button
+        class="glide__arrow glide__arrow--right !bg-base-200 !text-primary !shadow-none !rounded-full !border-none !right-0 !py-3"
+        data-glide-dir=">"
+        ><Icon name="ic--round-navigate-next" size={26} /></button
+      >
+    </div>
   </div>
-  <!-- If we need pagination -->
-  <div class="swiper-pagination"></div>
 
-  <!-- If we need navigation buttons -->
-  <div class="swiper-button swiper-button-prev"></div>
-  <div class="swiper-button swiper-button-next"></div>
+  <script>
+    import Glide from "@glidejs/glide";
+
+    document.addEventListener("astro:page-load", () => {
+      new Glide(".glideProduct", {
+        rewind: false,
+      }).mount();
+    });
+  </script>
 </div>
-
-<script>
-  import Swiper from "swiper";
-  import { Navigation, Pagination } from "swiper/modules";
-
-  document.addEventListener("astro:page-load", () => {
-    const swiperConfig = {
-      modules: [Navigation, Pagination],
-      // If we need pagination
-      pagination: {
-        el: ".swiper-pagination",
-        clickable: true,
-      },
-      // Navigation arrows
-      navigation: {
-        nextEl: ".swiper-button-next",
-        prevEl: ".swiper-button-prev",
-      },
-    };
-
-    const swiper = new Swiper(".swiper", swiperConfig);
-  });
-</script>
