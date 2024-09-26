@@ -16,6 +16,7 @@
     "@astrojs/react": "^3.6.2",
     "@astrojs/tailwind": "5.1.1",
     "@fontsource-variable/nunito": "^5.1.0",
+    "@glidejs/glide": "^3.6.2",
     "@szhsin/react-menu": "^4.2.2",
     "@types/react": "^18.3.8",
     "@types/react-dom": "^18.3.0",
@@ -30,6 +31,7 @@
   },
   "devDependencies": {
     "@tailwindcss/typography": "^0.5.14",
+    "@types/glidejs__glide": "^3",
     "daisyui": "^4.12.10",
     "prettier": "^3.3.3",
     "prettier-plugin-astro": "^0.14.1"

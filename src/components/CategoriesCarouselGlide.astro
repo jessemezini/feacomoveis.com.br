@@ -1,0 +1,87 @@
+---
+import { Icon } from "astro-icon/components";
+
+import "@glidejs/glide/dist/css/glide.core.css";
+import "@glidejs/glide/dist/css/glide.theme.css";
+
+import CategoriesGlideSlider from "./CategoriesGlideSlider.astro";
+import { categories } from "../data/categories";
+---
+
+<div class="bg-primary h-96 -mt-8 flex flex-col justify-center gap-y-4">
+  <div class="prose text-center mx-auto mt-5">
+    <h3 class="text-primary-content">Encontre por Categoria</h3>
+  </div>
+  <div class="container mx-auto">
+    <div class="glide">
+      <div class="glide__track" data-glide-el="track">
+        <ul class="glide__slides">
+          <!-- Slides -->
+          {
+            categories.map((category) => (
+              <CategoriesGlideSlider
+                imagePath={category.imageUrl}
+                name={category.name}
+              />
+            ))
+          }
+        </ul>
+      </div>
+
+      <div class="glide__arrows" data-glide-el="controls">
+        <button
+          class="glide__arrow glide__arrow--left !bg-secondary !rounded-full !border-none !left-1 !py-3"
+          data-glide-dir="<"
+          ><Icon name="ic--round-navigate-before" size={26} /></button
+        >
+        <button
+          class="glide__arrow glide__arrow--right !bg-secondary !rounded-full !border-none !right-1 !py-3"
+          data-glide-dir=">"
+          ><Icon name="ic--round-navigate-next" size={26} /></button
+        >
+      </div>
+
+      <div class="glide__bullets !bottom-2" data-glide-el="controls[nav]">
+        {
+          categories.map((_category, index) => (
+            <button class="glide__bullet" data-glide-dir={`=${index}`} />
+          ))
+        }
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+  import Glide, {
+    Breakpoints,
+    Controls,
+    Swipe,
+  } from "@glidejs/glide/dist/glide.modular.esm";
+
+  document.addEventListener("astro:page-load", () => {
+    new Glide(".glide", {
+      type: "carousel",
+      startAt: 0,
+      perView: 5,
+      breakpoints: {
+        425: {
+          perView: 1,
+          gap: 10,
+        },
+        640: {
+          perView: 2,
+          gap: 20,
+        },
+        768: {
+          perView: 3,
+          gap: 20,
+        },
+        1024: {
+          perView: 4,
+          gap: 30,
+        },
+      },
+    }).mount({ Breakpoints, Controls, Swipe });
+  });
+</script>
