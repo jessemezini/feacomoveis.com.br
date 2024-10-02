@@ -23,12 +23,12 @@ const { title, description, items, height, width, depth, sheetWidth } =
   </PageHeader>
 
   <main class="container mx-auto my-5 sm:my-10">
-    <article class="flex flex-col lg:flex-row gap-y-8 justify-between">
+    <article class="flex flex-col lg:flex-row justify-between">
       <div class="lg:w-1/2">
         <slot />
       </div>
 
-      <div class="prose lg:w-1/2 lg:pl-8 mt-10">
+      <div class="prose lg:w-1/2 lg:pl-8 sm:mt-10 mt-5">
         <h2>{title}</h2>
 
         <ul
