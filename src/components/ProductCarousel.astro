@@ -10,6 +10,7 @@ import "@glidejs/glide/dist/css/glide.theme.css";
     <ul class="glide__slides">
       <slot />
     </ul>
+
     <div class="glide__arrows" data-glide-el="controls">
       <button
         class="glide__arrow glide__arrow--left !bg-base-200 !text-primary !shadow-none !rounded-full !border-none !left-0 !py-3"
@@ -22,7 +23,28 @@ import "@glidejs/glide/dist/css/glide.theme.css";
         ><Icon name="ic--round-navigate-next" size={26} /></button
       >
     </div>
+
+    <div class="glide__bullets !bottom-0" data-glide-el="controls[nav]">
+      <slot name="bullets" />
+    </div>
   </div>
+
+  <style is:global>
+    .glide__bullet {
+      @apply bg-secondary/30;
+    }
+    .glide__bullet {
+      @apply bg-secondary/30;
+    }
+    .glide__bullet:hover {
+      @apply bg-secondary/30;
+      @apply border-secondary/30;
+    }
+    .glide__bullet--active {
+      @apply !bg-secondary;
+      @apply !border-secondary;
+    }
+  </style>
 
   <script>
     import Glide from "@glidejs/glide";
