@@ -11,7 +11,7 @@ import CategoriesMenu from "../../components/CategoriesMenu";
 export const prerender = false;
 
 const { searchParams } = Astro.url;
-const category = searchParams.get("category") || undefined;
+const category = searchParams.get("category") || "Armários de Ferramentas";
 
 const allProducts = await getCollection("products", ({ data }) => {
   return category ? data.category === category : data;
