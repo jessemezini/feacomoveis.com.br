@@ -1,0 +1,51 @@
+---
+title: "Armário de Ferramenta baixo L70"
+category: "Armários de Ferramentas"
+height: "83 cm"
+width: "70 cm"
+depth: "40 cm"
+sheetWidth: "26"
+items:
+  [
+    "Modelo AFB Estreito (Coloridos)",
+    "Pintura: Eletrostática Texturizada",
+    "Disponível na chapa 24 e 22",
+    "Acompanha: 2 gavetas rolamento com chaves individuais",
+  ]
+heroImage: "./1.png"
+---
+
+import { Image } from "astro:assets";
+import ProductCarousel from "../../../components/ProductCarousel.astro";
+
+import product1 from "./1.png";
+import product2 from "./2.png";
+import product3 from "./3.png";
+import product4 from "./4.png";
+
+export const TOTAL_PRODUCTS = 4;
+
+export const imageList = [
+  { src: product1 },
+  { src: product2 },
+  { src: product3 },
+  { src: product4 },
+];
+
+<ProductCarousel>
+  {imageList.map((image) => (
+    <div class="glide__slide">
+      <Image
+        src={image.src}
+        widths={[370, 500]}
+        sizes="(max-width: 440px) 370px, 500px"
+        alt={frontmatter.title}
+        class="object-contain h-[500px] mx-auto p-5 mb-1 sm:mb-5"
+      />
+    </div>
+  ))}
+
+  <Fragment slot="bullets">
+    {TOTAL_PRODUCTS > 1 && Array(TOTAL_PRODUCTS).fill(0).map((_, i) => <button class="glide__bullet" data-glide-dir={`=${i}`}></button>)}
+  </Fragment>
+</ProductCarousel>

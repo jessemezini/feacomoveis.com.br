@@ -14,10 +14,18 @@ import { Image } from "astro:assets";
 import ProductCarousel from "../../../components/ProductCarousel.astro";
 
 import product1 from "./1.png";
+import product2 from "./2.png";
+import product3 from "./3.png";
+import product4 from "./4.png";
 
-export const TOTAL_PRODUCTS = 1;
+export const TOTAL_PRODUCTS = 4;
 
-export const imageList = [{ src: product1 }];
+export const imageList = [
+  { src: product1 },
+  { src: product2 },
+  { src: product3 },
+  { src: product4 },
+];
 
 <ProductCarousel>
   {imageList.map((image) => (

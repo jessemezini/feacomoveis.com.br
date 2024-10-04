@@ -3,7 +3,7 @@ import { getCollection } from "astro:content";
 import { Icon } from "astro-icon/components";
 import { Image } from "astro:assets";
 
-const allProducts = await getCollection("products");
+const allProducts = (await getCollection("products")).slice(0, 8);
 ---
 
 <section class="container mx-auto mt-10 mb-20">
