@@ -2,6 +2,6 @@
 // You can import this data from anywhere in your site by using the `import` keyword.
 
 export const SITE_TITLE =
-  "JL Móveis de Aço - Armários, estantes, arquivos, vitrines e roupeiros em aço de alta resistência";
+  "DEC Móveis Planejados Direto da Fábrica | Armários e Estantes em Aço e MDF";
 export const SITE_DESCRIPTION =
-  "Qualidade e Durabilidade para seu Espaço. Soluções versáteis e robustas para empresas e residências, com foco em organização e segurança.";
+  "Encontre armários, estantes, bancadas e móveis planejados com qualidade garantida, direto da fábrica. Produtos em aço e MDF feitos sob medida por profissionais qualificados.";
