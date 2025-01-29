@@ -4,6 +4,9 @@ import { Icon } from "astro-icon/components";
 
 import hero1 from "../assets/images/hero1.png";
 import hero2 from "../assets/images/hero2.png";
+
+import patternAccent from "../assets/images/pattern-accent.png";
+import patternWhite from "../assets/images/pattern-white.png";
 ---
 
 <section
@@ -24,13 +27,21 @@ import hero2 from "../assets/images/hero2.png";
       href="https://wa.me/5519988287751"
       target="_blank"
       rel="noopener noreferrer"
-      class="btn btn-accent rounded-full mx-auto lg:ml-0"
+      class="btn btn-accent rounded-full mx-auto lg:ml-0 relative z-10"
       >Solicite seu orçamento
       <Icon name="bxl--whatsapp" size={26} /></a
     >
   </div>
 
-  <div class="hidden md:grid grid-cols-2 gap-x-5 w-full">
+  <div class="relative hidden md:grid grid-cols-2 gap-x-5 w-full">
+    <div class="w-80 absolute left-1/4 -top-20">
+      <Image src={patternAccent} alt="pattern enfeite" />
+    </div>
+
+    <div class="w-80 absolute -left-24 -bottom-14">
+      <Image src={patternWhite} alt="pattern enfeite" />
+    </div>
+
     <div class="relative max-w-96 lg:max-w-80 flex items-center justify-center">
       <div
         class="bg-secondary rounded-3xl w-64 lg:w-52 xl:w-64 h-[400px] lg:h-[520px]"
