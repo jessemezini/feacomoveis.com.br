@@ -2,19 +2,18 @@
 import { Image } from "astro:assets";
 import { Icon } from "astro-icon/components";
 
-import hero from "../assets/images/hero.png";
+import hero1 from "../assets/images/hero1.png";
 import hero2 from "../assets/images/hero2.png";
-import hero3 from "../assets/images/hero3.png";
 ---
 
 <section
   id="hero"
-  class="flex flex-col gap-y-5 lg:flex-row container mx-auto items-center justify-between relative z-10"
+  class="grid grid-cols-1 lg:grid-cols-2 gap-5 py-10 container mx-auto relative z-10"
 >
-  <div class="flex flex-col text-center lg:text-left">
-    <p class="text-base text-primary mb-2">Móveis Direto da Fábrica</p>
+  <div class="flex flex-col text-center lg:text-left lg:pt-20">
     <h1 class="text-4xl font-bold mb-5">
-      Móveis Planejados em Aço e MDF Direto da Fábrica
+      Móveis Planejados em <span class="text-[#888888]">Aço e MDF</span> Direto da
+      Fábrica
     </h1>
     <h2 class="text-base mb-5 text-gray-500">
       Descubra armários e estantes com qualidade excepcional, fabricados por
@@ -26,53 +25,36 @@ import hero3 from "../assets/images/hero3.png";
       target="_blank"
       rel="noopener noreferrer"
       class="btn btn-accent rounded-full mx-auto lg:ml-0"
-      >ORÇAMENTO <span class="max-[336px]:hidden">SEM COMPROMISSO</span>
+      >Solicite seu orçamento
       <Icon name="bxl--whatsapp" size={26} /></a
     >
   </div>
 
-  <div class="flex items-center gap-x-6">
-    <div
-      class="w-[60vw] h-[60vw] max-[425px]:w-[80vw] max-[425px]:h-[80vw] md:w-[400px] md:h-[400px] lg:w-[460px] lg:h-[460px]"
-    >
-      <div class="w-full h-full borders rounded-[50%]">
-        <Image src={hero} class="mt-5" alt="Armário de Ferramenta baixo L90" />
-        <div
-          class="flex items-center gap-x-1 absolute bottom-10 left-0 sm:bottom-12 sm:left-1 bg-base-100 shadow-sm rounded-full px-3 py-2 text-sm text-gray-500"
-        >
-          Diversas cores
-          <span class="h-4 w-4 rounded-full bg-gray-200"></span>
-          <span class="h-4 w-4 rounded-full bg-red-500"></span>
-          <span class="h-4 w-4 rounded-full bg-black"></span>
-        </div>
+  <div class="hidden md:grid grid-cols-2 gap-x-5 w-full">
+    <div class="relative max-w-96 lg:max-w-80 flex items-center justify-center">
+      <div
+        class="bg-secondary rounded-3xl w-64 lg:w-52 xl:w-64 h-[400px] lg:h-[520px]"
+      >
       </div>
+      <Image
+        src={hero1}
+        width="320"
+        class="absolute max-w-72 lg:max-w-64 xl:max-w-72"
+        alt="Armário de Ferramenta baixo"
+      />
     </div>
-    <div class="sm:flex lg:max-xl:hidden flex-col gap-y-8 hidden">
-      <div class="w-24">
-        <Image src={hero2} alt="Armário de Ferramenta baixo L90" />
+
+    <div class="relative max-w-96 lg:max-w-80 flex items-center justify-center">
+      <div
+        class="bg-secondary rounded-3xl w-64 lg:w-52 xl:w-64 h-[400px] lg:h-[520px]"
+      >
       </div>
-      <div class="w-24">
-        <Image src={hero3} alt="Armário de Ferramenta baixo L90" />
-      </div>
+      <Image
+        src={hero2}
+        width="280"
+        class="absolute max-w-72 lg:max-w-64 xl:max-w-72"
+        alt="Armário de Ferramenta baixo"
+      />
     </div>
   </div>
-
-  <style>
-    .borders {
-      position: relative;
-      border: 12px solid #dce0e6;
-    }
-
-    .borders:before {
-      content: " ";
-      position: absolute;
-      z-index: -1;
-      top: 12px;
-      left: 12px;
-      right: 12px;
-      bottom: 12px;
-      border-radius: 50%;
-      background-color: #dce0e6;
-    }
-  </style>
 </section>
