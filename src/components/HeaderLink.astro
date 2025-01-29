@@ -1,32 +1,12 @@
 ---
-import type { HTMLAttributes } from "astro/types";
-
-interface Props extends HTMLAttributes<"a"> {
-  dropdownHref?: string | URL | null | undefined;
-}
-
-const { href, dropdownHref, class: className, ...props } = Astro.props;
-
-const { pathname } = Astro.url;
-const subpath = pathname.match(/[^\/]+/g);
-const isActive = href === pathname || href === "/" + subpath?.[0];
-const isDropDownActive =
-  dropdownHref === pathname || dropdownHref === "/" + subpath?.[0];
+const { href, class: className, ...props } = Astro.props;
 ---
 
-{
-  isDropDownActive ? (
-    <p class="bg-base-200 btn btn-ghost">
-      <slot />
-    </p>
-  ) : (
-    <a
-      href={href}
-      class:list={[className]}
-      class={`${isActive} btn btn-ghost text-base hover:bg-transparent hover:text-secondary rounded-none nav-link border-0`}
-      {...props}
-    >
-      <slot />
-    </a>
-  )
-}
+<a
+  href={href}
+  class:list={[className]}
+  class="btn btn-ghost text-secondary-content hover:bg-secondary-content/10 hover:text-secondary-content"
+  {...props}
+>
+  <slot />
+</a>
