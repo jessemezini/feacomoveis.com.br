@@ -20,14 +20,14 @@ if (!images[imagePath])
 <div class="glide__slide text-primary-content p-5">
   <a href={`/produtos?category=${name}`}>
     <div
-      class="flex justify-center items-center bg-base-100 shadow-md rounded-full w-32 h-32 mx-auto"
+      class="flex justify-center items-center bg-secondary shadow-md rounded-3xl mx-auto p-3 w-40 h-40"
     >
       <Image
         src={images[imagePath]()}
         alt={name}
-        class="object-contain h-40 mx-auto"
+        class="object-contain h-36 mx-auto"
       />
     </div>
-    <p class="text-center my-5">{name}</p>
+    <p class="text-center my-5 text-sm">{name}</p>
   </a>
 </div>
