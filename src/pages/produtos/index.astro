@@ -37,13 +37,10 @@ const allProducts = await getCollection("products", ({ data }) => {
       {
         allProducts.map((product) => (
           <li>
-            <a
-              href={`/produtos/${product.slug}/`}
-              class="border rounded-md flex flex-col hover:shadow-md"
-            >
-              <div class="bg-gray-100 p-4 h-72">
+            <a href={`/produtos/${product.slug}/`} class="flex flex-col group">
+              <div class="bg-secondary p-4 h-72 rounded-3xl">
                 <Image
-                  class="object-contain w-full h-full"
+                  class="object-contain w-full h-full rounded-3xl group-hover:scale-105 transition-transform duration-300"
                   src={product.data.heroImage}
                   alt={product.data.title}
                   width="350"
@@ -51,7 +48,7 @@ const allProducts = await getCollection("products", ({ data }) => {
                 />
               </div>
               <div class="h-28">
-                <h4 class="font-semibold py-5 px-3 line-clamp-3">
+                <h4 class="font-semibold text-sm py-5 px-3 line-clamp-3">
                   {product.data.title}
                 </h4>
               </div>
