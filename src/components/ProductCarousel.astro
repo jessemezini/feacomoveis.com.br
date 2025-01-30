@@ -13,12 +13,12 @@ import "@glidejs/glide/dist/css/glide.theme.css";
 
     <div class="glide__arrows" data-glide-el="controls">
       <button
-        class="glide__arrow glide__arrow--left !bg-base-200 !text-primary !shadow-none !rounded-full !border-none !left-0 !py-3"
+        class="glide__arrow glide__arrow--left !bg-secondary !border !border-secondary-content !text-primary !shadow-none !rounded-full !left-0 !py-3"
         data-glide-dir="<"
         ><Icon name="ic--round-navigate-before" size={26} /></button
       >
       <button
-        class="glide__arrow glide__arrow--right !bg-base-200 !text-primary !shadow-none !rounded-full !border-none !right-0 !py-3"
+        class="glide__arrow glide__arrow--right !bg-secondary !border !border-secondary-content !text-primary !shadow-none !rounded-full !right-0 !py-3"
         data-glide-dir=">"
         ><Icon name="ic--round-navigate-next" size={26} /></button
       >
@@ -31,18 +31,18 @@ import "@glidejs/glide/dist/css/glide.theme.css";
 
   <style is:global>
     .glide__bullet {
-      @apply !bg-secondary/30;
+      @apply !bg-primary/30;
     }
     .glide__bullet {
-      @apply !bg-secondary/30;
+      @apply !bg-primary/30;
     }
     .glide__bullet:hover {
-      @apply !bg-secondary/30;
-      @apply !border-secondary/30;
+      @apply !bg-primary/30;
+      @apply !border-primary/30;
     }
     .glide__bullet--active {
-      @apply !bg-secondary;
-      @apply !border-secondary;
+      @apply !bg-primary;
+      @apply !border-primary;
     }
   </style>
 
