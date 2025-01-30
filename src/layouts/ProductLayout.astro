@@ -3,7 +3,6 @@ import type { CollectionEntry } from "astro:content";
 import { Icon } from "astro-icon/components";
 
 import Layout from "./Layout.astro";
-import PageHeader from "../components/PageHeader.astro";
 
 type Props = CollectionEntry<"products">["data"];
 
@@ -12,27 +11,27 @@ const { title, description, items, height, width, depth, sheetWidth } =
 ---
 
 <Layout title={title} description={description}>
-  <PageHeader>
-      <div class="breadcrumbs text-sm">
-        <ul>
-          <li><a href="/">Início</a></li>
-          <li><a href="/produtos">Produtos</a></li>
-          <li>{title}</li>
-        </ul>
-      </div>
-  </PageHeader>
+  
 
-  <main class="container mx-auto my-5 sm:my-10">
-    <article class="flex flex-col lg:flex-row justify-between">
-      <div class="lg:w-1/2">
+  <main class="container mx-auto py-5 sm:py-10">
+    <article class="flex flex-col-reverse lg:flex-row justify-between">
+      <div class="lg:w-1/2 bg-secondary p-5 rounded-3xl">
         <slot />
       </div>
 
-      <div class="prose lg:w-1/2 lg:pl-8 sm:mt-10 mt-5">
-        <h2>{title}</h2>
+      <div class="prose lg:w-1/2 lg:pl-8">
+        <div class="breadcrumbs text-xs">
+          <ul class="pl-0 m-0">
+            <li><a href="/">Início</a></li>
+            <li><a href="/produtos">Produtos</a></li>
+            <li>{title}</li>
+          </ul>
+        </div>
+
+        <h3>{title}</h3>
 
         <ul
-          class="flex gap-4 flex-wrap max-[470px]:flex-col max-[470px]:border-none max-[470px]:p-0 border p-3 [&>p]:w-[45%] max-[470px]:[&>p]:w-[100%] [&>p]:flex [&>p]:gap-x-2 [&>p]:items-center not-prose"
+          class="flex gap-4 flex-wrap max-[470px]:flex-col max-[470px]:border-none max-[470px]:p-0 border p-3 [&>p]:w-[45%] max-[470px]:[&>p]:w-[100%] [&>p]:flex [&>p]:gap-x-2 [&>p]:items-center not-prose rounded-3xl"
         >
           <p><Icon name="material-symbols--height-rounded" size={20} /> Altura: {height}</p>
           <p><Icon name="material-symbols--width-rounded" size={20} /> Largura: {width}</p>
@@ -58,7 +57,7 @@ const { title, description, items, height, width, depth, sheetWidth } =
             href="https://wa.me/5519988287751"
             target="_blank"
             rel="noopener noreferrer"
-            class="btn btn-accent rounded-full mb-10">Entre em contato conosco!</span>
+            class="btn btn-accent rounded-full mb-10">Tenho interesse</span>
             <Icon name="bxl--whatsapp" size={26} />
           </a>
       </div>
