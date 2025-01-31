@@ -9,7 +9,7 @@ const productsCollection = defineCollection({
       height: z.string(),
       width: z.string(),
       depth: z.string(),
-      sheetWidth: z.string(),
+      sheetWidth: z.string().optional(),
       items: z.string().array(),
       description: z.string().optional(),
       heroImage: image(),

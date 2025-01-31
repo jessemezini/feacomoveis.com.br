@@ -36,13 +36,13 @@ const { title, description, items, height, width, depth, sheetWidth } =
           <p><Icon name="material-symbols--height-rounded" size={20} /> Altura: {height}</p>
           <p><Icon name="material-symbols--width-rounded" size={20} /> Largura: {width}</p>
           <p><Icon name="iconoir--depth" size={20} /> Profundidade: {depth}</p>
-          <p><Icon name="gg--size" size={20} /> Chapa: {sheetWidth}</p>
+          {sheetWidth && <p><Icon name="gg--size" size={20} /> Chapa: {sheetWidth}</p>}
         </ul>
 
         <ul>
           {items.map((item) => <li>{item}</li>)}
           <li>
-            Consulte mais cores disponíveis.
+            Consulte cores e tamanhos diferentes disponíveis.
           </li>
         </ul>
         {
