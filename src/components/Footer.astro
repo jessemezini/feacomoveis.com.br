@@ -9,7 +9,7 @@ import patternAccent from "../assets/images/pattern-accent.png";
 const today = new Date();
 ---
 
-<footer class="bg-secondary pt-20 pb-5">
+<footer id="contato" class="bg-secondary pt-20 pb-5">
   <div
     class="relative container mx-auto pb-10 flex flex-col md:flex-row gap-10 justify-between md:items-center"
   >
@@ -64,13 +64,19 @@ const today = new Date();
     <div class="flex flex-col w-full md:w-auto gap-3 prose">
       <h4>Links:</h4>
       <a class="link">Sobre Nós</a>
-      <a class="link">Catálogo de Produtos</a>
-      <a class="link">Armários de Ferramentas</a>
-      <a class="link">Armários e Colméias</a>
-      <a class="link">Arquivos</a>
-      <a class="link">Estantes</a>
-      <a class="link">Mesas</a>
-      <a class="link flex items-center"
+      <a href="/produtos?category=Armários%20de%20Ferramentas" class="link"
+        >Armários de Ferramentas</a
+      >
+      <a
+        href="/produtos?category=Arm%C3%A1rios%20e%20Colm%C3%A9ias"
+        class="link">Armários e Colméias</a
+      >
+      <a href="/produtos?category=Arquivos" class="link">Arquivos</a>
+      <a href="/produtos?category=Estantes" class="link">Estantes</a>
+      <a href="/produtos?category=Mesas%20e%20Aparadores" class="link">Mesas</a>
+      <a
+        href="/produtos?category=Armários%20de%20Ferramentas"
+        class="link flex items-center"
         >Ver todos <Icon name="majesticons--chevron-right" /></a
       >
     </div>
