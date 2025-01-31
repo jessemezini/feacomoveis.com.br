@@ -3,6 +3,10 @@ export const categories = [
     name: "Armários de Ferramentas",
     imageUrl: "/src/assets/images/categories/armarios-de-ferramentas.png",
   },
+  {
+    name: "Armários e Colméias",
+    imageUrl: "/src/assets/images/categories/armarios-e-colmeias.png",
+  },
   // {
   //   name: "Armários",
   //   imageUrl: "/src/assets/images/categories/armarios.png",
