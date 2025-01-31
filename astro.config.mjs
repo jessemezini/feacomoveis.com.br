@@ -8,7 +8,7 @@ import netlify from "@astrojs/netlify";
 
 // https://astro.build/config
 export default defineConfig({
-  site: "https://jlmoveisdeaco.com.br",
+  site: "https://decmoveisplanejados.com.br",
   integrations: [
     tailwind(),
     icon({

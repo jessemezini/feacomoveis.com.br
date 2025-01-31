@@ -8,11 +8,15 @@ import CategoriesGlideSlider from "./CategoriesGlideSlider.astro";
 import { categories } from "../data/categories";
 ---
 
-<div class="bg-primary h-96 -mt-8 flex flex-col justify-center gap-y-4">
-  <div class="prose text-center mx-auto mt-5">
-    <h3 class="text-primary-content">Encontre por Categoria</h3>
-  </div>
-  <div class="container mx-auto">
+<div class="bg-primary md:-mt-32 sm:pt-20 md:pt-44 sm:pb-20 py-10">
+  <div
+    class="container mx-auto prose max-w-none prose-headings:text-primary-content prose-p:text-primary-content prose-a:no-underline"
+  >
+    <div class="text-center sm:text-left">
+      <p class="text-sm mb-2">Produtos</p>
+      <h2 class="text-primary-content mt-0">Categorias</h2>
+    </div>
+
     <div class="glide glideCarousel">
       <div class="glide__track" data-glide-el="track">
         <ul class="glide__slides">
@@ -28,20 +32,23 @@ import { categories } from "../data/categories";
         </ul>
       </div>
 
-      <div class="glide__arrows" data-glide-el="controls">
+      <div class="glide__arrows hidden lg:block" data-glide-el="controls">
         <button
-          class="glide__arrow glide__arrow--left !bg-secondary !rounded-full !border-none !left-1 !py-3"
+          class="glide__arrow glide__arrow--left !bg-primary !rounded-full !-top-14 !left-[89%] !py-3"
           data-glide-dir="<"
-          ><Icon name="ic--round-navigate-before" size={26} /></button
+          ><Icon name="ic--round-navigate-before" size={22} /></button
         >
         <button
-          class="glide__arrow glide__arrow--right !bg-secondary !rounded-full !border-none !right-1 !py-3"
+          class="glide__arrow glide__arrow--right !bg-primary !rounded-full !-top-14 !left-[95%] !right-auto !py-3"
           data-glide-dir=">"
-          ><Icon name="ic--round-navigate-next" size={26} /></button
+          ><Icon name="ic--round-navigate-next" size={22} /></button
         >
       </div>
 
-      <div class="glide__bullets !bottom-2" data-glide-el="controls[nav]">
+      <div
+        class="glide__bullets !bottom-2 lg:!hidden"
+        data-glide-el="controls[nav]"
+      >
         {
           categories.map((_category, index) => (
             <button class="glide__bullet" data-glide-dir={`=${index}`} />

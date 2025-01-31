@@ -754,10 +754,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@fontsource-variable/nunito@npm:^5.1.0":
-  version: 5.1.0
-  resolution: "@fontsource-variable/nunito@npm:5.1.0"
-  checksum: 10c0/2f7de932bbc1ff9f6ea596d2969d2d6b3feb1681c3d34266b57d0920f4e66b20b9126d945b8aaf237c8ac518ba7bfeceb981db4db5caa2e13c231d7213dd1f4d
+"@fontsource-variable/montserrat@npm:^5.1.1":
+  version: 5.1.1
+  resolution: "@fontsource-variable/montserrat@npm:5.1.1"
+  checksum: 10c0/210951f4e9b9862cb70f3c04e9544b62e55c2b99964546d58e7eca786052108bde064e82eae3977778769e69e987f6e866a0e200b51ccd0aa4b64ae24d903466
   languageName: node
   linkType: hard
 
@@ -6329,7 +6329,7 @@ __metadata:
     "@astrojs/partytown": "npm:2.1.2"
     "@astrojs/react": "npm:^3.6.2"
     "@astrojs/tailwind": "npm:5.1.1"
-    "@fontsource-variable/nunito": "npm:^5.1.0"
+    "@fontsource-variable/montserrat": "npm:^5.1.1"
     "@glidejs/glide": "npm:^3.6.2"
     "@szhsin/react-menu": "npm:^4.2.2"
     "@tailwindcss/typography": "npm:^0.5.14"

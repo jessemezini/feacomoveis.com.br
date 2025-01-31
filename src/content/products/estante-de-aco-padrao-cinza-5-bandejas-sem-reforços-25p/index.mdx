@@ -1,0 +1,43 @@
+---
+title: "Estante de Aço padrão cinza 5 bandejas sem reforços, 25p"
+category: "Estantes"
+height: "175 cm"
+width: "75 cm"
+depth: "25 cm"
+sheetWidth: "26"
+items:
+  [
+    "Com 5 bandejas sem reforços",
+    "Material em aço",
+    "Pintura: eletrostática texturizada",
+    "Peso: 17kg",
+  ]
+heroImage: "./1.jpg"
+---
+
+import { Image } from "astro:assets";
+import ProductCarousel from "../../../components/ProductCarousel.astro";
+
+import product1 from "./1.jpg";
+
+export const TOTAL_PRODUCTS = 1;
+
+export const imageList = [{ src: product1 }];
+
+<ProductCarousel>
+  {imageList.map((image) => (
+    <div class="glide__slide">
+      <Image
+        src={image.src}
+        widths={[370, 500]}
+        sizes="(max-width: 440px) 370px, 500px"
+        alt={frontmatter.title}
+        class="object-contain h-[500px] mx-auto p-5 mb-1 sm:mb-5"
+      />
+    </div>
+  ))}
+
+  <Fragment slot="bullets">
+    {TOTAL_PRODUCTS > 1 && Array(TOTAL_PRODUCTS).fill(0).map((_, i) => <button class="glide__bullet" data-glide-dir={`=${i}`}></button>)}
+  </Fragment>
+</ProductCarousel>

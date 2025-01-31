@@ -1,34 +1,27 @@
 ---
-title: "Armário de Ferramenta Simples"
+title: "Armário de ferramenta simples"
 category: "Armários de Ferramentas"
 height: "100 cm"
-width: "45 cm"
+width: "48 cm"
 depth: "40 cm"
 sheetWidth: "26"
 items:
   [
-    "Modelo AFS Cinza",
     "Pintura: Eletrostática Texturizada",
-    "Disponível na chapa 24 e 22",
-    "Acompanha: 1 gaveta rolamento com chave individual",
+    "Disponível na chapa 26, 24 e 22",
+    "Gavetas rolamento",
   ]
-heroImage: "./1.png"
+heroImage: "./1.jpg"
 ---
 
 import { Image } from "astro:assets";
 import ProductCarousel from "../../../components/ProductCarousel.astro";
 
-import product1 from "./1.png";
-import product2 from "./2.png";
-import product3 from "./3.png";
+import product1 from "./1.jpg";
 
-export const TOTAL_PRODUCTS = 3;
+export const TOTAL_PRODUCTS = 1;
 
-export const imageList = [
-  { src: product1 },
-  { src: product2 },
-  { src: product3 },
-];
+export const imageList = [{ src: product1 }];
 
 <ProductCarousel>
   {imageList.map((image) => (
