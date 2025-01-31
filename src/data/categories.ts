@@ -35,6 +35,10 @@ export const categories = [
     name: "Mesas e Aparadores",
     imageUrl: "/src/assets/images/categories/mesas-e-aparadores.png",
   },
+  {
+    name: "Rack para Celulares",
+    imageUrl: "/src/assets/images/categories/rack-para-celulares.png",
+  },
   // {
   //   name: "Estantes Gaveteiros",
   //   imageUrl: "/src/assets/images/categories/estantes-gaveteiros.png",
