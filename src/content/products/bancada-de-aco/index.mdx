@@ -1,11 +1,11 @@
 ---
-title: "Armário Baixo com 2 Portas"
-category: "Armários e Colméias"
-height: "65 cm"
-width: "90 cm"
-depth: "42 cm"
+title: "Bancada de aço"
+category: "Bancadas"
+height: "93 cm"
+width: "193 cm"
+depth: "50 cm"
 # sheetWidth: "26"
-items: ["Pés rodízios"]
+items: ["Material em aço", "Pintura: eletrostática texturizada", "Com reforço"]
 heroImage: "./1.jpg"
 ---
 
@@ -14,10 +14,17 @@ import ProductCarousel from "../../../components/ProductCarousel.astro";
 
 import product1 from "./1.jpg";
 import product2 from "./2.jpg";
+import product3 from "./3.jpg";
+import product4 from "./4.jpg";
 
-export const TOTAL_PRODUCTS = 2;
+export const TOTAL_PRODUCTS = 4;
 
-export const imageList = [{ src: product1 }, { src: product2 }];
+export const imageList = [
+  { src: product1 },
+  { src: product2 },
+  { src: product3 },
+  { src: product4 },
+];
 
 <ProductCarousel>
   {imageList.map((image) => (

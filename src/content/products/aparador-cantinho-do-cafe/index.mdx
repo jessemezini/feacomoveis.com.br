@@ -1,11 +1,11 @@
 ---
-title: "Armário Baixo com 2 Portas"
-category: "Armários e Colméias"
-height: "65 cm"
-width: "90 cm"
-depth: "42 cm"
-# sheetWidth: "26"
-items: ["Pés rodízios"]
+title: "Aparador Industrial Preto"
+category: "Mesas e Aparadores"
+height: "80 cm"
+width: "100 cm"
+depth: "36 cm"
+# sheetWidth: ""
+items: []
 heroImage: "./1.jpg"
 ---
 
@@ -14,10 +14,15 @@ import ProductCarousel from "../../../components/ProductCarousel.astro";
 
 import product1 from "./1.jpg";
 import product2 from "./2.jpg";
+import product3 from "./3.jpg";
 
-export const TOTAL_PRODUCTS = 2;
+export const TOTAL_PRODUCTS = 3;
 
-export const imageList = [{ src: product1 }, { src: product2 }];
+export const imageList = [
+  { src: product1 },
+  { src: product2 },
+  { src: product3 },
+];
 
 <ProductCarousel>
   {imageList.map((image) => (

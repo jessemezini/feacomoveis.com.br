@@ -1,11 +1,11 @@
 ---
-title: "Armário Baixo com 2 Portas"
-category: "Armários e Colméias"
-height: "65 cm"
-width: "90 cm"
-depth: "42 cm"
-# sheetWidth: "26"
-items: ["Pés rodízios"]
+title: "Gaveteiro Volante"
+category: "Gaveteiros"
+height: "60 cm"
+width: "45 cm"
+depth: "40 cm"
+# sheetWidth: ""
+items: ["Pés rodízio"]
 heroImage: "./1.jpg"
 ---
 
@@ -13,11 +13,10 @@ import { Image } from "astro:assets";
 import ProductCarousel from "../../../components/ProductCarousel.astro";
 
 import product1 from "./1.jpg";
-import product2 from "./2.jpg";
 
-export const TOTAL_PRODUCTS = 2;
+export const TOTAL_PRODUCTS = 1;
 
-export const imageList = [{ src: product1 }, { src: product2 }];
+export const imageList = [{ src: product1 }];
 
 <ProductCarousel>
   {imageList.map((image) => (
