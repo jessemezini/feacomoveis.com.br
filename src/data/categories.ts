@@ -7,14 +7,6 @@ export const categories = [
     name: "Armários e Colméias",
     imageUrl: "/src/assets/images/categories/armarios-e-colmeias.png",
   },
-  // {
-  //   name: "Armários",
-  //   imageUrl: "/src/assets/images/categories/armarios.png",
-  // },
-  // {
-  //   name: "Armários Vitrines",
-  //   imageUrl: "/src/assets/images/categories/armarios-vitrines.png",
-  // },
   {
     name: "Arquivos",
     imageUrl: "/src/assets/images/categories/arquivos.png",
@@ -26,6 +18,10 @@ export const categories = [
   {
     name: "Estantes",
     imageUrl: "/src/assets/images/categories/estantes.png",
+  },
+  {
+    name: "Estantes Gaveteiros",
+    imageUrl: "/src/assets/images/categories/estantes-gaveteiros.png",
   },
   {
     name: "Gaveteiros",
@@ -40,11 +36,11 @@ export const categories = [
     imageUrl: "/src/assets/images/categories/rack-para-celulares.png",
   },
   // {
-  //   name: "Estantes Gaveteiros",
-  //   imageUrl: "/src/assets/images/categories/estantes-gaveteiros.png",
-  // },
-  // {
   //   name: "Roupeiros GRP",
   //   imageUrl: "/src/assets/images/categories/roupeiros-grp.png",
+  // },
+  // {
+  //   name: "Vitrines",
+  //   imageUrl: "/src/assets/images/categories/armarios-vitrines.png",
   // },
 ];
