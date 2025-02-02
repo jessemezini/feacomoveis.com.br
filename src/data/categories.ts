@@ -39,8 +39,8 @@ export const categories = [
   //   name: "Roupeiros GRP",
   //   imageUrl: "/src/assets/images/categories/roupeiros-grp.png",
   // },
-  // {
-  //   name: "Vitrines",
-  //   imageUrl: "/src/assets/images/categories/armarios-vitrines.png",
-  // },
+  {
+    name: "Vitrines",
+    imageUrl: "/src/assets/images/categories/armarios-vitrines.png",
+  },
 ];
