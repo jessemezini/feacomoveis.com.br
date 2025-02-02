@@ -8,6 +8,10 @@ export const categories = [
     imageUrl: "/src/assets/images/categories/armarios-e-colmeias.png",
   },
   {
+    name: "Armários Roupeiros GRP",
+    imageUrl: "/src/assets/images/categories/roupeiros-grp.png",
+  },
+  {
     name: "Arquivos",
     imageUrl: "/src/assets/images/categories/arquivos.png",
   },
@@ -34,10 +38,6 @@ export const categories = [
   {
     name: "Rack para Celulares",
     imageUrl: "/src/assets/images/categories/rack-para-celulares.png",
-  },
-  {
-    name: "Roupeiros GRP",
-    imageUrl: "/src/assets/images/categories/roupeiros-grp.png",
   },
   {
     name: "Vitrines",
