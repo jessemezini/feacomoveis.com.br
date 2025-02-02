@@ -35,10 +35,10 @@ export const categories = [
     name: "Rack para Celulares",
     imageUrl: "/src/assets/images/categories/rack-para-celulares.png",
   },
-  // {
-  //   name: "Roupeiros GRP",
-  //   imageUrl: "/src/assets/images/categories/roupeiros-grp.png",
-  // },
+  {
+    name: "Roupeiros GRP",
+    imageUrl: "/src/assets/images/categories/roupeiros-grp.png",
+  },
   {
     name: "Vitrines",
     imageUrl: "/src/assets/images/categories/armarios-vitrines.png",
