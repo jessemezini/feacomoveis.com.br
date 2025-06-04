@@ -1,4 +1,5 @@
 ---
+import { Image } from "astro:assets";
 import { Icon } from "astro-icon/components";
 import {
   Astronav,
@@ -13,6 +14,8 @@ import IconsGroup from "./IconsGroup.astro";
 
 import { SITE_TITLE } from "../consts";
 import { categories } from "../data/categories";
+
+import logo from "../assets/logo.png";
 ---
 
 <header id="header" class="bg-secondary relative z-20 border-b border-base-200">
@@ -37,12 +40,13 @@ import { categories } from "../data/categories";
       <Astronav closeOnClick>
         <div class="flex justify-between items-center w-full">
           <a href="/"
-            ><img
-              src="/logo.png"
+            ><Image
+              src={logo}
               alt={SITE_TITLE}
-              width="100px"
-              height="100px"
+              width="100"
+              densities={[1, 2, 3]}
               class="rounded-full"
+              loading="eager"
             /></a
           >
           <div class="block lg:hidden">
@@ -57,6 +61,9 @@ import { categories } from "../data/categories";
               <Dropdown class="group">
                 <button
                   class="flex items-center btn btn-ghost text-secondary-content hover:bg-secondary-content/10 hover:text-secondary-content"
+                  aria-haspopup="true"
+                  aria-expanded="false"
+                  aria-label="Produtos"
                 >
                   <span class="mr-1">Produtos</span>
                   <svg

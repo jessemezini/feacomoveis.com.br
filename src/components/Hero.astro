@@ -34,11 +34,11 @@ import patternWhite from "../assets/images/pattern-white.png";
 
   <div class="relative hidden md:grid grid-cols-2 gap-x-5 w-full">
     <div class="w-80 absolute left-1/4 -top-20">
-      <Image src={patternAccent} alt="pattern enfeite" />
+      <Image src={patternAccent} alt="pattern enfeite" loading="eager" />
     </div>
 
     <div class="w-80 absolute -left-24 -bottom-14">
-      <Image src={patternWhite} alt="pattern enfeite" />
+      <Image src={patternWhite} alt="pattern enfeite" loading="eager" />
     </div>
 
     <div class="relative max-w-96 lg:max-w-80 flex items-center justify-center">
@@ -48,9 +48,11 @@ import patternWhite from "../assets/images/pattern-white.png";
       </div>
       <Image
         src={hero1}
-        width="320"
+        widths={[288, 576, 864]}
+        sizes="(max-width: 288px) 100vw, 288px"
         class="absolute max-w-72 lg:max-w-64 xl:max-w-72"
         alt="Armário de Ferramenta baixo"
+        loading="eager"
       />
     </div>
 
@@ -61,9 +63,11 @@ import patternWhite from "../assets/images/pattern-white.png";
       </div>
       <Image
         src={hero2}
-        width="280"
+        widths={[288, 576, 864]}
+        sizes="(max-width: 288px) 100vw, 288px"
         class="absolute max-w-72 lg:max-w-64 xl:max-w-72"
-        alt="Armário de Ferramenta baixo"
+        alt="Armário 3 gavetas"
+        loading="eager"
       />
     </div>
   </div>

@@ -5,6 +5,9 @@ import { Icon } from "astro-icon/components";
 import IconsGroup from "./IconsGroup.astro";
 
 import patternAccent from "../assets/images/pattern-accent.png";
+import { SITE_TITLE } from "../consts";
+
+import logo from "../assets/logo.png";
 
 const today = new Date();
 ---
@@ -22,10 +25,10 @@ const today = new Date();
       class="relative prose max-w-none prose-headings:text-secondary-content prose-p:text-secondary-content prose-p:text-sm"
     >
       <Image
-        src="/logo.png"
-        alt="logo DEC Móveis"
+        src={logo}
+        alt={SITE_TITLE}
         width="100"
-        height="100"
+        densities={[1, 2, 3]}
         class="rounded-full"
       />
 
