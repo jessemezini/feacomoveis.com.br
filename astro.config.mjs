@@ -5,6 +5,7 @@ import partytown from "@astrojs/partytown";
 import react from "@astrojs/react";
 import mdx from "@astrojs/mdx";
 import netlify from "@astrojs/netlify";
+import sitemap from "@astrojs/sitemap";
 
 // https://astro.build/config
 export default defineConfig({
@@ -17,6 +18,7 @@ export default defineConfig({
     partytown(),
     react(),
     mdx(),
+    sitemap(),
   ],
   output: "server",
   adapter: netlify(),
