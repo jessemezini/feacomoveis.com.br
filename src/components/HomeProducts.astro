@@ -10,9 +10,9 @@ const allProducts = (await getCollection("products")).slice(0, 8);
   <div
     class="flex flex-col sm:flex-row justify-between items-center prose max-w-none mb-10"
   >
-    <div class="text-center sm:text-left">
-      <p class="text-sm mb-2">Destaques</p>
+    <div class="text-center sm:text-left flex flex-col-reverse">
       <h2 class="mt-0">Produtos em Destaque</h2>
+      <p class="text-sm mb-2">Destaques</p>
     </div>
     <a href="/produtos" class="btn btn-outline rounded-3xl">
       Todos Produtos <Icon name="majesticons--chevron-right" />
