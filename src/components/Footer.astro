@@ -12,7 +12,33 @@ import logo from "../assets/logo.png";
 const today = new Date();
 ---
 
-<footer id="contato" class="bg-secondary pt-20 pb-5">
+<footer id="contato" class="bg-secondary pt-10 pb-5">
+  <div class="container mx-auto">
+    <div
+      class="flex flex-col md:flex-row items-center justify-around gap-5 pb-10 mb-10 border-b border-secondary-content/15"
+    >
+      <Image
+        src={logo}
+        alt={SITE_TITLE}
+        width="100"
+        densities={[1, 2, 3]}
+        class="rounded-full"
+      />
+
+      <div class="prose max-w-4xl text-center md:text-left">
+        <p>
+          <span class="font-bold"
+            >A DEC Móveis é uma empresa com 8 anos de experiência na fabricação
+            de móveis em aço e MDF.</span
+          > Atuamos em todo estado de São Paulo e Minas Gerais, oferecendo móveis
+          de qualidade, direto da fábrica, com garantia e montagem no local. Trabalhamos
+          com armários, estantes, arquivos, racks para celulares e móveis sob medida,
+          sempre prezando pela durabilidade, resistência e ótimo acabamento.
+        </p>
+      </div>
+    </div>
+  </div>
+
   <div
     class="relative container mx-auto pb-10 flex flex-col md:flex-row gap-10 justify-between md:items-center"
   >
@@ -24,14 +50,7 @@ const today = new Date();
     <div
       class="relative prose max-w-none prose-headings:text-secondary-content prose-p:text-secondary-content prose-p:text-sm"
     >
-      <Image
-        src={logo}
-        alt={SITE_TITLE}
-        width="100"
-        densities={[1, 2, 3]}
-        class="rounded-full"
-      />
-
+      <h3 class="mb-10">Entre em contato conosco!</h3>
       <h4>Endereço:</h4>
       <p class="mb-2">
         Rua Sebastião Nicolau Pires, nº 108 - Bairro Parque Catharina B. Ometto
@@ -79,14 +98,16 @@ const today = new Date();
       <a
         href="/produtos?category=Armários%20de%20Ferramentas"
         class="link flex items-center"
-        >Ver todos <Icon name="majesticons--chevron-right" /></a
+        >Todas Categorias de Produtos <Icon
+          name="majesticons--chevron-right"
+        /></a
       >
     </div>
   </div>
 
   <div class="container mx-auto">
     <div
-      class="border-t border-secondary-content pt-10 pb-5 flex flex-col md:flex-row justify-between items-center gap-5"
+      class="border-t border-secondary-content/15 pt-10 pb-5 flex flex-col md:flex-row justify-between items-center gap-5"
     >
       <small>
         &copy; {today.getFullYear()} DEC Móveis. Todos direitos reservados.
