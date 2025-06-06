@@ -2001,13 +2001,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"astro-navbar@npm:^2.3.3":
-  version: 2.3.3
-  resolution: "astro-navbar@npm:2.3.3"
-  checksum: 10c0/86b1948979266b181e4eb968905125f23ef499851ecffba7d48cd66299a75a63c7eb583583040ad3d04bbffe5390c3d7a8e388472ce39b89241d0ab7e702d6c7
-  languageName: node
-  linkType: hard
-
 "astro@npm:4.15.7":
   version: 4.15.7
   resolution: "astro@npm:4.15.7"
@@ -6366,7 +6359,6 @@ __metadata:
     "@types/react-dom": "npm:^18.3.0"
     astro: "npm:4.15.7"
     astro-icon: "npm:^1.1.1"
-    astro-navbar: "npm:^2.3.3"
     daisyui: "npm:^4.12.10"
     prettier: "npm:^3.3.3"
     prettier-plugin-astro: "npm:^0.14.1"
