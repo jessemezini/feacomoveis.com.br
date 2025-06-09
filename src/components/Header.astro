@@ -8,6 +8,32 @@ import CategoriesMenu from "./CategoriesMenu";
 import { SITE_TITLE } from "../consts";
 
 import logo from "../assets/logo.png";
+
+const { pathname } = Astro.url;
+
+const navLinks = [
+  { href: "/", label: "Início" },
+  { href: "/sobre-nos", label: "Sobre Nós" },
+  { href: "/contato", label: "Contato" },
+];
+
+function isActive(href: string, currentPath: string): boolean {
+  // Exact match for home page
+  if (href === "/") {
+    return currentPath === "/";
+  }
+
+  // For nested routes like /blog/post-1, /blog/post-2
+  if (currentPath.startsWith(href)) {
+    return true;
+  }
+
+  // Remove trailing slashes for comparison
+  const cleanHref = href.replace(/\/$/, "");
+  const cleanPath = currentPath.replace(/\/$/, "");
+
+  return cleanPath === cleanHref || cleanPath.startsWith(cleanHref + "/");
+}
 ---
 
 <header id="header" class="bg-secondary relative z-20 border-b border-base-200">
@@ -49,25 +75,45 @@ import logo from "../assets/logo.png";
           <ul
             class="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow"
           >
-            <li>
-              <a
-                href="/"
-                aria-label="Início"
-                class="btn btn-secondary shadow-none rounded-3xl">Início</a
-              >
-            </li>
-            <li role="none" class="">
-              <div role="menuitem" tabindex="-1" class="rounded-3xl p-0 block">
-                <CategoriesMenu client:load name="Produtos" />
-              </div>
-            </li>
-            <li>
-              <a
-                href="/contato"
-                aria-label="Contato"
-                class="btn btn-secondary shadow-none rounded-3xl">Contato</a
-              >
-            </li>
+            {
+              navLinks.map((link, i) => {
+                if (i === 1) {
+                  return (
+                    <li role="none">
+                      <div
+                        role="menuitem"
+                        tabindex="-1"
+                        class="rounded-3xl p-0 block"
+                      >
+                        <CategoriesMenu client:load name="Produtos" isActive={isActive("/produtos", pathname) ? true : false} />
+                      </div>
+                    </li>
+                    <li>
+                      <a
+                        href={link.href}
+                        class={`btn btn-secondary shadow-none rounded-3xl ${
+                          isActive(link.href, pathname) ? "btn-active" : ""
+                        }`}
+                      >
+                        {link.label}
+                      </a>
+                    </li>
+                  );
+                }
+                return (
+                  <li>
+                    <a
+                      href={link.href}
+                      class={`btn btn-secondary shadow-none rounded-3xl ${
+                          isActive(link.href, pathname) ? "btn-active" : ""
+                        }`}
+                    >
+                      {link.label}
+                    </a>
+                  </li>
+                );
+              })
+            }
           </ul>
         </div>
         <a href="/"
@@ -85,21 +131,45 @@ import logo from "../assets/logo.png";
       <!-- DESKTOP -->
       <div class="navbar-center hidden lg:flex">
         <ul class="menu menu-horizontal px-1">
-          <li>
-            <a href="/" class="btn btn-secondary shadow-none rounded-3xl"
-              >Início</a
-            >
-          </li>
-          <li role="none">
-            <div role="menuitem" tabindex="-1" class="rounded-3xl p-0">
-              <CategoriesMenu client:load name="Produtos" />
-            </div>
-          </li>
-          <li>
-            <a href="/contato" class="btn btn-secondary shadow-none rounded-3xl"
-              >Contato</a
-            >
-          </li>
+          {
+            navLinks.map((link, i) => {
+              if (i === 1) {
+                return (
+                  <li role="none">
+                    <div
+                      role="menuitem"
+                      tabindex="-1"
+                      class="rounded-3xl p-0 block"
+                    >
+                      <CategoriesMenu client:load name="Produtos" isActive={isActive("/produtos", pathname) ? true : false} />
+                    </div>
+                  </li>
+                  <li>
+                  <a
+                    href={link.href}
+                    class={`btn btn-secondary shadow-none rounded-3xl ${
+                          isActive(link.href, pathname) ? "btn-active" : ""
+                        }`}
+                  >
+                    {link.label}
+                  </a>
+                </li>
+                );
+              }
+              return (
+                <li>
+                  <a
+                    href={link.href}
+                    class={`btn btn-secondary shadow-none rounded-3xl ${
+                          isActive(link.href, pathname) ? "btn-active" : ""
+                        }`}
+                  >
+                    {link.label}
+                  </a>
+                </li>
+              );
+            })
+          }
         </ul>
       </div>
       <div class="navbar-end">

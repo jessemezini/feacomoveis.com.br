@@ -6,15 +6,19 @@ import { categories } from "../data/categories";
 
 export default function CategoriesMenu({
   name = "Filtrar por Categoria",
+  isActive,
 }: {
   name?: string;
+  isActive?: boolean;
 }) {
   return (
     <Menu
       align="end"
       arrow
       menuButton={({ open }) => (
-        <MenuButton className="flex items-center gap-2 btn btn-secondary w-full lg:w-auto shadow-none rounded-3xl no-animation">
+        <MenuButton
+          className={`flex items-center gap-2 btn btn-secondary w-full lg:w-auto shadow-none rounded-3xl no-animation ${isActive ? "btn-active" : ""}`}
+        >
           {name}
           {open ? (
             <svg
