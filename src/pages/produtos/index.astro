@@ -28,7 +28,9 @@ const allProducts = await getCollection("products", ({ data }) => {
         {category && <li>{category}</li>}
       </ul>
     </div>
-    <CategoriesMenu client:load />
+    <div class="max-w-72">
+      <CategoriesMenu client:load />
+    </div>
   </PageHeader>
 
   <section class="container mx-auto my-20">

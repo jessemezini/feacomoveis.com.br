@@ -47,18 +47,24 @@ import logo from "../assets/logo.png";
             </svg>
           </div>
           <ul
-            tabindex="0"
             class="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow"
           >
             <li>
-              <a href="/" class="btn btn-secondary shadow-none rounded-3xl"
-                >Início</a
+              <a
+                href="/"
+                aria-label="Início"
+                class="btn btn-secondary shadow-none rounded-3xl">Início</a
               >
             </li>
-            <CategoriesMenu client:load name="Produtos" />
+            <li role="none" class="">
+              <div role="menuitem" tabindex="-1" class="rounded-3xl p-0 block">
+                <CategoriesMenu client:load name="Produtos" />
+              </div>
+            </li>
             <li>
               <a
                 href="#contato"
+                aria-label="Contato"
                 class="btn btn-secondary shadow-none rounded-3xl">Contato</a
               >
             </li>
@@ -84,7 +90,11 @@ import logo from "../assets/logo.png";
               >Início</a
             >
           </li>
-          <CategoriesMenu client:load name="Produtos" />
+          <li role="none">
+            <div role="menuitem" tabindex="-1" class="rounded-3xl p-0">
+              <CategoriesMenu client:load name="Produtos" />
+            </div>
+          </li>
           <li>
             <a href="#contato" class="btn btn-secondary shadow-none rounded-3xl"
               >Contato</a

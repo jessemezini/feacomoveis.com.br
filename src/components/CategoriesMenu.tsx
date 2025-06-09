@@ -14,7 +14,7 @@ export default function CategoriesMenu({
       align="end"
       arrow
       menuButton={({ open }) => (
-        <MenuButton className="flex items-center gap-2 btn btn-secondary shadow-none rounded-3xl">
+        <MenuButton className="flex items-center gap-2 btn btn-secondary w-full lg:w-auto shadow-none rounded-3xl no-animation">
           {name}
           {open ? (
             <svg
