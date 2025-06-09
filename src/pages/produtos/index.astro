@@ -2,8 +2,6 @@
 import { Image } from "astro:assets";
 import { getCollection } from "astro:content";
 
-import { SITE_TITLE, SITE_DESCRIPTION } from "../../consts";
-
 import Layout from "../../layouts/Layout.astro";
 import PageHeader from "../../components/PageHeader.astro";
 import CategoriesMenu from "../../components/CategoriesMenu";
@@ -18,7 +16,10 @@ const allProducts = await getCollection("products", ({ data }) => {
 });
 ---
 
-<Layout title={`Produtos | ${SITE_TITLE}`} description={SITE_DESCRIPTION}>
+<Layout
+  title="Armários, Estantes, Arquivos e Móveis em Aço e MDF | DEC Móveis"
+  description="Confira nossa linha de móveis em aço e MDF: armários, estantes, arquivos e muito mais. Entrega na região de SP e MG. Qualidade e garantia direto da fábrica."
+>
   <PageHeader>
     <div class="breadcrumbs text-sm">
       <ul>
@@ -27,7 +28,9 @@ const allProducts = await getCollection("products", ({ data }) => {
         {category && <li>{category}</li>}
       </ul>
     </div>
-    <CategoriesMenu client:load />
+    <div class="max-w-72">
+      <CategoriesMenu client:load />
+    </div>
   </PageHeader>
 
   <section class="container mx-auto my-20">
@@ -43,8 +46,9 @@ const allProducts = await getCollection("products", ({ data }) => {
                   class="object-contain w-full h-full rounded-3xl group-hover:scale-105 transition-transform duration-300"
                   src={product.data.heroImage}
                   alt={product.data.title}
+                  loading="eager"
                   width="350"
-                  height="350"
+                  densities={[1, 2, 3]}
                 />
               </div>
               <div class="h-28">

@@ -2,6 +2,6 @@
 // You can import this data from anywhere in your site by using the `import` keyword.
 
 export const SITE_TITLE =
-  "DEC Móveis Direto da Fábrica | Armários e Estantes em Aço e MDF";
+  "Móveis em Aço e MDF Direto da Fábrica | DEC Móveis | SP e MG";
 export const SITE_DESCRIPTION =
-  "Encontre armários, estantes, bancadas e móveis com qualidade garantida, direto da fábrica. Produtos em aço e MDF feitos sob medida por profissionais qualificados.";
+  "Há 8 anos no mercado, a DEC Móveis fabrica móveis em aço e MDF com qualidade, garantia e montagem local. Entregamos na região de SP e MG. Consulte modelos a pronta entrega!";

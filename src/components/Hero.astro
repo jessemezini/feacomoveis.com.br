@@ -13,15 +13,15 @@ import patternWhite from "../assets/images/pattern-white.png";
   id="hero"
   class="grid grid-cols-1 lg:grid-cols-2 gap-5 py-10 container mx-auto relative z-10"
 >
-  <div class="flex flex-col text-center lg:text-left lg:pt-20">
-    <h1 class="text-4xl font-bold mb-5">
-      Móveis em <span class="text-[#888888]">Aço e MDF</span> Direto da Fábrica
+  <div class="flex flex-col text-center lg:text-left lg:pt-5">
+    <h1 class="text-4xl sm:text-5xl leading-tight font-bold mb-5">
+      Móveis em <span class="text-primary/70">Aço e MDF</span> Direto da Fábrica
     </h1>
-    <h2 class="text-base mb-5 text-gray-500">
-      Descubra armários e estantes com qualidade excepcional, fabricados por
-      profissionais qualificados. Perfeitos para organizar e valorizar seus
-      espaços.
-    </h2>
+    <p class="mb-5 text-gray-500">
+      Transforme seus espaços com armários, estantes e arquivos feitos sob
+      medida, com garantia de fábrica, montagem no local e modelos a pronta
+      entrega. Entregamos em todo o estado de São Paulo, Minas Gerais e região.
+    </p>
     <a
       href="https://wa.me/5519988287751"
       target="_blank"
@@ -34,11 +34,11 @@ import patternWhite from "../assets/images/pattern-white.png";
 
   <div class="relative hidden md:grid grid-cols-2 gap-x-5 w-full">
     <div class="w-80 absolute left-1/4 -top-20">
-      <Image src={patternAccent} alt="pattern enfeite" />
+      <Image src={patternAccent} alt="pattern enfeite" loading="eager" />
     </div>
 
     <div class="w-80 absolute -left-24 -bottom-14">
-      <Image src={patternWhite} alt="pattern enfeite" />
+      <Image src={patternWhite} alt="pattern enfeite" loading="eager" />
     </div>
 
     <div class="relative max-w-96 lg:max-w-80 flex items-center justify-center">
@@ -48,9 +48,11 @@ import patternWhite from "../assets/images/pattern-white.png";
       </div>
       <Image
         src={hero1}
-        width="320"
+        widths={[288, 576, 864]}
+        sizes="(max-width: 288px) 100vw, 288px"
         class="absolute max-w-72 lg:max-w-64 xl:max-w-72"
         alt="Armário de Ferramenta baixo"
+        loading="eager"
       />
     </div>
 
@@ -61,10 +63,20 @@ import patternWhite from "../assets/images/pattern-white.png";
       </div>
       <Image
         src={hero2}
-        width="280"
+        widths={[288, 576, 864]}
+        sizes="(max-width: 288px) 100vw, 288px"
         class="absolute max-w-72 lg:max-w-64 xl:max-w-72"
-        alt="Armário de Ferramenta baixo"
+        alt="Armário 3 gavetas"
+        loading="eager"
       />
     </div>
   </div>
 </section>
+
+<style>
+  .hero-stroke {
+    -webkit-text-stroke-width: 2px;
+    -webkit-text-stroke-color: black;
+    /* color: transparent; */
+  }
+</style>

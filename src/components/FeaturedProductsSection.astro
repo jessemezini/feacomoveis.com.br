@@ -6,13 +6,13 @@ import { Image } from "astro:assets";
 const allProducts = (await getCollection("products")).slice(0, 8);
 ---
 
-<section class="container mx-auto mt-10 mb-20">
+<section class="container mx-auto mt-16 mb-24">
   <div
     class="flex flex-col sm:flex-row justify-between items-center prose max-w-none mb-10"
   >
-    <div class="text-center sm:text-left">
-      <p class="text-sm mb-2">Destaques</p>
+    <div class="text-center sm:text-left flex flex-col-reverse">
       <h2 class="mt-0">Produtos em Destaque</h2>
+      <p class="text-sm mb-2">Destaques</p>
     </div>
     <a href="/produtos" class="btn btn-outline rounded-3xl">
       Todos Produtos <Icon name="majesticons--chevron-right" />
@@ -35,7 +35,7 @@ const allProducts = (await getCollection("products")).slice(0, 8);
               />
             </div>
             <div class="h-28">
-              <p class="font-semibold text-sm py-5 px-3 line-clamp-3">
+              <p class="font-semibold text-sm text-center sm:text-left py-5 px-3 line-clamp-3">
                 {product.data.title}
               </p>
             </div>
