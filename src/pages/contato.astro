@@ -1,0 +1,48 @@
+---
+import { Icon } from "astro-icon/components";
+import Layout from "../layouts/Layout.astro";
+---
+
+<Layout
+  title="Fale com a DEC Móveis | Peça Já Seu Orçamento"
+  description="Solicite seu orçamento de móveis em aço e MDF direto da fábrica. Entregamos na região de SP e MG. Garantia de fábrica e montagem no local."
+>
+  <div class="bg-primary text-center py-10">
+    <h1 class="text-2xl sm:text-3xl text-primary-content font-semibold">
+      Contato - Fale Conosco
+    </h1>
+  </div>
+
+  <div class="container mx-auto my-28">
+    <div class="prose mx-auto">
+      <h2>
+        Precisa de móveis em aço ou MDF com qualidade, garantia e montagem no
+        local?
+      </h2>
+      <p>
+        Estamos prontos para atender você! Fale com a nossa equipe pelo
+        WhatsApp, e-mail ou, se preferir, solicite seu orçamento. Entregamos em
+        todo o estado de São Paulo, Minas Gerais e região.
+      </p>
+
+      <div class="flex flex-col sm:flex-row gap-4 items-center">
+        <a
+          href="https://wa.me/5519988287751"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="btn btn-accent rounded-full"
+          >Solicite seu Orçamento
+          <Icon name="bxl--whatsapp" size={26} /></a
+        >
+        <a
+          href="mailto:vendas@moveisdec.com.br"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="btn btn-primary rounded-full"
+          >Solicite seu Orçamento
+          <Icon name="mdi-light--email" size={26} /></a
+        >
+      </div>
+    </div>
+  </div>
+</Layout>
