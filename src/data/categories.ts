@@ -16,7 +16,7 @@ export const categories = [
     imageUrl: "/src/assets/images/categories/arquivos.png",
   },
   {
-    name: "Bancadas",
+    name: "Bancadas e Cadeiras",
     imageUrl: "/src/assets/images/categories/bancadas.png",
   },
   {

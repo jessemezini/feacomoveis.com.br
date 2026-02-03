@@ -1,30 +1,22 @@
 ---
-title: "Bancada de aço"
-category: "Bancadas e Cadeiras"
-height: "93 cm"
-width: "193 cm"
-depth: "50 cm"
+title: "Mesa em L - Crystal"
+category: "Mesas e Aparadores"
+height: "120 cm"
+width: "60 cm"
+depth: "40 cm"
 # sheetWidth: "26"
-items: ["Material em aço", "Pintura: eletrostática texturizada", "Com reforço"]
-heroImage: "./1.jpg"
+items: ["Mesa em L", "Cor: Cinza Crystal", "Material: Aço e MDF"]
+heroImage: "./1.png"
 ---
 
 import { Image } from "astro:assets";
 import ProductCarousel from "../../../components/ProductCarousel.astro";
 
-import product1 from "./1.jpg";
-import product2 from "./2.jpg";
-import product3 from "./3.jpg";
-import product4 from "./4.jpg";
+import product1 from "./1.png";
 
-export const TOTAL_PRODUCTS = 4;
+export const TOTAL_PRODUCTS = 1;
 
-export const imageList = [
-  { src: product1 },
-  { src: product2 },
-  { src: product3 },
-  { src: product4 },
-];
+export const imageList = [{ src: product1 }];
 
 <ProductCarousel>
   {imageList.map((image) => (

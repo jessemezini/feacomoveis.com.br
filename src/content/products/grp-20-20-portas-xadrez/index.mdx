@@ -1,11 +1,18 @@
 ---
-title: "Bancada de aço"
-category: "Bancadas e Cadeiras"
-height: "93 cm"
-width: "193 cm"
-depth: "50 cm"
-# sheetWidth: "26"
-items: ["Material em aço", "Pintura: eletrostática texturizada", "Com reforço"]
+title: "GRP 20 - 20 Portas, Xadrez, Colorido"
+category: "Armários Roupeiros GRP"
+height: "198 cm"
+width: "123 cm"
+depth: "40 cm"
+sheetWidth: "26"
+items:
+  [
+    "Material em aço",
+    "20 portas",
+    "Pintura: eletrostática texturizada",
+    "Chapas: 26, 24 e 22",
+    "Com pés ou sem pés",
+  ]
 heroImage: "./1.jpg"
 ---
 
@@ -13,18 +20,10 @@ import { Image } from "astro:assets";
 import ProductCarousel from "../../../components/ProductCarousel.astro";
 
 import product1 from "./1.jpg";
-import product2 from "./2.jpg";
-import product3 from "./3.jpg";
-import product4 from "./4.jpg";
 
-export const TOTAL_PRODUCTS = 4;
+export const TOTAL_PRODUCTS = 1;
 
-export const imageList = [
-  { src: product1 },
-  { src: product2 },
-  { src: product3 },
-  { src: product4 },
-];
+export const imageList = [{ src: product1 }];
 
 <ProductCarousel>
   {imageList.map((image) => (
