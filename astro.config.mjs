@@ -15,7 +15,11 @@ export default defineConfig({
     icon({
       iconDir: "src/assets/icons",
     }),
-    partytown(),
+    partytown({
+      config: {
+        forward: ["dataLayer.push", "gtag"],
+      },
+    }),
     react(),
     mdx(),
     sitemap(),

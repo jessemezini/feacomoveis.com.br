@@ -56,20 +56,33 @@ const { title, description, image = "/ogimage.jpg" } = Astro.props;
 <meta property="twitter:description" content={description} />
 <meta property="twitter:image" content="/ogimage.jpg" />
 
-<!-- Google tag (gtag.js) -->
+<!-- Google Analytics (gtag.js) -->
 <script
   is:inline
   type="text/partytown"
   async
   src="https://www.googletagmanager.com/gtag/js?id=G-1XVNKSNMVN"></script>
-<script type="text/partytown">
+<script is:inline type="text/partytown">
   window.dataLayer = window.dataLayer || [];
   function gtag() {
     dataLayer.push(arguments);
   }
   gtag("js", new Date());
-
   gtag("config", "G-1XVNKSNMVN");
+</script>
+
+<!-- Google Tag Manager -->
+<script is:inline type="text/partytown">
+  (function (w, d, s, l, i) {
+    w[l] = w[l] || [];
+    w[l].push({ "gtm.start": new Date().getTime(), event: "gtm.js" });
+    var f = d.getElementsByTagName(s)[0],
+      j = d.createElement(s),
+      dl = l != "dataLayer" ? "&l=" + l : "";
+    j.async = true;
+    j.src = "https://www.googletagmanager.com/gtm.js?id=" + i + dl;
+    f.parentNode.insertBefore(j, f);
+  })(window, document, "script", "dataLayer", "GTM-M6LG275Q");
 </script>
 
 <ViewTransitions />
