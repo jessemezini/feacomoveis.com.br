@@ -12,8 +12,12 @@ export const categories = [
     imageUrl: "/src/assets/images/categories/arquivos.png",
   },
   {
-    name: "Bancadas e Cadeiras",
+    name: "Bancadas e Balcões",
     imageUrl: "/src/assets/images/categories/bancadas.png",
+  },
+  {
+    name: "Cadeiras e Assentos",
+    imageUrl: "/src/assets/images/categories/cadeiras.png",
   },
   {
     name: "Estantes",

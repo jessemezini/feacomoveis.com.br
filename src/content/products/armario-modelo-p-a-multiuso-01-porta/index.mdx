@@ -5,13 +5,22 @@ height: "170 cm"
 width: "48 cm"
 depth: "40 cm"
 sheetWidth: "26"
-items:
-  [
+items: [
     "Material em aço",
     "Pintura: eletrostática texturizada",
     "Fechadura: com chave",
     "Cor: Cinza",
     "3 bandejas internas",
+    "Armário de Aço multi-uso ideal para escritórios, almoxarifados, empresas,
+    garagem e pode ser usado em residências também, com 01 (UMA) porta de abrir e
+    03 (TRÊS) prateleiras resistente a 20kg (distribuídos por prateleira) com
+    níveis para acomodação de materiais e objetos. Possui cremalheira para ajuste
+    das prateleiras.",
+    "Produzido em Aço de alta qualidade com tratamento anti-ferruginoso, em 'CHAPA
+    26', possui 01 Porta de Abrir com fechadura com duas chaves, 03 (TRÊS)
+    prateleiras resistente a 20kg (distribuídos por prateleira).O acabamento em
+    sistema de pintura eletrostática a alta temperatura a pó (epóxi) também
+    garante maior durabilidade da cor e resistência à ferrugem.",
   ]
 heroImage: "./1.png"
 ---
@@ -21,10 +30,15 @@ import ProductCarousel from "../../../components/ProductCarousel.astro";
 
 import product1 from "./1.png";
 import product2 from "./2.png";
+import product3 from "./3.png";
 
-export const TOTAL_PRODUCTS = 2;
+export const TOTAL_PRODUCTS = 3;
 
-export const imageList = [{ src: product1 }, { src: product2 }];
+export const imageList = [
+  { src: product1 },
+  { src: product2 },
+  { src: product3 },
+];
 
 <ProductCarousel>
   {imageList.map((image) => (

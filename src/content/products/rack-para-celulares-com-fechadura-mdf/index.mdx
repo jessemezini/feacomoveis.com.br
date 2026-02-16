@@ -13,19 +13,25 @@ items:
     "Garantia de Fábrica",
     "Instalação e Montagem Sob Consulta",
     "Organização e Segurança",
+    "Código: 000274",
   ]
-heroImage: "./1.png"
+heroImage: "./1.jpeg"
 ---
 
 import { Image } from "astro:assets";
 import ProductCarousel from "../../../components/ProductCarousel.astro";
 
-import product1 from "./1.png";
-import product2 from "./2.png";
+import product1 from "./1.jpeg";
+import product2 from "./2.jpeg";
+import product3 from "./3.jpeg";
 
-export const TOTAL_PRODUCTS = 2;
+export const TOTAL_PRODUCTS = 3;
 
-export const imageList = [{ src: product1 }, { src: product2 }];
+export const imageList = [
+  { src: product1 },
+  { src: product2 },
+  { src: product3 },
+];
 
 <ProductCarousel>
   {imageList.map((image) => (
