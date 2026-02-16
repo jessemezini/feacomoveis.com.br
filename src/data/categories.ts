@@ -1,10 +1,6 @@
 export const categories = [
   {
-    name: "Armários de Ferramentas",
-    imageUrl: "/src/assets/images/categories/armarios-de-ferramentas.png",
-  },
-  {
-    name: "Armários e Colméias",
+    name: "Armários",
     imageUrl: "/src/assets/images/categories/armarios-e-colmeias.png",
   },
   {
