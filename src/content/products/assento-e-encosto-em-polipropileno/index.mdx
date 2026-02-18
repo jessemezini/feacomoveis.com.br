@@ -1,22 +1,29 @@
 ---
-title: "Bancada de Aço e MDF"
-category: "Bancadas e Balcões"
-height: "45 cm"
-width: "120 cm"
-depth: "30 cm"
+title: "Assento e Encosto em Polipropileno 100% Reciclável"
+category: "Cadeiras e Assentos"
+height: "470 mm"
+width: "430 mm"
+depth: "31 mm"
 # sheetWidth: "26"
-items: ["Material em aço e MDF", "Pintura: eletrostática texturizada"]
-heroImage: "./1.jpg"
+items:
+  [
+    "Encosto com medidas de 295 x 470 x 28 mm (altura x largura x espessura)",
+    "Assento anatômico com medidas de 470 x 430 x 31 mm (largura x profundidade x espessura)",
+    "Disponível para 2, 3, 4 e 5 lugares",
+    "Código: 000273",
+  ]
+heroImage: "./1.png"
 ---
 
 import { Image } from "astro:assets";
 import ProductCarousel from "../../../components/ProductCarousel.astro";
 
-import product1 from "./1.jpg";
+import product1 from "./1.png";
+import product2 from "./2.png";
 
-export const TOTAL_PRODUCTS = 1;
+export const TOTAL_PRODUCTS = 2;
 
-export const imageList = [{ src: product1 }];
+export const imageList = [{ src: product1 }, { src: product2 }];
 
 <ProductCarousel>
   {imageList.map((image) => (
