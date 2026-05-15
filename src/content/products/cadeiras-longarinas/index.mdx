@@ -1,11 +1,16 @@
 ---
-title: "Armário Baixo com 2 Portas"
-category: "Armários"
-height: "65 cm"
-width: "90 cm"
-depth: "42 cm"
+title: "Cadeiras Longarinas"
+category: "Cadeiras e Assentos"
+height: ""
+width: ""
+depth: ""
 # sheetWidth: "26"
-items: ["Pés rodízios"]
+items:
+  [
+    "Ela mede 50 cm por assento, ou seja 3 lugares é igual a 1,5 metros de comprimento",
+    "Temos de 2, 3, 4 e 5 lugares",
+    "Ideal para recepções, salas de espera, clínicas, escritórios e ambientes corporativos",
+  ]
 heroImage: "./1.jpg"
 ---
 
@@ -14,10 +19,15 @@ import ProductCarousel from "../../../components/ProductCarousel.astro";
 
 import product1 from "./1.jpg";
 import product2 from "./2.jpg";
+import product3 from "./3.jpg";
 
-export const TOTAL_PRODUCTS = 2;
+export const TOTAL_PRODUCTS = 3;
 
-export const imageList = [{ src: product1 }, { src: product2 }];
+export const imageList = [
+  { src: product1 },
+  { src: product2 },
+  { src: product3 },
+];
 
 <ProductCarousel>
   {imageList.map((image) => (
