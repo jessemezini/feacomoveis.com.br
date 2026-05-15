@@ -1,19 +1,11 @@
 export const categories = [
   {
-    name: "Armários",
-    imageUrl: "/src/assets/images/categories/armarios-e-colmeias.png",
-  },
-  {
     name: "Armários Roupeiros GRP",
     imageUrl: "/src/assets/images/categories/roupeiros-grp.png",
   },
   {
     name: "Arquivos",
     imageUrl: "/src/assets/images/categories/arquivos.png",
-  },
-  {
-    name: "Bancadas e Balcões",
-    imageUrl: "/src/assets/images/categories/bancadas.png",
   },
   {
     name: "Cadeiras e Assentos",
@@ -32,7 +24,7 @@ export const categories = [
     imageUrl: "/src/assets/images/categories/gaveteiros.png",
   },
   {
-    name: "Mesas e Aparadores",
+    name: "Mesas",
     imageUrl: "/src/assets/images/categories/mesas-e-aparadores.png",
   },
   {
