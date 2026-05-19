@@ -31,8 +31,4 @@ export const categories = [
     name: "Rack para Celulares",
     imageUrl: "/src/assets/images/categories/rack-para-celulares.png",
   },
-  {
-    name: "Vitrines",
-    imageUrl: "/src/assets/images/categories/armarios-vitrines.png",
-  },
 ];
