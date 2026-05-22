@@ -9,7 +9,7 @@ import sitemap from "@astrojs/sitemap";
 
 // https://astro.build/config
 export default defineConfig({
-  site: "https://moveisdec.com.br",
+  site: "https://feacomoveis.com.br",
   integrations: [
     tailwind(),
     icon({
