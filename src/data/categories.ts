@@ -19,16 +19,4 @@ export const categories = [
     name: "Estantes Gaveteiros",
     imageUrl: "/src/assets/images/categories/estantes-gaveteiros.png",
   },
-  {
-    name: "Gaveteiros",
-    imageUrl: "/src/assets/images/categories/gaveteiros.png",
-  },
-  {
-    name: "Mesas",
-    imageUrl: "/src/assets/images/categories/mesas-e-aparadores.png",
-  },
-  {
-    name: "Rack para Celulares",
-    imageUrl: "/src/assets/images/categories/rack-para-celulares.png",
-  },
 ];
