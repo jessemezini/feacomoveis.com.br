@@ -765,10 +765,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@fontsource-variable/montserrat@npm:^5.1.1":
-  version: 5.1.1
-  resolution: "@fontsource-variable/montserrat@npm:5.1.1"
-  checksum: 10c0/210951f4e9b9862cb70f3c04e9544b62e55c2b99964546d58e7eca786052108bde064e82eae3977778769e69e987f6e866a0e200b51ccd0aa4b64ae24d903466
+"@fontsource-variable/montserrat@npm:^5.2.8":
+  version: 5.2.8
+  resolution: "@fontsource-variable/montserrat@npm:5.2.8"
+  checksum: 10c0/b37baacec7e2030b2058525f33de093f253f4248e8a539f4b7161005c6bff967bf2edecd93055f3767e44a6943051e831afbdb873d3924474fd502aa237d0abc
   languageName: node
   linkType: hard
 
@@ -6350,7 +6350,7 @@ __metadata:
     "@astrojs/react": "npm:^3.6.2"
     "@astrojs/sitemap": "npm:^3.4.1"
     "@astrojs/tailwind": "npm:5.1.1"
-    "@fontsource-variable/montserrat": "npm:^5.1.1"
+    "@fontsource-variable/montserrat": "npm:^5.2.8"
     "@glidejs/glide": "npm:^3.6.2"
     "@szhsin/react-menu": "npm:^4.2.2"
     "@tailwindcss/typography": "npm:^0.5.14"
