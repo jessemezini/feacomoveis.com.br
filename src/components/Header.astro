@@ -2,185 +2,181 @@
 import { Image } from "astro:assets";
 import { Icon } from "astro-icon/components";
 
-import IconsGroup from "./IconsGroup.astro";
-import CategoriesMenu from "./CategoriesMenu";
-
 import { SITE_TITLE } from "../consts";
-
 import logo from "../assets/logo.png";
 
 const { pathname } = Astro.url;
 
 const navLinks = [
   { href: "/", label: "Início" },
-  { href: "/sobre-nos", label: "Sobre Nós" },
+  { href: "/produtos", label: "Produtos" },
+  { href: "/sobre-nos", label: "Sobre nós" },
   { href: "/contato", label: "Contato" },
 ];
 
-function isActive(href: string, currentPath: string): boolean {
-  // Exact match for home page
-  if (href === "/") {
-    return currentPath === "/";
-  }
-
-  // For nested routes like /blog/post-1, /blog/post-2
-  if (currentPath.startsWith(href)) {
-    return true;
-  }
-
-  // Remove trailing slashes for comparison
-  const cleanHref = href.replace(/\/$/, "");
-  const cleanPath = currentPath.replace(/\/$/, "");
-
-  return cleanPath === cleanHref || cleanPath.startsWith(cleanHref + "/");
+function isActive(href: string): boolean {
+  if (href === "/") return pathname === "/";
+  return pathname.replace(/\/$/, "").startsWith(href);
 }
 ---
 
-<header id="header" class="bg-secondary relative z-20 border-b border-base-200">
-  <div class="container mx-auto">
-    <div class="flex justify-between py-1">
-      <div class="flex gap-x-4 items-center text-sm">
-        <p class="hidden md:flex items-center gap-x-1">
-          <Icon name="mdi-light--email" size={18} /> feacomoveis@gmail.com 
-        </p>
-        <div class="hidden md:block bg-secondary-content w-px h-1/2"></div>
-        <p class="flex items-center gap-x-1">
-          <Icon name="mdi--shop-hours-outline" size={18} /> Seg. a Sex. das 8 às
-          17h
-        </p>
-      </div>
+<header
+  id="header"
+  class="sticky top-0 z-50 border-b border-slate-200/80 bg-white/95 shadow-[0_1px_0_rgba(15,23,42,.03)] backdrop-blur-xl"
+>
+  <div class="border-b border-slate-100 bg-accent text-white">
+    <div
+      class="container mx-auto flex h-9 items-center justify-between text-[11px] font-medium tracking-wide sm:text-xs"
+    >
+      <p class="flex items-center gap-2 text-accent-content">
+        <Icon name="mdi--shop-hours-outline" size={16} />
+        Seg. a Sex. · 8h às 17h
+      </p>
+      <a
+        class="hidden items-center gap-2 text-accent-content transition hover:text-white sm:flex"
+        href="mailto:feacomoveis@gmail.com"
+      >
+        <Icon name="mdi-light--email" size={17} />
+        feacomoveis@gmail.com
+      </a>
     </div>
+  </div>
 
-    <div class="navbar">
-      <div class="navbar-start">
-        <div class="dropdown">
-          <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              class="h-5 w-5"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke="currentColor"
-            >
-              <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
-                d="M4 6h16M4 12h8m-8 6h16"></path>
-            </svg>
-          </div>
-          <ul
-            tabindex="0"
-            class="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow"
+  <div
+    class="container mx-auto flex h-[76px] items-center justify-between gap-5 lg:h-[84px]"
+  >
+    <a
+      href="/"
+      class="group flex shrink-0 items-center gap-3"
+      aria-label="FÉAÇO Móveis — início"
+    >
+      <Image
+        src={logo}
+        alt={SITE_TITLE}
+        width="66"
+        densities={[1, 2, 3]}
+        class="h-[58px] w-[58px] rounded-full ring-1 ring-slate-200 transition group-hover:scale-[1.03] lg:h-16 lg:w-16"
+        loading="eager"
+      />
+      <span
+        class="hidden border-l border-slate-200 pl-3 text-[10px] font-bold uppercase leading-[1.35] tracking-[.16em] text-slate-500 sm:block"
+      >
+        Móveis em aço<br />direto da fábrica
+      </span>
+    </a>
+
+    <nav
+      class="hidden items-center gap-1 lg:flex"
+      aria-label="Navegação principal"
+    >
+      {
+        navLinks.map((link) => (
+          <a
+            href={link.href}
+            aria-current={isActive(link.href) ? "page" : undefined}
+            class:list={[
+              "relative rounded-full px-4 py-2.5 text-sm font-semibold transition-colors",
+              isActive(link.href)
+                ? "bg-base-200 text-base-conteent"
+                : "text-base-content/70 hover:bg-base-200 hover:text-base-content",
+            ]}
           >
-            {
-              navLinks.map((link, i) => {
-                if (i === 1) {
-                  return (
-                    <li role="none">
-                      <div
-                        role="menuitem"
-                        tabindex="-1"
-                        class="rounded-3xl p-0 block"
-                      >
-                        <CategoriesMenu client:load name="Produtos" isActive={isActive("/produtos", pathname) ? true : false} />
-                      </div>
-                    </li>
-                    <li>
-                      <a
-                        href={link.href}
-                        class={`btn btn-secondary shadow-none rounded-3xl ${
-                          isActive(link.href, pathname) ? "btn-active" : ""
-                        }`}
-                      >
-                        {link.label}
-                      </a>
-                    </li>
-                  );
-                }
-                return (
-                  <li>
-                    <a
-                      href={link.href}
-                      class={`btn btn-secondary shadow-none rounded-3xl ${
-                          isActive(link.href, pathname) ? "btn-active" : ""
-                        }`}
-                    >
-                      {link.label}
-                    </a>
-                  </li>
-                );
-              })
-            }
-          </ul>
-        </div>
-        <a href="/"
-          ><Image
-            src={logo}
-            alt={SITE_TITLE}
-            width="100"
-            densities={[1, 2, 3]}
-            class="rounded-full"
-            loading="eager"
-          /></a
-        >
-      </div>
+            {link.label}
+            {isActive(link.href) && (
+              <span class="absolute inset-x-4 -bottom-[17px] h-0.5 rounded-full bg-accent" />
+            )}
+          </a>
+        ))
+      }
+    </nav>
 
-      <!-- DESKTOP -->
-      <div class="navbar-center hidden lg:flex">
-        <ul class="menu menu-horizontal px-1">
-          {
-            navLinks.map((link, i) => {
-              if (i === 1) {
-                return (
-                  <li role="none">
-                    <div
-                      role="menuitem"
-                      tabindex="-1"
-                      class="rounded-3xl p-0 block"
-                    >
-                      <CategoriesMenu client:load name="Produtos" isActive={isActive("/produtos", pathname) ? true : false} />
-                    </div>
-                  </li>
-                  <li>
-                  <a
-                    href={link.href}
-                    class={`btn btn-secondary shadow-none rounded-3xl ${
-                          isActive(link.href, pathname) ? "btn-active" : ""
-                        }`}
-                  >
-                    {link.label}
-                  </a>
-                </li>
-                );
-              }
-              return (
-                <li>
-                  <a
-                    href={link.href}
-                    class={`btn btn-secondary shadow-none rounded-3xl ${
-                          isActive(link.href, pathname) ? "btn-active" : ""
-                        }`}
-                  >
-                    {link.label}
-                  </a>
-                </li>
-              );
-            })
-          }
-        </ul>
-      </div>
-      <div class="navbar-end">
-        <a
-          id="wpplead-header"
-          href="https://wa.me/5519988287751"
-          target="_blank"
-          rel="noopener noreferrer"
-          class="btn btn-accent rounded-full"
-          >Orçamento
-          <Icon name="bxl--whatsapp" size={26} /></a
+    <div class="flex items-center gap-2">
+      <a
+        id="wpplead-header"
+        href="https://wa.me/5519988287751"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="group hidden items-center gap-2 rounded-full bg-primary px-5 py-3 text-sm font-bold text-white shadow-[0_8px_24px_rgba(61,86,104,.2)] transition hover:-translate-y-0.5 hover:bg-accent sm:flex"
+      >
+        Pedir orçamento
+        <Icon
+          name="bxl--whatsapp"
+          size={21}
+          class="transition group-hover:rotate-6"
+        />
+      </a>
+
+      <details class="mobile-menu relative lg:hidden">
+        <summary
+          class="grid h-11 w-11 cursor-pointer place-items-center rounded-full border border-slate-200 text-slate-950 transition hover:bg-slate-100"
+          aria-label="Abrir menu"
         >
-      </div>
+          <span class="menu-lines" aria-hidden="true"
+            ><i></i><i></i><i></i></span
+          >
+        </summary>
+        <div
+          class="absolute right-0 top-14 w-[min(20rem,calc(100vw-2rem))] rounded-3xl border border-slate-200 bg-white p-3 shadow-2xl shadow-slate-950/15"
+        >
+          <nav class="flex flex-col" aria-label="Navegação móvel">
+            {
+              navLinks.map((link) => (
+                <a
+                  href={link.href}
+                  class:list={[
+                    "rounded-2xl px-4 py-3.5 text-sm font-semibold",
+                    isActive(link.href)
+                      ? "bg-base-200 text-base-content"
+                      : "text-base-content/70",
+                  ]}
+                >
+                  {link.label}
+                </a>
+              ))
+            }
+          </nav>
+          <a
+            href="https://wa.me/5519988287751"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="mt-2 flex items-center justify-center gap-2 rounded-2xl bg-primary px-4 py-3.5 text-sm font-bold text-white"
+          >
+            Pedir orçamento <Icon name="bxl--whatsapp" size={21} />
+          </a>
+        </div>
+      </details>
     </div>
   </div>
 </header>
+
+<style>
+  summary {
+    list-style: none;
+  }
+  summary::-webkit-details-marker {
+    display: none;
+  }
+  .menu-lines {
+    display: flex;
+    width: 18px;
+    flex-direction: column;
+    gap: 4px;
+  }
+  .menu-lines i {
+    display: block;
+    height: 2px;
+    width: 100%;
+    border-radius: 999px;
+    background: currentColor;
+    transition: 0.2s ease;
+  }
+  details[open] .menu-lines i:first-child {
+    transform: translateY(6px) rotate(45deg);
+  }
+  details[open] .menu-lines i:nth-child(2) {
+    opacity: 0;
+  }
+  details[open] .menu-lines i:last-child {
+    transform: translateY(-6px) rotate(-45deg);
+  }
+</style>
