@@ -4,80 +4,177 @@ import { Icon } from "astro-icon/components";
 
 import hero1 from "../assets/images/categories/arquivos.png";
 import hero2 from "../assets/images/categories/estantes.png";
-
-import patternAccent from "../assets/images/pattern-accent.png";
-import patternWhite from "../assets/images/pattern-white.png";
 ---
 
-<section
-  id="hero"
-  class="grid grid-cols-1 lg:grid-cols-2 gap-6 py-10 container mx-auto relative z-10"
->
-  <div class="flex flex-col text-center lg:text-left lg:pt-5">
-    <h1 class="text-4xl sm:text-5xl leading-tight font-bold mb-5">
-      Móveis em <span class="text-primary/70">Aço</span> Direto da Fábrica
-    </h1>
-    <p class="mb-5 text-gray-500">
-      Transforme seus espaços com armários, estantes e arquivos feitos sob
-      medida, com garantia de fábrica, montagem no local e modelos a pronta
-      entrega. Entregamos em todo o estado de São Paulo, Minas Gerais e região.
-    </p>
-    <a
-      id="wpplead-hero-section"
-      href="https://wa.me/5519988287751"
-      target="_blank"
-      rel="noopener noreferrer"
-      class="btn btn-accent rounded-full mx-auto lg:ml-0 relative z-10"
-      >Solicite seu orçamento
-      <Icon name="bxl--whatsapp" size={26} /></a
+<section id="hero" class="overflow-hidden bg-base-100 py-5 sm:py-7 lg:py-9">
+  <div class="container mx-auto">
+    <div
+      class="hero-shell relative isolate px-6 py-10 text-base-content sm:px-10 lg:min-h-[620px] lg:px-14 lg:py-16 xl:px-20"
     >
-  </div>
-
-  <div class="relative grid grid-cols-2 gap-x-5 w-full">
-    <div class="w-56 sm:w-80 absolute left-1/4 -top-20">
-      <Image src={patternAccent} alt="pattern enfeite" loading="eager" />
-    </div>
-
-    <div class="w-80 absolute -left-24 -bottom-14">
-      <Image src={patternWhite} alt="pattern enfeite" loading="eager" />
-    </div>
-
-    <div class="relative max-w-96 lg:max-w-80 flex items-center justify-center">
       <div
-        class="bg-secondary rounded-3xl w-64 lg:w-52 xl:w-64 h-[400px] lg:h-[520px]"
+        class="grid items-center gap-12 lg:grid-cols-[1.02fr_.98fr] lg:gap-8"
       >
-      </div>
-      <Image
-        src={hero1}
-        widths={[288, 576, 864]}
-        sizes="(max-width: 288px) 100vw, 288px"
-        class="absolute max-w-52 sm:max-w-64 xl:max-w-72"
-        alt="Armário de Ferramenta baixo"
-        loading="eager"
-      />
-    </div>
+        <div class="relative z-10 max-w-2xl text-center lg:text-left">
+          <div
+            class="mb-6 inline-flex items-center gap-2 rounded-full border border-black/15 bg-black/[.07] px-4 py-2 text-[11px] font-bold uppercase tracking-[.18em] text-slate-700 backdrop-blur-sm"
+          >
+            <span
+              class="h-2 w-2 rounded-full bg-emerald-400 shadow-[0_0_14px_#34d399]"
+            ></span>
+            Fabricação própria · SP e MG
+          </div>
 
-    <div class="relative max-w-96 lg:max-w-80 flex items-center justify-center">
-      <div
-        class="bg-secondary rounded-3xl w-64 lg:w-52 xl:w-64 h-[400px] lg:h-[520px]"
-      >
+          <h1
+            class="text-[clamp(2.6rem,6vw,4rem)] font-bold leading-[.98] tracking-[-.045em] text-base-content"
+          >
+            A força do aço.<br />
+            <span class="steel-text">O design que fica.</span>
+          </h1>
+
+          <p
+            class="mx-auto mt-7 max-w-xl text-base leading-relaxed text-slate-700 sm:text-lg lg:mx-0 lg:max-w-lg"
+          >
+            Armários, estantes e arquivos resistentes, com acabamento de alto
+            padrão, garantia de fábrica e montagem no local.
+          </p>
+
+          <div
+            class="mt-8 flex flex-col items-center gap-3 sm:flex-row sm:justify-center lg:justify-start"
+          >
+            <a
+              id="wpplead-hero-section"
+              href="https://wa.me/5519988287751"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="group flex w-full items-center justify-center gap-2 rounded-full bg-primary px-6 py-4 text-sm font-bold text-primary-content transition hover:-translate-y-0.5 hover:bg-accent sm:w-auto"
+            >
+              Solicitar orçamento
+              <Icon
+                name="bxl--whatsapp"
+                size={23}
+                class="transition group-hover:rotate-6"
+              />
+            </a>
+            <a
+              href="/produtos"
+              class="group flex w-full items-center justify-center gap-2 rounded-full border border-primary/20 px-6 py-4 text-sm font-bold text-primary transition hover:border-primary/50 hover:bg-primary/10 sm:w-auto"
+            >
+              Ver produtos
+              <span
+                class="transition-transform group-hover:translate-x-1"
+                aria-hidden="true">→</span
+              >
+            </a>
+          </div>
+
+          <div
+            class="mt-9 flex flex-wrap justify-center gap-x-7 gap-y-3 border-t border-black/10 pt-6 text-xs font-semibold text-slate-500 lg:justify-start"
+          >
+            <span class="flex items-center gap-2"
+              ><i>✓</i> 8 anos de experiência</span
+            >
+            <span class="flex items-center gap-2"><i>✓</i> Pronta entrega</span>
+            <span class="flex items-center gap-2"><i>✓</i> Sob medida</span>
+          </div>
+        </div>
+
+        <div
+          class="relative mx-auto h-[380px] w-full max-w-[570px] sm:h-[470px] lg:h-[520px]"
+        >
+          <div
+            class="absolute inset-x-[7%] bottom-[2%] top-[4%] rotate-3 rounded-[2.5rem] border border-black/10 bg-black/[.055] backdrop-blur-[2px]"
+          >
+          </div>
+          <div
+            class="absolute left-[3%] top-[6%] h-24 w-24 rounded-full border border-black/10"
+          >
+          </div>
+          <div
+            class="absolute bottom-[2%] right-[0] h-36 w-36 rounded-full bg-black/[.06]"
+          >
+          </div>
+
+          <div
+            class="absolute bottom-[4%] left-[0] z-20 w-[58%] drop-shadow-[0_35px_35px_rgba(0,0,0,.45)] sm:w-[56%]"
+          >
+            <Image
+              src={hero1}
+              widths={[320, 480, 640]}
+              sizes="(max-width: 1024px) 55vw, 320px"
+              alt="Arquivo de aço FÉAÇO"
+              loading="eager"
+            />
+          </div>
+          <div
+            class="absolute bottom-[4%] right-[0] z-10 w-[56%] drop-shadow-[0_35px_35px_rgba(0,0,0,.45)] sm:w-[54%]"
+          >
+            <Image
+              src={hero2}
+              widths={[320, 480, 640]}
+              sizes="(max-width: 1024px) 53vw, 310px"
+              alt="Estante de aço FÉAÇO"
+              loading="eager"
+            />
+          </div>
+
+          <div
+            class="absolute right-[2%] top-[14%] z-30 rounded-2xl border border-white/15 bg-primary/75 px-4 py-3 text-left shadow-xl backdrop-blur-md"
+          >
+            <span
+              class="block text-[9px] font-bold uppercase tracking-[.2em] text-slate-600"
+              >Qualidade</span
+            >
+            <strong class="mt-1 block text-sm text-white"
+              >Feito para durar.</strong
+            >
+          </div>
+        </div>
       </div>
-      <Image
-        src={hero2}
-        widths={[288, 576, 864]}
-        sizes="(max-width: 288px) 100vw, 288px"
-        class="absolute max-w-40 sm:max-w-56 xl:max-w-72"
-        alt="Armário 3 gavetas"
-        loading="eager"
-      />
     </div>
   </div>
 </section>
 
 <style>
-  .hero-stroke {
-    -webkit-text-stroke-width: 2px;
-    -webkit-text-stroke-color: black;
-    /* color: transparent; */
+  .steel-grid {
+    background-image: linear-gradient(
+        rgba(255, 255, 255, 0.045) 1px,
+        transparent 1px
+      ),
+      linear-gradient(90deg, rgba(255, 255, 255, 0.045) 1px, transparent 1px);
+    background-size: 54px 54px;
+    mask-image: linear-gradient(to right, transparent, black 35%, black);
+  }
+  .steel-text {
+    background: linear-gradient(
+      105deg,
+      #73747d 10%,
+      #94a3b8 46%,
+      #73747d 73%,
+      #64748b 100%
+    );
+    background-size: 180% auto;
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+  i {
+    display: grid;
+    height: 18px;
+    width: 18px;
+    place-items: center;
+    border-radius: 999px;
+    background: rgba(52, 211, 153, 0.12);
+    color: #6ee7b7;
+    font-style: normal;
+  }
+  @media (prefers-reduced-motion: no-preference) {
+    .steel-text {
+      animation: sheen 8s linear infinite;
+    }
+    @keyframes sheen {
+      to {
+        background-position: 180% center;
+      }
+    }
   }
 </style>
